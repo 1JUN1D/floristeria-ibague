@@ -76,155 +76,84 @@
         </div>
     </section>
 
-    <!-- Trust Badges -->
-    <section class="trust-section">
+
+    <!-- Catálogo Completo -->
+    <section class="catalog-filters" id="productos">
         <div class="container">
-            <div class="badges-grid">
-                <div class="badge">
-                    <span class="badge-icon">✓</span>
-                    <h3>Flores Frescas</h3>
-                    <p>Seleccionadas diariamente de los mejores floricultores</p>
-                </div>
-                <div class="badge">
-                    <span class="badge-icon">🚚</span>
-                    <h3>Entrega el Mismo Día</h3>
-                    <p>Entrega a domicilio en Ibagué, Tolima</p>
-                </div>
-                <div class="badge">
-                    <span class="badge-icon">💝</span>
-                    <h3>Diseños Personalizados</h3>
-                    <p>Arreglos y ramos diseñados especialmente para ti</p>
-                </div>
-                <div class="badge">
-                    <span class="badge-icon">⭐</span>
-                    <h3>Garantía de Satisfacción</h3>
-                    <p>Si no estás satisfecho, te lo arreglamos</p>
-                </div>
+            <!-- Barra de búsqueda -->
+            <div class="search-container">
+                <input type="text" class="search-input" id="search-input" placeholder="Buscar ramos, rosas, girasoles, gerberas...">
+                <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"/>
+                    <path d="m21 21-4.35-4.35"/>
+                </svg>
+                <button class="search-clear" id="search-clear">&times;</button>
+            </div>
+            <!-- Filtros -->
+            <div class="filters-container">
+                <span class="filter-label">Filtrar:</span>
+                <button class="filter-btn active" data-filter="todos">Todos</button>
+                <button class="filter-btn" data-filter="girasoles">Girasoles</button>
+                <button class="filter-btn" data-filter="gerberas">Gerberas</button>
+                <button class="filter-btn" data-filter="bouquets">Bouquets</button>
+                <button class="filter-btn" data-filter="canastas">Canastas</button>
+                <button class="filter-btn" data-filter="cajas">Cajas</button>
+                <button class="filter-btn" data-filter="chocolates">Con Chocolates</button>
+                <button class="filter-btn" data-filter="novia">Novia</button>
+                <button class="filter-btn" data-filter="pompones">Pompones</button>
+                <button class="filter-btn" data-filter="rosas-eternas">Rosas Eternas</button>
+                <button class="filter-btn" data-filter="coreano">Estilo Coreano</button>
+                <button class="filter-btn" data-filter="premium">Premium</button>
+                <button class="filter-btn" data-filter="precio-bajo">Menos de $150.000</button>
+                <button class="filter-btn" data-filter="precio-medio">$150.000 - $250.000</button>
+                <button class="filter-btn" data-filter="precio-alto">Más de $250.000</button>
             </div>
         </div>
     </section>
 
-    <!-- SEO Content Section -->
-    <section class="content-section">
+    <!-- Contador de resultados -->
+    <div class="results-counter">
         <div class="container">
-            <article class="seo-content">
-                <h2>Flores para Cumpleaños en Ibagué: Ideas y Opciones</h2>
-
-                <h3>Arreglos Florales Perfectos para Celebrar</h3>
-                <p>En Flore, entendemos que los <strong>arreglos florales para cumpleaños</strong> son más que solo flores. Son sentimientos, emociones y momentos especiales condensados en un hermoso ramo. Nuestras <strong>flores de cumpleaños</strong> son seleccionadas cuidadosamente para garantizar que tu celebración sea inolvidable.</p>
-
-                <p>Contamos con una amplia variedad de <strong>ramos de flores para cumpleaños</strong> que se adaptan a cualquier estilo y presupuesto. Desde los clásicos ramos rojos y rosas, hasta los modernos arreglos multicolores, tenemos exactamente lo que buscas.</p>
-
-                <h3>Ramos de Flores para Cumpleaños de Mujer</h3>
-                <p>Si estás buscando <strong>ramos de flores para cumpleaños de mujer</strong>, te ofrecemos diseños elegantes y sofisticados. Nuestros floristas expertos crean combinaciones que transmiten elegancia, femineidad y celebración. Puedes elegir entre flores como lirios, peonías, tulipanes y rosas en los colores que prefieras.</p>
-
-                <h3>¡Feliz Cumpleaños con Flores y Globos!</h3>
-                <p>¿Quieres hacer la sorpresa aún más especial? Nuestros combos de <strong>feliz cumpleaños con flores y globos</strong> son perfectos para crear un ambiente festivo. Combinamos hermosos ramos con globos de helio en diferentes formas y colores para un impacto visual increíble.</p>
-
-                <h3>Entrega el Mismo Día en Ibagué, Tolima</h3>
-                <p>En Flore, ofrecemos <strong>entrega el mismo día</strong> para todos nuestros pedidos realizados antes de las 2:00 PM. Si estás en Ibagué, Tolima, puedes confiar en que tus flores llegarán frescas y hermosas. Nuestro servicio de entrega es rápido, confiable y profesional.</p>
-
-                <h3>Ideas de Regalos para Complementar tu Ramo</h3>
-                <p>Para hacer tu regalo aún más especial, ofrecemos opciones complementarias como:</p>
-                <ul>
-                    <li>Chocolates gourmet premium</li>
-                    <li>Peluches personalizados</li>
-                    <li>Tarjetas de felicitación personalizadas</li>
-                    <li>Vinos y champagnes seleccionados</li>
-                    <li>Arreglos con flores y frutas</li>
-                </ul>
-
-                <p>Nuestro equipo en Ibagué está listo para hacer de tu cumpleaños un día realmente especial. Contáctanos por WhatsApp y déjanos ayudarte a crear un momento memorable.</p>
-            </article>
+            Mostrando <strong id="results-count">0</strong> productos
         </div>
-    </section>
+    </div>
 
-    <!-- Products Section -->
+    <!-- Grid de Productos -->
     <section class="products-section">
         <div class="container">
-            <h2>Nuestros Arreglos y Ramos para Cumpleaños</h2>
             <div class="products-container"></div>
-        </div>
-    </section>
-
-    <!-- FAQ Section -->
-    <section class="faq-section">
-        <div class="container">
-            <h2>Preguntas Frecuentes sobre Flores para Cumpleaños</h2>
-
-            <div class="faq-item">
-                <div class="faq-question">
-                    <h3>¿Cuál es el mejor arreglo de flores para un cumpleaños?</h3>
-                    <span class="faq-icon">+</span>
-                </div>
-                <div class="faq-answer">
-                    <p>El mejor arreglo depende de los gustos personales, pero en Flore recomendamos nuestros ramos clásicos con rosas y lirios para celebraciones tradicionales, o nuestros arreglos moderno-coloridos para algo más vibrante. Todos nuestros arreglos florales para cumpleaños están diseñados para durar y verse hermosos durante toda la celebración.</p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question">
-                    <h3>¿Puedo encomendar flores para cumpleaños el mismo día en Ibagué?</h3>
-                    <span class="faq-icon">+</span>
-                </div>
-                <div class="faq-question">
-                    <p>Sí, ofrecemos entrega el mismo día para todos los pedidos en Ibagué, Tolima. Si ordenas antes de las 2:00 PM, garantizamos entrega el mismo día. Simplemente contáctanos por WhatsApp con los detalles de tu pedido.</p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question">
-                    <h3>¿Qué tal combinar flores con globos de cumpleaños?</h3>
-                    <span class="faq-icon">+</span>
-                </div>
-                <div class="faq-answer">
-                    <p>¡Excelente idea! Nuestros combos de flores y globos crean un impacto visual increíble. Los ramos de flores combinados con globos de helio son perfectos para cualquier celebración. Ofrecemos globos de diferentes colores, formas (números, corazones, estrellas) y temas para personalizar tu sorpresa.</p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question">
-                    <h3>¿Tienen opciones especiales para cumpleaños de mujeres?</h3>
-                    <span class="faq-icon">+</span>
-                </div>
-                <div class="faq-answer">
-                    <p>Absolutamente. Nuestros ramos especiales para cumpleaños de mujer incluyen flores elegantes como peonías, tulipanes de lujo, rosas premium y lirios blancos. También ofrecemos opciones con colores sofisticados como blanco, rosa claro, lavanda y coral que complementan cualquier estilo.</p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question">
-                    <h3>¿Puedo añadir un mensaje personalizado a mi ramo?</h3>
-                    <span class="faq-icon">+</span>
-                </div>
-                <div class="faq-answer">
-                    <p>Claro que sí. Cada ramo puede incluir una tarjeta de felicitación personalizada con el mensaje que desees. También ofrecemos opciones de tarjetas especiales y empaques personalizados. Cuéntanos tu mensaje y lo haremos perfecto para la ocasión.</p>
-                </div>
+            <div class="empty-state" id="empty-state">
+                <h3>No se encontraron productos</h3>
+                <p>Intenta con otro filtro o término de búsqueda</p>
             </div>
         </div>
     </section>
 
-    <!-- Final CTA Section -->
+
+    <!-- CTA Final -->
     <section class="final-cta">
         <div class="container">
-            <h2>¿Listo para Celebrar con las Mejores Flores de Ibagué?</h2>
-            <p>Envia flores hermosas para cumpleaños con entrega el mismo día en Ibagué, Tolima. Contáctanos ahora por WhatsApp.</p>
-            <button class="cta-button cta-button-large" onclick="contactWA(); return false;">
-                <span class="whatsapp-icon">📱</span> Encarga Ahora por WhatsApp
+            <h2>Sorprende Hoy, Sonríen Mañana</h2>
+            <p>Haz tu pedido de flores a domicilio ahora mismo. Enviamos en Ibagué todos los días.</p>
+            <button class="cta-button-large" onclick="orderWA(); return false;">
+                📞 WhatsApp: +57 315 1100609
             </button>
-            <p class="whatsapp-number">O llamanos: <a href="tel:+573151100609">+57 315 110 0609</a></p>
+            <p class="cta-subtitle">Disponible 24 horas - Respuesta inmediata</p>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2026 Flore - Floristería Ibagué. Ibagué, Tolima, Colombia.</p>
-            <p>Especialistas en arreglos florales para cumpleaños, bodas, eventos y ocasiones especiales.</p>
+            <div class="footer-info">
+                <p><strong>Flore</strong> - Florería en Ibagué, Tolima, Colombia</p>
+                <p>WhatsApp: <a href="https://wa.me/573151100609">+57 315 1100609</a></p>
+                <p>Entrega a domicilio en toda la ciudad</p>
+            </div>
+            <p class="footer-copyright">&copy; 2024 Flore. Todos los derechos reservados.</p>
         </div>
     </footer>
 
-    <!-- Schema.org Structured Data -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -255,84 +184,13 @@
     }
     </script>
 
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
-            {
-                "@type": "Question",
-                "name": "¿Cuál es el mejor arreglo de flores para un cumpleaños?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "El mejor arreglo depende de los gustos personales, pero en Flore recomendamos nuestros ramos clásicos con rosas y lirios para celebraciones tradicionales, o nuestros arreglos moderno-coloridos para algo más vibrante."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "¿Puedo encomendar flores para cumpleaños el mismo día en Ibagué?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Sí, ofrecemos entrega el mismo día para todos los pedidos en Ibagué, Tolima. Si ordenas antes de las 2:00 PM, garantizamos entrega el mismo día."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "¿Qué tal combinar flores con globos de cumpleaños?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "¡Excelente idea! Nuestros combos de flores y globos crean un impacto visual increíble. Los ramos de flores combinados con globos de helio son perfectos para cualquier celebración."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "¿Tienen opciones especiales para cumpleaños de mujeres?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Absolutamente. Nuestros ramos especiales para cumpleaños de mujer incluyen flores elegantes como peonías, tulipanes de lujo, rosas premium y lirios blancos."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "¿Puedo añadir un mensaje personalizado a mi ramo?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Claro que sí. Cada ramo puede incluir una tarjeta de felicitación personalizada con el mensaje que desees. También ofrecemos opciones de tarjetas especiales y empaques personalizados."
-                }
-            }
-        ]
-    }
-    </script>
-
-    <!-- Scripts -->
+    <!-- JS -->
     <script src="../js/landing.js"></script>
     <script>
-        // WhatsApp Contact Function
-        function contactWA() {
-            const message = "Hola Flore, me interesa conocer sobre arreglos florales para cumpleaños. ¿Puedo ver sus opciones?";
-            const encodedMessage = encodeURIComponent(message);
-            const phoneNumber = "573151100609";
-            const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
-            window.open(whatsappUrl, '_blank');
-
-            // Google Ads Conversion
-            gtag('event', 'conversion', {
-                'send_to': 'AW-17976527804/R5i-CNDxofYDEPDZwrgp'
-            });
-        }
-
-        // Initialize landing page
-        document.addEventListener('DOMContentLoaded', function(){
-            LANDING_PRIORITY_TAG = 'bouquets';
-            renderProducts([], 12);
-
-            // FAQ Toggle Functionality
-            document.querySelectorAll('.faq-question').forEach(q => {
-                q.addEventListener('click', () => {
-                    q.parentElement.classList.toggle('open');
-                });
-            });
-        });
+    document.addEventListener('DOMContentLoaded', function(){
+        LANDING_PRIORITY_TAG = 'bouquets';
+        initCatalog();
+    });
     </script>
 </body>
 </html>

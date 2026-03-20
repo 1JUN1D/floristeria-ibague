@@ -130,6 +130,8 @@
     </script>
 </head>
 <body>
+
+
     <!-- Hero Section -->
     <section class="hero" style="background-image: url('https://images.unsplash.com/photo-1566873535350-a3f5d4a804b7?w=1920&q=80');">
         <div class="hero-overlay"></div>
@@ -145,172 +147,120 @@
         </div>
     </section>
 
-    <!-- Trust Badges -->
-    <section class="trust-badges">
-        <div class="badge">
-            <div class="badge-icon">🚚</div>
-            <div class="badge-text">
-                <strong>Envío Mismo Día</strong>
-                <p>En Ibagué antes de las 7 PM</p>
-            </div>
-        </div>
-        <div class="badge">
-            <div class="badge-icon">✨</div>
-            <div class="badge-text">
-                <strong>Frescura Garantizada</strong>
-                <p>Orquídeas recién cortadas</p>
-            </div>
-        </div>
-        <div class="badge">
-            <div class="badge-icon">🔒</div>
-            <div class="badge-text">
-                <strong>Pago Seguro</strong>
-                <p>Múltiples métodos de pago</p>
-            </div>
-        </div>
-        <div class="badge">
-            <div class="badge-icon">💬</div>
-            <div class="badge-text">
-                <strong>WhatsApp 24h</strong>
-                <p>Atención personalizada</p>
-            </div>
-        </div>
-    </section>
 
-    <!-- SEO Content Section -->
-    <section class="content-section">
+    <!-- Catálogo Completo -->
+    <section class="catalog-filters" id="productos">
         <div class="container">
-            <h2>¿Por Qué Elegir Nuestras Orquídeas?</h2>
-
-            <div class="content-grid">
-                <div class="content-block">
-                    <h3>Orquídeas Blancas: Elegancia Pura</h3>
-                    <p>Nuestras orquídeas blancas representan la máxima elegancia y sofisticación. Perfectas para matrimonios, eventos corporativos o como regalo de condolencias. Cada ramo de orquídeas blancas es cuidadosamente seleccionado para garantizar tallos firmes y flores en perfecto estado.</p>
-                </div>
-
-                <div class="content-block">
-                    <h3>Variedad de Flores Orquídeas</h3>
-                    <p>Trabajamos con múltiples variedades de flores orquídeas para ofrecerte opciones únicas. Desde las clásicas Phalaenopsis hasta las exóticas Dendrobiums, cada tipo de orquídea tiene características especiales. Nuestro catálogo de ramos de orquídeas incluye desde arreglos sencillos hasta composiciones elaboradas.</p>
-                </div>
-
-                <div class="content-block">
-                    <h3>Cuidados para Tus Orquídeas a Domicilio</h3>
-                    <p>Cuando recibes tus orquídeas a domicilio en Ibagué, incluimos instrucciones detalladas de cuidado. Mantén tus flores orquídeas con luz indirecta, temperatura moderada y riego semanal. Con los cuidados adecuados, disfrutarás de tus orquídeas durante semanas o incluso meses.</p>
-                </div>
-
-                <div class="content-block">
-                    <h3>Ramo de Orquídeas Personalizado</h3>
-                    <p>¿Necesitas un ramo de orquídeas especial? Nuestro equipo en Flore personaliza cada arreglo según tus preferencias. Combinamos orquídeas con flores complementarias, verdes decorativos y elementos personalizados. Perfecto para cualquier ocasión en Ibagué.</p>
-                </div>
-
-                <div class="content-block">
-                    <h3>Orquídeas para Cada Ocasión</h3>
-                    <p>Desde cumpleaños hasta aniversarios, nuestras flores orquídeas son el regalo perfecto. Las orquídeas florecen año tras año, simbolizando belleza duradera y amor eterno. Un ramo de orquídeas es una inversión en felicidad que trasciende el momento.</p>
-                </div>
-
-                <div class="content-block">
-                    <h3>Entrega Rápida en Ibagué, Tolima</h3>
-                    <p>Servimos todo Ibagué con entregas rápidas y confiables. Tu ramo de orquídeas llegará fresco y hermoso a su destino. Nuestro sistema de logística garantiza que las flores orquídeas se mantengan en condiciones óptimas durante el transporte.</p>
-                </div>
+            <!-- Barra de búsqueda -->
+            <div class="search-container">
+                <input type="text" class="search-input" id="search-input" placeholder="Buscar ramos, rosas, girasoles, gerberas...">
+                <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"/>
+                    <path d="m21 21-4.35-4.35"/>
+                </svg>
+                <button class="search-clear" id="search-clear">&times;</button>
             </div>
-
-            <div class="highlight-box">
-                <h3>Tipos de Orquídeas que Ofrecemos</h3>
-                <p>En Flore, contamos con una selección premium de orquídeas para todos los gustos:</p>
-                <ul class="orchid-list">
-                    <li><strong>Orquídeas Blancas:</strong> Phalaenopsis blancas, símbolo de pureza y elegancia</li>
-                    <li><strong>Orquídeas Rosas:</strong> Tonos delicados para expresar amor y aprecio</li>
-                    <li><strong>Orquídeas Moradas:</strong> Flores exóticas que representan admiración y prestigio</li>
-                    <li><strong>Orquídeas Rojas:</strong> Pasionarias y llamativas, para ocasiones especiales</li>
-                    <li><strong>Ramos Mixtos:</strong> Combinaciones de flores orquídeas con complementos florales</li>
-                </ul>
+            <!-- Filtros -->
+            <div class="filters-container">
+                <span class="filter-label">Filtrar:</span>
+                <button class="filter-btn active" data-filter="todos">Todos</button>
+                <button class="filter-btn" data-filter="girasoles">Girasoles</button>
+                <button class="filter-btn" data-filter="gerberas">Gerberas</button>
+                <button class="filter-btn" data-filter="bouquets">Bouquets</button>
+                <button class="filter-btn" data-filter="canastas">Canastas</button>
+                <button class="filter-btn" data-filter="cajas">Cajas</button>
+                <button class="filter-btn" data-filter="chocolates">Con Chocolates</button>
+                <button class="filter-btn" data-filter="novia">Novia</button>
+                <button class="filter-btn" data-filter="pompones">Pompones</button>
+                <button class="filter-btn" data-filter="rosas-eternas">Rosas Eternas</button>
+                <button class="filter-btn" data-filter="coreano">Estilo Coreano</button>
+                <button class="filter-btn" data-filter="premium">Premium</button>
+                <button class="filter-btn" data-filter="precio-bajo">Menos de $150.000</button>
+                <button class="filter-btn" data-filter="precio-medio">$150.000 - $250.000</button>
+                <button class="filter-btn" data-filter="precio-alto">Más de $250.000</button>
             </div>
         </div>
     </section>
 
-    <!-- Products Section -->
+    <!-- Contador de resultados -->
+    <div class="results-counter">
+        <div class="container">
+            Mostrando <strong id="results-count">0</strong> productos
+        </div>
+    </div>
+
+    <!-- Grid de Productos -->
     <section class="products-section">
         <div class="container">
-            <h2>Catálogo de Orquídeas</h2>
-            <p class="section-subtitle">Selecciona tu ramo de flores orquídeas favorito</p>
             <div class="products-container"></div>
-        </div>
-    </section>
-
-    <!-- FAQ Section -->
-    <section class="faq-section">
-        <div class="container">
-            <h2>Preguntas Frecuentes sobre Orquídeas en Ibagué</h2>
-
-            <div class="faq-container">
-                <div class="faq-item">
-                    <button class="faq-question">¿Cómo cuidar las orquídeas que me entregarán en Ibagué?</button>
-                    <div class="faq-answer">
-                        <p>Las orquídeas requieren luz indirecta, humedad moderada y riego 1-2 veces por semana. Evita agua fría directa en las hojas. Mantén una temperatura entre 15-25°C. Nuestros ramos de orquídeas vienen con instrucciones de cuidado específicas para garantizar su durabilidad.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">¿Cuál es la diferencia entre orquídeas blancas y de otros colores?</button>
-                    <div class="faq-answer">
-                        <p>Las orquídeas blancas simbolizan pureza y elegancia, mientras que las de colores representan otros significados: rosas para amor, moradas para admiración, y rojas para pasión. Cada tipo de orquídea tiene características únicas de cuidado y duración. En Flore ofrecemos todas las variedades.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">¿Hacen envío de orquídeas a domicilio en Ibagué mismo día?</button>
-                    <div class="faq-answer">
-                        <p>Sí, ofrecemos envío mismo día para todos nuestros ramos de orquídeas en Ibagué. Si realizas tu pedido antes de las 2 PM, garantizamos entrega antes de las 7 PM. Contacta por WhatsApp al +573151100609 para confirmar disponibilidad.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">¿Las orquídeas son buen regalo para ocasiones especiales?</button>
-                    <div class="faq-answer">
-                        <p>Absolutamente. Las flores orquídeas son el regalo perfecto para cumpleaños, aniversarios, bodas y condolencias. Su belleza exótica y durabilidad las hacen especiales. Un ramo de orquídeas personalizado es una forma elegante de expresar sentimientos en cualquier ocasión.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">¿Cómo hago mi pedido de orquídeas en Flore?</button>
-                    <div class="faq-answer">
-                        <p>Es muy fácil. Selecciona tu ramo de orquídeas en nuestro catálogo, elige la cantidad y haz clic en 'Encargar por WhatsApp'. Nuestro equipo confirmará disponibilidad, personalizará tu arreglo y coordinará el envío a domicilio en Ibagué.</p>
-                    </div>
-                </div>
+            <div class="empty-state" id="empty-state">
+                <h3>No se encontraron productos</h3>
+                <p>Intenta con otro filtro o término de búsqueda</p>
             </div>
         </div>
     </section>
 
-    <!-- Final CTA Section -->
+
+    <!-- CTA Final -->
     <section class="final-cta">
         <div class="container">
-            <h2>¿Listo para Encargar Tus Orquídeas?</h2>
-            <p>Nuestro equipo en Flore está disponible 24/7 por WhatsApp para ayudarte con tu pedido de flores orquídeas en Ibagué.</p>
-            <button class="cta-button large" onclick="orderWA(); return false;">
-                <span class="whatsapp-icon">💬</span> Ordenar Ahora por WhatsApp
+            <h2>Sorprende Hoy, Sonríen Mañana</h2>
+            <p>Haz tu pedido de flores a domicilio ahora mismo. Enviamos en Ibagué todos los días.</p>
+            <button class="cta-button-large" onclick="orderWA(); return false;">
+                📞 WhatsApp: +57 315 1100609
             </button>
-            <p class="contact-info">Llama o escribe al <a href="tel:573151100609">+57 315 110 0609</a></p>
+            <p class="cta-subtitle">Disponible 24 horas - Respuesta inmediata</p>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2024 Flore - Floristería Ibagué. Orquídeas a domicilio en Ibagué, Tolima, Colombia.</p>
-            <p>Servicio disponible en Ibagué | WhatsApp: +57 315 110 0609</p>
+            <div class="footer-info">
+                <p><strong>Flore</strong> - Florería en Ibagué, Tolima, Colombia</p>
+                <p>WhatsApp: <a href="https://wa.me/573151100609">+57 315 1100609</a></p>
+                <p>Entrega a domicilio en toda la ciudad</p>
+            </div>
+            <p class="footer-copyright">&copy; 2024 Flore. Todos los derechos reservados.</p>
         </div>
     </footer>
 
-    <!-- Scripts -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Flore - Floristería Ibagué",
+        "image": "https://floristeriaibague.dondeseria.com/assets/logo.webp",
+        "description": "Floristería en Ibagué especializada en orquídeas y flores frescas a domicilio",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Ibagué",
+            "addressRegion": "Tolima",
+            "addressCountry": "CO"
+        },
+        "telephone": "+573151100609",
+        "url": "https://floristeriaibague.dondeseria.com",
+        "priceRange": "COP",
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "Customer Service",
+            "telephone": "+573151100609",
+            "areaServed": "CO",
+            "availableLanguage": "es"
+        },
+        "sameAs": [
+            "https://wa.me/573151100609"
+        ]
+    }
+    </script>
+
+    <!-- JS -->
     <script src="../js/landing.js"></script>
     <script>
-        document.addEventListener('DOMContentLoaded', function(){
-            LANDING_PRIORITY_TAG = 'premium';
-            renderProducts([], 12);
-            document.querySelectorAll('.faq-question').forEach(q => {
-                q.addEventListener('click', () => q.parentElement.classList.toggle('open'));
-            });
-        });
+    document.addEventListener('DOMContentLoaded', function(){
+        LANDING_PRIORITY_TAG = 'premium';
+        initCatalog();
+    });
     </script>
 </body>
 </html>

@@ -888,8 +888,14 @@ const products = [
         ];
 
 // --- VARIABLES GLOBALES ---
-let currentLandingFilter = 'priority';
+let currentLandingFilter = 'todos';
+let currentSearchQuery = '';
 let LANDING_PRIORITY_TAG = '';
+
+// --- QUITAR TILDES para búsqueda ---
+function removeAccents(str) {
+    return str.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+}
 
 // --- FORMATEO DE PRECIO ---
 function formatCOP(price) {
@@ -914,6 +920,14 @@ function getSortedProducts(priorityTag) {
     return [...priority, ...rest];
 }
 
+// --- ACTUALIZAR CONTADOR DE RESULTADOS ---
+function updateResultsCount(count) {
+    const counter = document.getElementById('results-count');
+    if (counter) counter.textContent = count;
+    const emptyState = document.getElementById('empty-state');
+    if (emptyState) emptyState.style.display = count === 0 ? 'block' : 'none';
+}
+
 // --- FUNCIÓN PARA RENDERIZAR PRODUCTOS ---
 function renderProducts(filters = [], limit = null) {
     const container = document.querySelector('.products-container');
@@ -925,18 +939,33 @@ function renderProducts(filters = [], limit = null) {
         productsToDisplay = getSortedProducts(LANDING_PRIORITY_TAG);
     }
 
-    if (filters.length > 0) {
-        productsToDisplay = productsToDisplay.filter(p => 
+    // Filtrar por categoría
+    if (filters.length > 0 && filters[0] !== 'todos') {
+        productsToDisplay = productsToDisplay.filter(p =>
             filters.some(f => p.categories && p.categories.includes(f))
         );
+    }
+
+    // Filtrar por búsqueda (sin tildes)
+    if (currentSearchQuery) {
+        const query = removeAccents(currentSearchQuery);
+        productsToDisplay = productsToDisplay.filter(p => {
+            const name = removeAccents(p.name);
+            const desc = removeAccents(p.description);
+            const cats = p.categories ? p.categories.map(c => removeAccents(c)).join(' ') : '';
+            return name.includes(query) || desc.includes(query) || cats.includes(query);
+        });
     }
 
     if (limit) {
         productsToDisplay = productsToDisplay.slice(0, limit);
     }
 
+    updateResultsCount(productsToDisplay.length);
+
     container.innerHTML = '';
     productsToDisplay.forEach(product => {
+        const escapedName = product.name.replace(/'/g, "\\'");
         const productHTML = `
             <div class="product-item">
                 <div class="product-image">
@@ -947,7 +976,7 @@ function renderProducts(filters = [], limit = null) {
                     <p>${product.description}</p>
                     <div class="product-footer">
                         <span class="price">${formatCOP(product.price)}</span>
-                        <button class="btn-order" onclick="orderWA('${product.name}', '${product.price}')">
+                        <button class="btn-order" onclick="orderWA('${escapedName}', '${product.price}')">
                             Pedir por WhatsApp
                         </button>
                     </div>
@@ -961,7 +990,6 @@ function renderProducts(filters = [], limit = null) {
 // --- FUNCIONES DE WHATSAPP ---
 function contactWA() {
     const url = 'https://wa.me/573151100609?text=Hola,%20me%20gustar%C3%ADa%20recibir%20m%C3%A1s%20informaci%C3%B3n%20sobre%20sus%20flores.%20%C2%BFPodr%C3%ADan%20ayudarme%3F';
-    // Track conversion - Mensaje WhatsApp
     try {
         gtag('event', 'conversion', {
             'send_to': 'AW-17976527804/eNHaCKmS7v4bELyX8PtC',
@@ -980,8 +1008,6 @@ function orderWA(productName, price) {
     const message = `Hola, me interesa ${productName} (${formatCOP(parseFloat(price))}). ¿Podrías darme más información?`;
     const encodedMessage = encodeURIComponent(message);
     const url = `https://wa.me/573151100609?text=${encodedMessage}`;
-    
-    // Track conversion to Google Ads
     try {
         gtag('event', 'conversion', {
             'send_to': 'AW-17976527804/eNHaCKmS7v4bELyX8PtC',
@@ -998,6 +1024,7 @@ function orderWA(productName, price) {
 
 // --- FILTRADO DE PRODUCTOS ---
 function filterProducts(tag) {
+    currentLandingFilter = tag;
     const buttons = document.querySelectorAll('.filter-btn');
     buttons.forEach(btn => {
         if (btn.getAttribute('data-filter') === tag) {
@@ -1007,14 +1034,60 @@ function filterProducts(tag) {
         }
     });
 
-    if (tag === 'all') {
+    if (tag === 'todos') {
         renderProducts();
     } else {
         renderProducts([tag]);
     }
 }
 
-// Inicializar cuando el DOM esté listo
-document.addEventListener('DOMContentLoaded', function() {
+// --- INICIALIZAR CATÁLOGO COMPLETO ---
+function initCatalog() {
+    window._catalogInitialized = true;
+    // Filtros
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+            filterProducts(this.getAttribute('data-filter'));
+        });
+    });
+
+    // Búsqueda
+    const searchInput = document.getElementById('search-input');
+    const searchClear = document.getElementById('search-clear');
+    if (searchInput) {
+        searchInput.addEventListener('input', function() {
+            currentSearchQuery = this.value.trim();
+            if (searchClear) searchClear.style.display = currentSearchQuery ? 'block' : 'none';
+            if (currentLandingFilter === 'todos') {
+                renderProducts();
+            } else {
+                renderProducts([currentLandingFilter]);
+            }
+        });
+    }
+    if (searchClear) {
+        searchClear.addEventListener('click', function() {
+            searchInput.value = '';
+            currentSearchQuery = '';
+            this.style.display = 'none';
+            if (currentLandingFilter === 'todos') {
+                renderProducts();
+            } else {
+                renderProducts([currentLandingFilter]);
+            }
+        });
+    }
+
+    // Render inicial con todos los productos
     renderProducts();
+}
+
+// Inicializar automáticamente si no se define LANDING_PRIORITY_TAG manualmente
+document.addEventListener('DOMContentLoaded', function() {
+    // Solo inicializar si no hay un script en la página que lo haga
+    setTimeout(function() {
+        if (!window._catalogInitialized) {
+            initCatalog();
+        }
+    }, 50);
 });
