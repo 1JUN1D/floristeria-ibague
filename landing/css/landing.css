@@ -1,0 +1,356 @@
+/* ===================================
+   LANDING PAGES CSS - Flore Ibagué
+   Estilo nativo para Google Ads landings
+   =================================== */
+
+/* --- HERO LANDING --- */
+.landing-hero {
+    position: relative;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    overflow: hidden;
+}
+.landing-hero-bg {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.45);
+    z-index: 0;
+}
+.landing-hero .container {
+    position: relative;
+    z-index: 1;
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 60px 20px 50px;
+}
+.landing-hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+    line-height: 1.15;
+    text-shadow: 0 2px 12px rgba(0,0,0,.4);
+}
+.landing-hero p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.15rem;
+    margin-bottom: 28px;
+    opacity: .92;
+    line-height: 1.6;
+}
+.landing-hero .btn-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: #25D366;
+    color: #fff;
+    padding: 14px 32px;
+    border-radius: 50px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: transform .2s, box-shadow .2s;
+    box-shadow: 0 4px 18px rgba(37,211,102,.35);
+}
+.landing-hero .btn-cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 24px rgba(37,211,102,.5);
+}
+.landing-hero .btn-cta svg {
+    width: 22px;
+    height: 22px;
+}
+
+/* --- TRUST BADGES --- */
+.trust-bar {
+    background: #f8f5f0;
+    padding: 20px 0;
+    text-align: center;
+    border-bottom: 1px solid #e8e2d9;
+}
+.trust-bar .badges {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 28px;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+.trust-bar .badge-item {
+    font-family: 'Poppins', sans-serif;
+    font-size: .92rem;
+    color: #555;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* --- CONTENIDO PRINCIPAL --- */
+.landing-content {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 50px 20px;
+}
+.landing-content h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: #2c2c2c;
+    margin-bottom: 18px;
+    text-align: center;
+}
+.landing-content h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.35rem;
+    color: #3a3a3a;
+    margin: 30px 0 12px;
+}
+.landing-content p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    line-height: 1.75;
+    color: #444;
+    margin-bottom: 16px;
+}
+
+/* --- PRODUCTOS GRID --- */
+.products-section {
+    background: #faf8f5;
+    padding: 50px 0;
+}
+.products-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: #2c2c2c;
+    text-align: center;
+    margin-bottom: 12px;
+}
+.products-section .subtitle {
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    color: #777;
+    margin-bottom: 30px;
+    font-size: .95rem;
+}
+.products-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 24px;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.product-item {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(0,0,0,.07);
+    transition: transform .25s, box-shadow .25s;
+}
+.product-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 28px rgba(0,0,0,.12);
+}
+.product-image {
+    width: 100%;
+    aspect-ratio: 1;
+    overflow: hidden;
+}
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .4s;
+}
+.product-item:hover .product-image img {
+    transform: scale(1.05);
+}
+.product-info {
+    padding: 16px 18px 20px;
+}
+.product-info h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    color: #2c2c2c;
+    margin: 0 0 8px;
+}
+.product-info p {
+    font-family: 'Poppins', sans-serif;
+    font-size: .85rem;
+    color: #666;
+    line-height: 1.55;
+    margin-bottom: 14px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.product-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+.product-footer .price {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #2c2c2c;
+}
+.product-footer .btn-order {
+    background: #25D366;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 25px;
+    font-family: 'Poppins', sans-serif;
+    font-size: .82rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background .2s;
+    white-space: nowrap;
+}
+.product-footer .btn-order:hover {
+    background: #1fb855;
+}
+
+/* --- FILTER BUTTONS --- */
+.filter-bar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 28px;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 20px;
+}
+.filter-btn {
+    font-family: 'Poppins', sans-serif;
+    font-size: .88rem;
+    padding: 8px 20px;
+    border: 1.5px solid #ccc;
+    background: #fff;
+    color: #555;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all .2s;
+}
+.filter-btn:hover, .filter-btn.active {
+    background: #2c2c2c;
+    color: #fff;
+    border-color: #2c2c2c;
+}
+
+/* --- FAQ SECTION --- */
+.faq-section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 50px 20px;
+}
+.faq-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    color: #2c2c2c;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.faq-item {
+    border-bottom: 1px solid #e5e0d8;
+    padding: 18px 0;
+}
+.faq-question {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    color: #2c2c2c;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.faq-question::after {
+    content: '+';
+    font-size: 1.4rem;
+    color: #999;
+    transition: transform .2s;
+}
+.faq-item.open .faq-question::after {
+    content: '−';
+}
+.faq-answer {
+    font-family: 'Poppins', sans-serif;
+    font-size: .93rem;
+    color: #555;
+    line-height: 1.7;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .35s ease, padding .35s ease;
+    padding-top: 0;
+}
+.faq-item.open .faq-answer {
+    max-height: 500px;
+    padding-top: 12px;
+}
+
+/* --- CTA FINAL --- */
+.cta-final {
+    background: linear-gradient(135deg, #2c2c2c 0%, #444 100%);
+    color: #fff;
+    text-align: center;
+    padding: 60px 20px;
+}
+.cta-final h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    margin-bottom: 14px;
+    color: #fff;
+}
+.cta-final p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.05rem;
+    opacity: .85;
+    margin-bottom: 28px;
+    color: #fff;
+}
+.cta-final .btn-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: #25D366;
+    color: #fff;
+    padding: 14px 36px;
+    border-radius: 50px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: transform .2s, box-shadow .2s;
+}
+.cta-final .btn-cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 24px rgba(37,211,102,.5);
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+    .landing-hero h1 { font-size: 2rem; }
+    .landing-hero p { font-size: 1rem; }
+    .products-container { grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 16px; }
+    .trust-bar .badges { gap: 16px; }
+    .landing-content { padding: 30px 16px; }
+    .faq-section { padding: 30px 16px; }
+}
+@media (max-width: 480px) {
+    .landing-hero h1 { font-size: 1.6rem; }
+    .products-container { grid-template-columns: 1fr; }
+    .product-footer { flex-direction: column; align-items: flex-start; }
+}

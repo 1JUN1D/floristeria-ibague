@@ -1,0 +1,1020 @@
+// ===================================
+// LANDING PAGE JS - Flore Ibagué
+// Catálogo con prioridad por categoría + Conversiones Google Ads
+// ===================================
+
+// --- DATOS DEL CATÁLOGO COMPLETO ---
+const products = [
+            {
+                id: 1,
+                name: "Para Ti con Cariño",
+                price: 18750,
+                image: "../assets/foto81.webp",
+                description: "Mini bouquet de margaritas amarillas en cartulina negra con mensaje 'Para Ti' escrito a mano y lazo dorado. El detalle más económico y tierno. Pequeño en tamaño pero grande en significado. Perfecto para sorpresas rápidas y emotivas.",
+                categories: ["bouquets", "precio-bajo"]
+            },
+            {
+                id: 2,
+                name: "Rosa Eterna Mini",
+                price: 18750,
+                image: "../assets/foto84.webp",
+                description: "Mini bouquet con 1 rosa eterna amarilla dorada envuelta en papel blanco con lazo amarillo y texto personalizado. El detalle más económico y duradero. Perfecto para expresar cariño con un regalo que nunca se marchita.",
+                categories: ["rosas-eternas", "precio-bajo"]
+            },
+            {
+                id: 3,
+                name: "Te Quiero Solar",
+                price: 22500,
+                image: "../assets/foto60.webp",
+                description: "Mini bouquet con 1 girasol envuelto en cartulina negra con mensaje 'Te Quiero' y lazo amarillo. El detalle más económico y tierno para expresar amor. Incluye tarjeta personalizada. Pequeño en tamaño, grande en significado.",
+                categories: ["girasoles", "precio-bajo"]
+            },
+            {
+                id: 4,
+                name: "Girasol Poético",
+                price: 31250,
+                image: "../assets/foto83.webp",
+                description: "1 girasol presentado en cartulina negra con texto personalizado escrito a mano y lazo dorado. Detalle artístico y sentimental que combina la belleza del girasol con palabras desde el corazón. Regalo original y emotivo.",
+                categories: ["girasoles", "precio-bajo"]
+            },
+            {
+                id: 5,
+                name: "Poema Amarillo",
+                price: 43750,
+                image: "../assets/foto69.webp",
+                description: "Bouquet de pompones amarillos envuelto en cartulina negra con texto poético escrito a mano y lazo amarillo. Detalle artístico y sentimental que combina flores con palabras de amor. Regalo original y económico cargado de significado.",
+                categories: ["pompones", "precio-bajo"]
+            },
+            {
+                id: 6,
+                name: "Frescura Amarilla",
+                price: 47500,
+                image: "../assets/foto78.webp",
+                description: "Bouquet sencillo y fresco de margaritas amarillas con follaje verde envuelto en papel durazno. Detalle económico y alegre que transmite optimismo y buenos deseos. Perfecto para gestos espontáneos llenos de color y vitalidad.",
+                categories: ["bouquets", "precio-bajo"]
+            },
+            {
+                id: 7,
+                name: "Sol Amarillo",
+                price: 52500,
+                image: "../assets/foto53.webp",
+                description: "Bouquet alegre de pompones amarillos abundantes envueltos en papel turquesa. Incluye tarjeta personalizada. Detalle fresco, vibrante y económico que transmite energía positiva y alegría pura. Perfecto para iluminar cualquier momento.",
+                categories: ["pompones", "precio-bajo"]
+            },
+            {
+                id: 8,
+                name: "Dulce Sorpresa Solar",
+                price: 56250,
+                image: "../assets/foto74.webp",
+                description: "Bouquet divertido con girasoles, margaritas de color fucsia, gomitas y quipitos envuelto en cartulina negra. Incluye tarjeta personalizada. Combinación creativa de flores y dulces perfecta para sorprender con alegría y sabor.",
+                categories: ["girasoles", "chocolates", "precio-bajo"]
+            },
+            {
+                id: 9,
+                name: "Elegancia Soleada",
+                price: 68750,
+                image: "../assets/foto27.webp",
+                description: "Bouquet encantador con 3 girasoles, nubes (gypsophila) y follaje verde. Envuelto en papel coreano rosa y blanco con lazo. Detalle sencillo pero luminoso que transmite alegría y admiración con estilo delicado.",
+                categories: ["girasoles", "coreano", "precio-bajo"]
+            },
+            {
+                id: 10,
+                name: "Ramillete del Sol",
+                price: 68750,
+                image: "../assets/foto38.webp",
+                description: "Bouquet compacto y colorido con 1 girasol central, rosas rosadas, flores surtidas en tonos vibrantes. Envuelto en papel coreano rosa con lazo. Detalle económico pero lleno de vida y alegría, perfecto para sorpresas espontáneas.",
+                categories: ["girasoles", "bouquets", "precio-bajo"]
+            },
+            {
+                id: 11,
+                name: "Rosas Eternas Doradas",
+                price: 68750,
+                image: "../assets/foto65.webp",
+                description: "Elegante caja redonda negra con 4 rosas eternas doradas, follaje verde y tarjeta personalizada con mensaje especial. Diseño sofisticado con lazo dorado. Un regalo duradero que simboliza amor eterno e inmortal.",
+                categories: ["rosas-eternas", "cajas", "precio-bajo"]
+            },
+            {
+                id: 12,
+                name: "Giras en Mi Mente",
+                price: 72500,
+                image: "../assets/foto20.webp",
+                description: "Detalle especial con 1 girasol central rodeado de flores surtidas en tonos rosa y blanco, acompañado de 4 chocolates Ferrero Rocher y tarjeta personalizada. Envuelto en papel coreano rosa. Regalo dulce y encantador.",
+                categories: ["girasoles", "chocolates", "precio-bajo"]
+            },
+            {
+                id: 13,
+                name: "Trío Nocturno",
+                price: 72500,
+                image: "../assets/foto73.webp",
+                description: "Bouquet elegante con 3 girasoles grandes y follaje verde envuelto en cartulina negra. Incluye tarjeta personalizada. Contraste sofisticado entre el amarillo dorado y el negro que transmite distinción y carácter. Detalle con personalidad.",
+                categories: ["girasoles", "precio-bajo"]
+            },
+            {
+                id: 14,
+                name: "Corazón Floral con Nutella",
+                price: 75000,
+                image: "../assets/foto33.webp",
+                description: "Bouquet en forma de corazón con 3 girasoles, manzanilla y follaje en papel negro elegante. Incluye Nutella y tarjeta personalizada. Detalle creativo y original que combina flores, dulzura y amor en una presentación única.",
+                categories: ["girasoles", "chocolates", "precio-bajo"]
+            },
+            {
+                id: 15,
+                name: "Dulce Serenidad",
+                price: 81250,
+                image: "../assets/foto4.webp",
+                description: "Bouquet delicado con gerberas rosadas, claveles suaves y follaje verde natural. Envuelto en elegante papel coreano bicolor rosa y blanco con lazo decorativo. Detalle tierno perfecto para gestos espontáneos llenos de cariño.",
+                categories: ["gerberas", "coreano", "precio-bajo"]
+            },
+            {
+                id: 16,
+                name: "Tres Veces Te Amo",
+                price: 81250,
+                image: "../assets/foto21.webp",
+                description: "Elegante bouquet con 3 girasoles envueltos en cartulina negra con dulce incluido y lazo amarillo. Presentación moderna y sofisticada que contrasta la calidez del girasol con la elegancia del negro. Detalle con personalidad.",
+                categories: ["girasoles", "precio-bajo"]
+            },
+            {
+                id: 17,
+                name: "Brillo Natural",
+                price: 81250,
+                image: "../assets/foto55.webp",
+                description: "Bouquet encantador con 3 girasoles, astromelias blancas y clavellinas en papel coreano bicolor blanco y negro. Combinación fresca y luminosa con tarjeta personalizada. Detalle sencillo pero elegante que transmite calidez y admiración.",
+                categories: ["girasoles", "coreano", "precio-bajo"]
+            },
+            {
+                id: 18,
+                name: "Bouquet Rústico Solar",
+                price: 81250,
+                image: "../assets/foto66.webp",
+                description: "Bouquet con 3 girasoles, eucalipto, manzanilla y decoración natural envuelto en papel kraft con lazo lavanda. Estilo rústico y elegante con tarjeta de la marca. Combinación campestre que transmite calidez y autenticidad.",
+                categories: ["girasoles", "bouquets", "precio-bajo"]
+            },
+            {
+                id: 19,
+                name: "Girasol Poético con Ferrero",
+                price: 81250,
+                image: "../assets/foto70.webp",
+                description: "Bouquet con girasoles, margaritas y 3 chocolates Ferrero Rocher en cartulina negra con texto poético escrito a mano. Combinación de flores, dulzura y sentimiento. Detalle creativo y romántico que habla directo al corazón.",
+                categories: ["girasoles", "chocolates", "precio-bajo"]
+            },
+            {
+                id: 20,
+                name: "Girasol con Globo Especial",
+                price: 81250,
+                image: "../assets/foto82.webp",
+                description: "Bouquet con girasol, astromelias blancas y eucalipto envuelto en papel blanco elegante. Incluye globo corazón dorado personalizado. Detalle encantador y festivo ideal para celebraciones especiales y sorpresas con mucho cariño.",
+                categories: ["girasoles", "bouquets", "precio-bajo"]
+            },
+            {
+                id: 21,
+                name: "Te Quiero Rosado",
+                price: 81250,
+                image: "../assets/foto85.webp",
+                description: "Delicado bouquet de rosas rosadas con abundante gypsophila (nube) envuelto en papel blanco estilo coreano. Un detalle romántico y tierno ideal para expresar amor con suavidad y elegancia. Incluye tarjeta personalizada.",
+                categories: ["bouquets", "coreano", "precio-bajo"]
+            },
+            {
+                id: 22,
+                name: "Te Amo Rosado",
+                price: 81250,
+                image: "../assets/foto104.webp",
+                description: "Delicado bouquet de rosas rosadas con eucalipto envuelto en papel blanco estilo minimalista. Sencillo, fresco y romántico. El detalle perfecto para decir 'te amo' con elegancia y naturalidad sin necesidad de excesos.",
+                categories: ["bouquets", "coreano", "precio-bajo"]
+            },
+            {
+                id: 23,
+                name: "Detalle Natural",
+                price: 85000,
+                image: "../assets/foto15.webp",
+                description: "Ramo fresco con 3 gerberas moradas, astromelias y margaritas blancas acompañadas de solidago verde. Envuelto en papel decorativo con tarjeta de la marca. Detalle económico y bonito perfecto para expresar gratitud y cariño sincero.",
+                categories: ["gerberas", "bouquets", "precio-bajo"]
+            },
+            {
+                id: 24,
+                name: "Rosas Eternas Bouquet",
+                price: 85000,
+                image: "../assets/foto79.webp",
+                description: "Bouquet de 8 rosas eternas amarillas doradas con moñito blanco decorado en papel fotográfico con corazones. Diseño delicado y duradero que simboliza amor imperecedero. Regalo sofisticado que no se marchita y perdura en el tiempo.",
+                categories: ["rosas-eternas", "precio-bajo"]
+            },
+            {
+                id: 25,
+                name: "Cuatro Soles con Margarita",
+                price: 97500,
+                image: "../assets/foto57.webp",
+                description: "Bouquet delicado con 4 girasoles y margaritas blancas decorado en papel coreano rosa. Combinación fresca y alegre que equilibra la calidez del girasol con la pureza de la margarita. Detalle encantador para cualquier ocasión.",
+                categories: ["girasoles", "coreano", "precio-bajo"]
+            },
+            {
+                id: 26,
+                name: "Elegancia Oscura",
+                price: 97500,
+                image: "../assets/foto59.webp",
+                description: "Bouquet de 4 girasoles grandes con follaje verde y solidago envuelto en elegante cartulina negra con tarjeta personalizada. Contraste sofisticado entre el amarillo radiante y el negro que transmite distinción y carácter único.",
+                categories: ["girasoles", "precio-bajo"]
+            },
+            {
+                id: 27,
+                name: "Cuarteto con Ferrero",
+                price: 97500,
+                image: "../assets/foto63.webp",
+                description: "Bouquet festivo con 4 girasoles grandes, 4 chocolates Ferrero Rocher, tarjeta de feliz día y lazo naranja en papel negro. Combinación perfecta entre flores y dulzura para celebrar momentos especiales con estilo y sabor.",
+                categories: ["girasoles", "chocolates", "precio-bajo"]
+            },
+            {
+                id: 28,
+                name: "Elegancia en Negro",
+                price: 97500,
+                image: "../assets/foto86.webp",
+                description: "Bouquet premium de rosas rojas intensas con follaje de eucalipto, envuelto en papel negro elegante con lazo de cinta negra. Presentación sofisticada y moderna que combina pasión y distinción. El regalo perfecto para impresionar.",
+                categories: ["bouquets", "coreano", "precio-bajo"]
+            },
+            {
+                id: 29,
+                name: "Encanto Sencillo",
+                price: 106250,
+                image: "../assets/foto14.webp",
+                description: "Bouquet compacto y encantador con gerberas rosadas y clavellinas blancas envueltas en papel coreano rosa. Detalle sencillo pero impactante que demuestra cariño con estilo. Ideal para sorpresas espontáneas y gestos del corazón.",
+                categories: ["gerberas", "coreano", "precio-bajo"]
+            },
+            {
+                id: 30,
+                name: "Trío Ferrero Solar",
+                price: 106250,
+                image: "../assets/foto61.webp",
+                description: "Bouquet con 3 girasoles coronados con 3 chocolates Ferrero Rocher, decoración de follaje y lazo rojo en papel negro elegante. Combinación irresistible de flores y dulzura con tarjeta personalizada. Regalo con carácter y sabor.",
+                categories: ["girasoles", "chocolates", "precio-bajo"]
+            },
+            {
+                id: 31,
+                name: "Sorpresa con Globo",
+                price: 110000,
+                image: "../assets/foto68.webp",
+                description: "Arreglo en caja con 3 girasoles, yicsu (gypsophila) y globo personalizado dorado. Presentación festiva con lazo amarillo y tarjeta. Detalle especial ideal para esposas, madres y personas queridas que merecen un regalo con significado.",
+                categories: ["girasoles", "cajas", "precio-bajo"]
+            },
+            {
+                id: 32,
+                name: "Elegancia en Cartuchos",
+                price: 118750,
+                image: "../assets/foto45.webp",
+                description: "Bouquet nupcial con 10 cartuchos blancos (calas) atados con cinta de encaje y perlas. Diseño minimalista y refinado que transmite sofisticación absoluta. Perfecto para novias con estilo moderno y elegante.",
+                categories: ["novia", "precio-bajo"]
+            },
+            {
+                id: 33,
+                name: "Dulzura Rosada",
+                price: 118750,
+                image: "../assets/foto48.webp",
+                description: "Bouquet de novia con rosas rosadas y blancas acompañadas de yicsu delicado. Envuelto con cinta dorada satinada. Obsequio incluido: ramillete del novio a juego. Detalle tierno y romántico para parejas que combinan sus accesorios.",
+                categories: ["novia", "precio-bajo"]
+            },
+            {
+                id: 34,
+                name: "Reina de Pompones",
+                price: 118750,
+                image: "../assets/foto54.webp",
+                description: "Ramo grande con 4 paquetes de pompones amarillos en decoración tipo reina. Envuelto en papel blanco elegante. Arreglo voluminoso y llamativo que irradia alegría y positivismo. Ideal para sorprender con abundancia y color dorado.",
+                categories: ["pompones", "precio-bajo"]
+            },
+            {
+                id: 35,
+                name: "Corazón de Pompones",
+                price: 118750,
+                image: "../assets/foto71.webp",
+                description: "Caja en forma de corazón rosa repleta de pompones amarillos decorados con 2 mariposas doradas. Incluye tarjeta personalizada. Diseño romántico y original que combina la calidez del amarillo con la forma del amor. Regalo encantador.",
+                categories: ["pompones", "cajas", "precio-bajo"]
+            },
+            {
+                id: 36,
+                name: "Pureza Solar",
+                price: 121250,
+                image: "../assets/foto64.webp",
+                description: "Bouquet delicado con 5 girasoles y margaritas blancas envuelto en papel coreano rosa. Incluye tarjeta personalizada. Combinación luminosa y fresca que transmite paz, alegría y buenos deseos. Ideal para sorpresas con encanto natural.",
+                categories: ["girasoles", "bouquets", "precio-bajo"]
+            },
+            {
+                id: 37,
+                name: "Ternura Rosada",
+                price: 122500,
+                image: "../assets/foto50.webp",
+                description: "Bouquet compacto y redondo con claveles rosados, rosas en tonos pastel y yicsu. Diseño esférico delicado que transmite dulzura y romanticismo. Perfecto para novias que aman los tonos suaves y la feminidad.",
+                categories: ["novia", "precio-bajo"]
+            },
+            {
+                id: 38,
+                name: "Coral y Nieve",
+                price: 122500,
+                image: "../assets/foto51.webp",
+                description: "Bouquet nupcial con rosas coral, claveles blancos, yicsu y eucalipto. Decorado con elegante lazo lavanda. Incluye ramillete del novio. Combinación fresca y moderna que aporta un toque de color sin perder la elegancia nupcial.",
+                categories: ["novia", "precio-bajo"]
+            },
+            {
+                id: 39,
+                name: "Mi Niña Bella",
+                price: 122500,
+                image: "../assets/foto97.webp",
+                description: "Bouquet clásico de rosas rojas intensas envueltas en papel crema/beige con lazo rojo de cinta satinada. Presentación limpia, elegante y atemporal. El ramo perfecto para decir 'te quiero' con estilo y sencillez.",
+                categories: ["bouquets", "coreano", "precio-bajo"]
+            },
+            {
+                id: 40,
+                name: "Rosas y Ferrero Dorado",
+                price: 122500,
+                image: "../assets/foto101.webp",
+                description: "Bouquet de rosas rojas con 5 Ferrero Rocher, gypsophila y abundante follaje verde, envuelto en papel negro con interior dorado y lazo rojo. La combinación perfecta de flores y chocolate para un regalo irresistible y delicioso.",
+                categories: ["bouquets", "chocolates", "precio-bajo"]
+            },
+            {
+                id: 41,
+                name: "Vestido Campestre",
+                price: 131250,
+                image: "../assets/foto18.webp",
+                description: "Ramo encantador con 3 girasoles, margaritas, claveles rosados, rosas y follaje verde. Envuelto en papel kraft natural con lazo rojo. Combinación campestre y alegre que transmite frescura y buenos deseos.",
+                categories: ["girasoles", "bouquets", "precio-bajo"]
+            },
+            {
+                id: 42,
+                name: "Princesa Rosada",
+                price: 131250,
+                image: "../assets/foto88.webp",
+                description: "Elegante bouquet de rosas rosadas con ramas de eucalipto, envuelto en papel blanco y rosa con lazo delicado. Estilo coreano fresco y romántico con tarjeta decorativa. Perfecto para sorprender a alguien especial con dulzura y estilo.",
+                categories: ["bouquets", "coreano", "precio-bajo"]
+            },
+            {
+                id: 43,
+                name: "Jardín de Primavera",
+                price: 137500,
+                image: "../assets/foto1.webp",
+                description: "Bouquet fresco y encantador con gerberas rosadas, pompones, manzanilla, rosas y claveles. Combinación delicada que transmite alegría y ternura. Envuelto en papel decorativo con tarjeta de la marca. Ideal para sorprender con frescura y color.",
+                categories: ["gerberas", "bouquets", "precio-bajo"]
+            },
+            {
+                id: 44,
+                name: "Alegría Campestre",
+                price: 137500,
+                image: "../assets/foto16.webp",
+                description: "Bouquet colorido con gerberas rosadas, rosas, follaje verde y pompones en tonos variados. Presentación envuelta con tarjeta personalizada. Arreglo fresco y vibrante que transmite felicidad, vitalidad y buenos deseos para cualquier ocasión.",
+                categories: ["gerberas", "bouquets", "precio-bajo"]
+            },
+            {
+                id: 45,
+                name: "Dulzura Floral",
+                price: 137500,
+                image: "../assets/foto91.webp",
+                description: "Hermoso bouquet con hortensia rosada, rosas en tonos pastel, mini rosas blancas y claveles verdes, envuelto en papel crema y lila con lazo suave. Una mezcla delicada y sofisticada que transmite ternura y cariño sincero.",
+                categories: ["bouquets", "premium", "precio-bajo"]
+            },
+            {
+                id: 46,
+                name: "Blancura Celestial",
+                price: 143750,
+                image: "../assets/foto42.webp",
+                description: "Bouquet nupcial de rosas blancas con yicsu (gypsophila) abundante. Clásico y delicado, perfecto para ceremonias tradicionales. Transmite inocencia y amor puro. Presentación compacta y elegante con acabado impecable.",
+                categories: ["novia", "precio-bajo"]
+            },
+            {
+                id: 47,
+                name: "Siete Soles con Ferrero",
+                price: 143750,
+                image: "../assets/foto76.webp",
+                description: "Bouquet generoso con 7 girasoles y 3 chocolates Ferrero Rocher envuelto en papel negro y amarillo con follaje. Incluye tarjeta personalizada. Combinación perfecta entre flores radiantes y dulzura para un regalo memorable.",
+                categories: ["girasoles", "chocolates", "precio-bajo"]
+            },
+            {
+                id: 48,
+                name: "Perfección en Rosa y Lirios",
+                price: 143750,
+                image: "../assets/foto89.webp",
+                description: "Bouquet mixto de rosas rosadas con lirios blancos, gypsophila y follaje verde, envuelto en papel verde menta con lazo rosa. Una combinación exquisita de texturas y aromas que transmite amor puro y perfección.",
+                categories: ["bouquets", "premium", "precio-bajo"]
+            },
+            {
+                id: 49,
+                name: "Terroncito de Amor",
+                price: 147500,
+                image: "../assets/foto102.webp",
+                description: "Bouquet encantador de rosas rojas con gerberas rosadas y ramas de eucalipto, envuelto en papel rosa y crema con lazo rojo satinado y tarjeta personalizada. La mezcla perfecta entre dulzura y pasión en un solo ramo.",
+                categories: ["bouquets", "gerberas", "coreano", "precio-bajo"]
+            },
+            {
+                id: 50,
+                name: "Pasión con Perlas",
+                price: 150000,
+                image: "../assets/foto52.webp",
+                description: "Bouquet de novia con rosas rojas, blancas y rosadas decoradas con perlas y yicsu. Incluye ramillete del novio a juego. Diseño romántico que combina colores intensos con detalles delicados. Perfecto para bodas llenas de amor.",
+                categories: ["novia", "precio-medio"]
+            },
+            {
+                id: 51,
+                name: "Siete Soles",
+                price: 150000,
+                image: "../assets/foto56.webp",
+                description: "Bouquet espectacular con 7 girasoles grandes acompañados de nubes (gypsophila). Decorado en papel coreano rosa con estampado 'Love'. Arreglo luminoso y generoso que transmite admiración y amor sincero. Tarjeta incluida.",
+                categories: ["girasoles", "coreano", "precio-medio"]
+            },
+            {
+                id: 52,
+                name: "Mi Corazón Derretido",
+                price: 150000,
+                image: "../assets/foto109.webp",
+                description: "Bouquet de rosas rojas con gypsophila y caja de Ferrero Rocher, envuelto en papel rosa con diseño mármol dorado y lazo rosa satinado. Un regalo que combina romance y dulzura en una presentación moderna y llamativa.",
+                categories: ["bouquets", "chocolates", "coreano", "precio-medio"]
+            },
+            {
+                id: 53,
+                name: "Brisa Lavanda",
+                price: 156250,
+                image: "../assets/foto8.webp",
+                description: "Bouquet armonioso que combina hortensias moradas, rosas, gerberas rosadas y astromelias. Envuelto en delicado papel lavanda con lazo. Combinación única de colores que transmite elegancia, misterio y romanticismo.",
+                categories: ["gerberas", "bouquets", "precio-medio"]
+            },
+            {
+                id: 54,
+                name: "Amanecer Dorado",
+                price: 156250,
+                image: "../assets/foto24.webp",
+                description: "Bouquet delicado con 3 girasoles, clavellinas, rosas en tonos durazno y nubes (gypsophila). Envuelto en papel blanco con lazo. Combinación suave y luminosa que transmite paz, esperanza y cariño genuino.",
+                categories: ["girasoles", "bouquets", "precio-medio"]
+            },
+            {
+                id: 55,
+                name: "Sol y Pasión",
+                price: 156250,
+                image: "../assets/foto29.webp",
+                description: "Bouquet impactante con 3 girasoles, rosas rojas, follaje verde y nubes. Envuelto en papel blanco y negro elegante. Combinación clásica que fusiona la energía del sol con la intensidad del amor. Tarjeta personalizada incluida.",
+                categories: ["girasoles", "bouquets", "precio-medio"]
+            },
+            {
+                id: 56,
+                name: "Pureza Natural",
+                price: 156250,
+                image: "../assets/foto41.webp",
+                description: "Bouquet de novia con rosas blancas y eucalipto verde. Diseño elegante y minimalista con tallos envueltos en cinta blanca. Transmite frescura, pureza y sofisticación. Ideal para novias que buscan un estilo natural y romántico.",
+                categories: ["novia", "precio-medio"]
+            },
+            {
+                id: 57,
+                name: "Romance Bicolor",
+                price: 156250,
+                image: "../assets/foto46.webp",
+                description: "Bouquet de novia con rosas rojas y blancas entrelazadas con yicsu abundante. Combinación clásica que simboliza amor apasionado y pureza. Diseño redondo y compacto con acabado impecable para una boda memorable.",
+                categories: ["novia", "precio-medio"]
+            },
+            {
+                id: 58,
+                name: "Serenidad Blanca",
+                price: 156250,
+                image: "../assets/foto47.webp",
+                description: "Bouquet nupcial con astromelias blancas y rosas en tonos crema con follaje verde. Atado con cuerda natural estilo rústico. Combinación fresca y delicada que transmite paz y armonía. Ideal para bodas al aire libre.",
+                categories: ["novia", "precio-medio"]
+            },
+            {
+                id: 59,
+                name: "Explosión de Color",
+                price: 160000,
+                image: "../assets/foto19.webp",
+                description: "Bouquet vibrante con 2 girasoles, 2 gerberas, boca de dragón, nubes, margaritas y solidago. Envuelto en papel coreano rosa. Mezcla multicolor llena de vida y alegría que celebra cada momento con intensidad.",
+                categories: ["girasoles", "gerberas", "bouquets", "precio-medio"]
+            },
+            {
+                id: 60,
+                name: "Mi Amor Bonito",
+                price: 162500,
+                image: "../assets/foto110.webp",
+                description: "Bouquet de rosas rojas con eucalipto envuelto en papel rosa suave con lazo rojo y tarjeta personalizada. Estilo coreano elegante y romántico con un toque natural. El equilibrio perfecto entre sencillez y sofisticación para expresar amor.",
+                categories: ["bouquets", "coreano", "precio-medio"]
+            },
+            {
+                id: 61,
+                name: "Canasta Dulce Rosa",
+                price: 168750,
+                image: "../assets/foto13.webp",
+                description: "Canasta decorativa con gerberas rosadas intensas, nubes (gypsophila) y margaritas blancas sobre follaje verde. Combinación tierna y fresca que transmite cariño y delicadeza. Perfecta para regalar en cualquier ocasión especial.",
+                categories: ["gerberas", "canastas", "precio-medio"]
+            },
+            {
+                id: 62,
+                name: "Jardín del Sol",
+                price: 168750,
+                image: "../assets/foto22.webp",
+                description: "Ramo abundante con 3 girasoles, 3 rosas rosadas, 4 gerberas y margaritas con follaje. Envuelto en papel coreano rosa. Combinación exuberante que fusiona la alegría del girasol con la delicadeza de las gerberas y rosas.",
+                categories: ["girasoles", "gerberas", "bouquets", "precio-medio"]
+            },
+            {
+                id: 63,
+                name: "Nube de Rosas",
+                price: 168750,
+                image: "../assets/foto43.webp",
+                description: "Bouquet redondo de rosas blancas con base de yicsu (gypsophila). Diseño esférico compacto y sofisticado. Cada rosa transmite elegancia y distinción. Perfecto para novias que desean un ramo clásico con presencia imponente.",
+                categories: ["novia", "precio-medio"]
+            },
+            {
+                id: 64,
+                name: "Soleado con Dulzura",
+                price: 173750,
+                image: "../assets/foto36.webp",
+                description: "Bouquet encantador con 6 girasoles rodeados de clavellinas rosadas en papel coreano decorado con margaritas. Incluye dulce y tarjeta personalizada. Combinación fresca y tierna perfecta para expresar cariño con un toque especial.",
+                categories: ["girasoles", "coreano", "chocolates", "precio-medio"]
+            },
+            {
+                id: 65,
+                name: "Te Amaré Para Siempre",
+                price: 173750,
+                image: "../assets/foto87.webp",
+                description: "Espectacular ramo redondo de abundantes rosas rojas rodeadas de gypsophila, con cinta personalizada 'Te Amo' y envoltura rosa translúcida estilo coreano. Un regalo grandioso que grita amor eterno. Ideal para aniversarios y declaraciones.",
+                categories: ["bouquets", "coreano", "premium", "precio-medio"]
+            },
+            {
+                id: 66,
+                name: "Cálido Amor",
+                price: 181250,
+                image: "../assets/foto17.webp",
+                description: "Bouquet radiante con 5 girasoles protagonistas acompañados de astromelias, claveles y eucalipto. Envuelto en elegante papel verde menta con lazo. Transmite calidez, energía positiva y amor sincero. Ideal para iluminar cualquier día.",
+                categories: ["girasoles", "bouquets", "precio-medio"]
+            },
+            {
+                id: 67,
+                name: "Jardín de Ensueño",
+                price: 185000,
+                image: "../assets/foto90.webp",
+                description: "Lujoso bouquet mixto con hortensia lila, rosas rosadas, mini rosas, claveles y alstroemeria, envuelto en papel azul turquesa con lazo elegante. Una explosión de color y frescura que evoca un jardín de fantasía. Arreglo premium para ocasiones especiales.",
+                categories: ["bouquets", "premium", "precio-medio"]
+            },
+            {
+                id: 68,
+                name: "Corazón Solar Hermoso",
+                price: 187500,
+                image: "../assets/foto72.webp",
+                description: "Caja corazón blanca con 9 girasoles, follaje y nubes. Incluye cartel decorativo 'Para la más hermosa'. Diseño romántico y luminoso que combina la calidez del girasol con el símbolo del amor. Regalo premium para momentos especiales.",
+                categories: ["girasoles", "cajas", "precio-medio"]
+            },
+            {
+                id: 69,
+                name: "Fusión Silvestre",
+                price: 193750,
+                image: "../assets/foto3.webp",
+                description: "Ramo exuberante y llamativo con gerberas en tonos rosa y fucsia, margaritas y rosas. Presentación abundante envuelta en papel periódico decorativo con lazo rosado. Diseño moderno con personalidad que transmite energía y pasión.",
+                categories: ["gerberas", "bouquets", "precio-medio"]
+            },
+            {
+                id: 70,
+                name: "Romance Coreano",
+                price: 193750,
+                image: "../assets/foto9.webp",
+                description: "Hermoso bouquet con rosas en tonos pastel, gerbera, margaritas, tulipán y alelís. Decorado en elegante estilo coreano con papel rosa suave. Combinación romántica y delicada perfecta para enamorar desde la primera mirada.",
+                categories: ["gerberas", "bouquets", "coreano", "precio-medio"]
+            },
+            {
+                id: 71,
+                name: "Cumpleaños Radiante",
+                price: 193750,
+                image: "../assets/foto37.webp",
+                description: "Caja elegante repleta de girasoles con globo burbuja personalizado 'Feliz Cumpleaños Amor'. Arreglo festivo y luminoso ideal para celebraciones especiales. Presentación premium con tarjeta incluida que hace de cada cumpleaños un momento mágico.",
+                categories: ["girasoles", "cajas", "precio-medio"]
+            },
+            {
+                id: 72,
+                name: "Gracia Nupcial",
+                price: 193750,
+                image: "../assets/foto44.webp",
+                description: "Bouquet de novia con rosas blancas, lirios elegantes y yicsu. Combinación sofisticada que aporta volumen y textura. Los lirios añaden un toque de distinción y fragancia. Ideal para ceremonias formales y elegantes.",
+                categories: ["novia", "premium", "precio-medio"]
+            },
+            {
+                id: 73,
+                name: "Caja Noir de Girasoles",
+                price: 193750,
+                image: "../assets/foto67.webp",
+                description: "Caja redonda negra elegante con 7 girasoles, moño decorativo y tarjeta personalizada. Diseño moderno y sofisticado que combina la calidez del girasol con la elegancia del negro. Pieza central perfecta para decorar con distinción.",
+                categories: ["girasoles", "cajas", "precio-medio"]
+            },
+            {
+                id: 74,
+                name: "Nube de Amor",
+                price: 193750,
+                image: "../assets/foto106.webp",
+                description: "Abundante bouquet mixto de rosas rojas, rosas rosadas, claveles rosados y eucalipto, envuelto en papel blanco con lazo rosa. Una nube de flores llena de color y romanticismo que transmite amor en cada pétalo. Perfecto para ocasiones especiales.",
+                categories: ["bouquets", "premium", "precio-medio"]
+            },
+            {
+                id: 75,
+                name: "Caja Elegancia Negra",
+                price: 197500,
+                image: "../assets/foto40.webp",
+                description: "Caja redonda negra con girasoles abundantes y follaje verde, decorada con lazo de cinta amarilla dorada. Contraste elegante y moderno entre el negro y el amarillo radiante. Arreglo sofisticado ideal para quienes buscan un regalo con estilo único.",
+                categories: ["girasoles", "cajas", "precio-medio"]
+            },
+            {
+                id: 76,
+                name: "Queen of My Heart",
+                price: 197500,
+                image: "../assets/foto100.webp",
+                description: "Elegante arreglo de rosas rojas de tallo largo con eucalipto en jarrón de vidrio transparente con cinta negra. Estilo moderno y sofisticado que realza la belleza natural de las rosas. Un regalo con presencia que perdura por días.",
+                categories: ["bouquets", "premium", "precio-medio"]
+            },
+            {
+                id: 77,
+                name: "Esplendor Dorado",
+                price: 200000,
+                image: "../assets/foto32.webp",
+                description: "Ramo espectacular con 10 girasoles grandes rodeados de nubes (gypsophila) y follaje verde. Envuelto en papel blanco elegante. Arreglo generoso y luminoso que transmite admiración, gratitud y energía positiva desbordante.",
+                categories: ["girasoles", "bouquets", "premium", "precio-medio"]
+            },
+            {
+                id: 78,
+                name: "Rosa Perfecta Escalera",
+                price: 200000,
+                image: "../assets/foto105.webp",
+                description: "Espectacular ramo de rosas rojas dispuestas en forma escalonada con papel negro transparente y mensaje personalizado de feliz cumpleaños. Presentación única tipo escalera que impacta visualmente. Ideal para cumpleaños y celebraciones especiales.",
+                categories: ["bouquets", "coreano", "premium", "precio-medio"]
+            },
+            {
+                id: 79,
+                name: "Rosas y Lirios en Jarrón",
+                price: 200000,
+                image: "../assets/foto108.webp",
+                description: "Elegante arreglo de rosas rojas con lirios amarillos, helechos y follaje verde en jarrón de vidrio con lazo rojo. Combinación clásica y sofisticada con aroma exquisito que llena cualquier espacio de vida y color. Ideal para decorar y regalar.",
+                categories: ["bouquets", "premium", "precio-medio"]
+            },
+            {
+                id: 80,
+                name: "Corazón Eterno Aniversario",
+                price: 206250,
+                image: "../assets/foto77.webp",
+                description: "Caja corazón grande con rosas eternas doradas y blancas rodeadas de nubes. Cartel 'Feliz Aniversario' en forma de corazón. Diseño lujoso y duradero que simboliza amor eterno. Regalo perfecto para celebrar años de amor.",
+                categories: ["rosas-eternas", "cajas", "premium", "precio-medio"]
+            },
+            {
+                id: 81,
+                name: "Enamoradito de Ti",
+                price: 206250,
+                image: "../assets/foto92.webp",
+                description: "Caja cilíndrica rosa con abundantes rosas fucsia frescas perfectamente acomodadas, decorada con lazo de cinta rosa. Presentación elegante tipo hat box que impacta a primera vista. Un regalo lleno de color y romance.",
+                categories: ["cajas", "premium", "precio-medio"]
+            },
+            {
+                id: 82,
+                name: "Corazón de Gerberas",
+                price: 210000,
+                image: "../assets/foto2.webp",
+                description: "Espectacular arreglo en forma de corazón con abundantes gerberas rosadas rodeadas de nubes (gypsophila). Presentación en elegante papel coreano rosa. Un regalo romántico e impactante que roba suspiros y deja huella.",
+                categories: ["gerberas", "coreano", "premium", "precio-medio"]
+            },
+            {
+                id: 83,
+                name: "Rosas y Sol",
+                price: 210000,
+                image: "../assets/foto23.webp",
+                description: "Bouquet premium con 4 girasoles, 12 rosas rosadas, follaje verde y boca de dragón. Envuelto en papel blanco elegante con lazo rosa. Arreglo sofisticado y generoso que combina romance y luminosidad en perfecta armonía.",
+                categories: ["girasoles", "bouquets", "premium", "precio-medio"]
+            },
+            {
+                id: 84,
+                name: "Celebración Dorada",
+                price: 210000,
+                image: "../assets/foto26.webp",
+                description: "Caja blanca con 6 girasoles, 4 chocolates Ferrero Rocher, nubes y globo de aniversario dorado. Presentación festiva con lazo dorado. Regalo completo que combina flores, dulzura y celebración en un solo detalle inolvidable.",
+                categories: ["girasoles", "cajas", "chocolates", "precio-medio"]
+            },
+            {
+                id: 85,
+                name: "Canasta Preciosa",
+                price: 210000,
+                image: "../assets/foto28.webp",
+                description: "Canasta de mimbre natural con 3 girasoles, rosas rojas, follaje verde abundante y nubes. Arreglo clásico y elegante que combina la pasión de las rosas con la calidez del girasol. Perfecto para sorprender con estilo rústico.",
+                categories: ["girasoles", "canastas", "precio-medio"]
+            },
+            {
+                id: 86,
+                name: "Canasta Perfección Roja",
+                price: 210000,
+                image: "../assets/foto99.webp",
+                description: "Hermosa canasta blanca de mimbre repleta de rosas rojas de tallo largo con lazo rojo y cinta personalizada. Presentación clásica y abundante que transmite amor y generosidad. Ideal para decorar y regalar en cualquier ocasión especial.",
+                categories: ["canastas", "premium", "precio-medio"]
+            },
+            {
+                id: 87,
+                name: "Docena Dorada Premium",
+                price: 212500,
+                image: "../assets/foto75.webp",
+                description: "Bouquet espectacular con 12 girasoles grandes, mariposas decorativas, follaje verde y 8 chocolates Ferrero Rocher. Envuelto en papel negro y amarillo con lazo rojo. Arreglo de alto impacto que combina abundancia, belleza y dulzura.",
+                categories: ["girasoles", "chocolates", "premium", "precio-medio"]
+            },
+            {
+                id: 88,
+                name: "Galaxia de Girasoles",
+                price: 218750,
+                image: "../assets/foto34.webp",
+                description: "Impresionante ramo circular con 13 girasoles decorados con mariposas doradas en papel negro. Diseño espectacular y moderno que transmite poder, admiración y grandeza. Presentación de alto impacto con tarjeta personalizada.",
+                categories: ["girasoles", "premium", "precio-medio"]
+            },
+            {
+                id: 89,
+                name: "Cascada Imperial",
+                price: 225000,
+                image: "../assets/foto49.webp",
+                description: "Bouquet de novia en cascada con rosas blancas, yicsu y follaje verde cayendo en forma de lágrima. Diseño clásico y majestuoso que transmite elegancia suprema. Ideal para novias que buscan un ramo con presencia y dramatismo.",
+                categories: ["novia", "premium", "precio-medio"]
+            },
+            {
+                id: 90,
+                name: "Elegancia con Tulipanes",
+                price: 231250,
+                image: "../assets/foto6.webp",
+                description: "Bouquet sofisticado que combina gerberas con tulipanes rosados, pompones blancos y alelís. Presentación en papel coreano bicolor con lazo. Mezcla exclusiva de texturas y tonos que transmite distinción y romanticismo.",
+                categories: ["gerberas", "bouquets", "coreano", "premium", "precio-medio"]
+            },
+            {
+                id: 91,
+                name: "Fiesta Floral",
+                price: 231250,
+                image: "../assets/foto11.webp",
+                description: "Ramo abundante y festivo con gerberas, margaritas, rosas, claveles y corona decorativa. Incluye 2 globos de helio que añaden un toque celebratorio. Envuelto en papel coreano rosa con corazones. Ideal para cumpleaños y celebraciones.",
+                categories: ["gerberas", "bouquets", "coreano", "precio-medio"]
+            },
+            {
+                id: 92,
+                name: "Canasta Primaveral",
+                price: 231250,
+                image: "../assets/foto30.webp",
+                description: "Canasta decorativa con 3 girasoles, rosas en tonos durazno, lisianthus verde, nubes y follaje. Presentación con lazo naranja. Arreglo fresco y armonioso que llena cualquier espacio de vida, color y elegancia natural.",
+                categories: ["girasoles", "canastas", "precio-medio"]
+            },
+            {
+                id: 93,
+                name: "Festival Floral con Ferrero",
+                price: 231250,
+                image: "../assets/foto39.webp",
+                description: "Ramo generoso con girasoles, gerberas rosadas y fucsia, rosas rojas y amarillas, claveles y pompones. Incluye caja de Ferrero Rocher. Envuelto en papel coreano rosa. Combinación festiva de flores y dulzura para momentos inolvidables.",
+                categories: ["girasoles", "gerberas", "bouquets", "chocolates", "premium", "precio-medio"]
+            },
+            {
+                id: 94,
+                name: "Mariposas Doradas",
+                price: 231250,
+                image: "../assets/foto62.webp",
+                description: "Impresionante ramo con 13 girasoles decorados con 4 mariposas doradas y moño elegante en papel negro. Incluye tarjeta del día de las flores amarillas. Diseño espectacular y simbólico que transmite admiración y grandeza.",
+                categories: ["girasoles", "premium", "precio-medio"]
+            },
+            {
+                id: 95,
+                name: "Canasta Arcoíris",
+                price: 235000,
+                image: "../assets/foto12.webp",
+                description: "Canasta de mimbre natural repleta de gerberas multicolores en tonos rojo, naranja, amarillo, rosa y blanco con follaje verde abundante. Arreglo vibrante y alegre que llena de vida cualquier espacio. Presentación rústica y elegante.",
+                categories: ["gerberas", "canastas", "precio-medio"]
+            },
+            {
+                id: 96,
+                name: "Tierno Amor Bicolor",
+                price: 235000,
+                image: "../assets/foto96.webp",
+                description: "Bouquet romántico de rosas rojas con claveles rosados y abundante gypsophila, envuelto en papel negro con corte decorativo y mariposa dorada. Combinación clásica y tierna que mezcla pasión con dulzura en una presentación moderna.",
+                categories: ["bouquets", "coreano", "precio-medio"]
+            },
+            {
+                id: 97,
+                name: "Corazón Multicolor",
+                price: 256250,
+                image: "../assets/foto5.webp",
+                description: "Impresionante caja negra en forma de corazón repleta de gerberas multicolores: fucsia, naranja, amarillo, blanco y rosa. Arreglo vibrante y alegre que irradia felicidad. Incluye tarjeta personalizada y lazo decorativo.",
+                categories: ["gerberas", "cajas", "premium", "precio-alto"]
+            },
+            {
+                id: 98,
+                name: "Esplendor en Base",
+                price: 262500,
+                image: "../assets/foto7.webp",
+                description: "Arreglo floral premium en elegante base cilíndrica blanca con gerberas, rosas, margaritas, astromelias, eucalipto, rosas mini y claveles. Diseño abundante y sofisticado con lazo fucsia que decora cualquier espacio con lujo.",
+                categories: ["gerberas", "cajas", "premium", "precio-alto"]
+            },
+            {
+                id: 99,
+                name: "Torre de Pasión",
+                price: 275000,
+                image: "../assets/foto10.webp",
+                description: "Lujoso arreglo en caja cilíndrica blanca con gerberas, pompones, rosas naturales rojas y rosadas, y clavellinas. Coronado con elegante lazo fucsia. Diseño imponente que combina dulzura y pasión en un solo detalle memorable.",
+                categories: ["gerberas", "cajas", "premium", "precio-alto"]
+            },
+            {
+                id: 100,
+                name: "Reina de las Rosas",
+                price: 287500,
+                image: "../assets/foto93.webp",
+                description: "Imponente hat box rosa repleta de más de 40 rosas en tonos rosa intenso y rojo. Una presentación de lujo que desborda romance y elegancia. El regalo más impactante para demostrar un amor grande e inolvidable.",
+                categories: ["cajas", "premium", "precio-alto"]
+            },
+            {
+                id: 101,
+                name: "Corazón de Rosas",
+                price: 297500,
+                image: "../assets/foto98.webp",
+                description: "Espectacular bouquet con rosas rojas formando un corazón en el centro, rodeadas de rosas blancas y gypsophila, con mariposa decorativa. Envuelto en papel blanco y negro con diseño geométrico. Una declaración de amor hecha arte floral.",
+                categories: ["bouquets", "premium", "precio-alto"]
+            },
+            {
+                id: 102,
+                name: "Corazón de Sol",
+                price: 300000,
+                image: "../assets/foto31.webp",
+                description: "Caja corazón blanca repleta de girasoles con nubes y cartel decorativo 'Para la más hermosa'. Diseño romántico y luminoso que combina amor y alegría. Regalo premium perfecto para declaraciones especiales y momentos únicos.",
+                categories: ["girasoles", "cajas", "premium", "precio-alto"]
+            },
+            {
+                id: 103,
+                name: "Celebración Completa",
+                price: 300000,
+                image: "../assets/foto58.webp",
+                description: "Arreglo premium en caja con 6 girasoles, chocolates Ferrero Rocher, globo burbuja 'Feliz Día' y peluche de gato. Regalo completo que combina flores, dulzura, diversión y ternura. Perfecto para cumpleaños y celebraciones especiales.",
+                categories: ["girasoles", "cajas", "chocolates", "premium", "precio-alto"]
+            },
+            {
+                id: 104,
+                name: "Para la Más Bonita",
+                price: 300000,
+                image: "../assets/foto107.webp",
+                description: "Gran bouquet de lujo con abundantes rosas rojas, claveles, alstroemeria rosada y cinta personalizada 'Por Bonita', envuelto en papel kraft dorado. Un homenaje floral imponente para la mujer más especial. Arreglo premium de máxima elegancia.",
+                categories: ["bouquets", "premium", "precio-alto"]
+            },
+            {
+                id: 105,
+                name: "Sinfonía Multicolor",
+                price: 362500,
+                image: "../assets/foto35.webp",
+                description: "Ramo espectacular y abundante con girasoles, gerberas rosadas y fucsia, rosas rojas y claveles. Envuelto en elegante papel coreano rosa con estampado decorativo. Explosión de color y alegría que deja sin palabras. Un regalo de alto impacto.",
+                categories: ["girasoles", "gerberas", "bouquets", "premium", "precio-alto"]
+            },
+            {
+                id: 106,
+                name: "Majestuosidad de Girasoles",
+                price: 393750,
+                image: "../assets/foto80.webp",
+                description: "Bouquet premium con 12 girasoles grandes, rosas blancas, follaje y tarjeta personalizada. Disponible en papel coreano. Reservar con 2 días de anticipación. Arreglo majestuoso e imponente para ocasiones que merecen lo mejor.",
+                categories: ["girasoles", "bouquets", "premium", "precio-alto"]
+            },
+            {
+                id: 107,
+                name: "Amor de Mi Vida",
+                price: 462500,
+                image: "../assets/foto103.webp",
+                description: "Impresionante mega bouquet redondo con más de 100 rosas rojas intensas envueltas en papel blanco con elegante lazo de cinta crema. Una declaración de amor absoluta que deja sin palabras. El regalo más grandioso para el amor de tu vida.",
+                categories: ["bouquets", "premium", "precio-alto"]
+            },
+            {
+                id: 108,
+                name: "Majestuosidad Solar",
+                price: 475000,
+                image: "../assets/foto25.webp",
+                description: "Arreglo premium de girasoles abundantes con follaje verde en elegante base cilíndrica blanca con iniciales. Diseño lujoso y sofisticado que irradia energía y positivismo. Pieza central perfecta para decorar espacios con distinción.",
+                categories: ["girasoles", "cajas", "premium", "precio-alto"]
+            },
+            {
+                id: 109,
+                name: "Dulce Amor con Peluche",
+                price: 512500,
+                image: "../assets/foto94.webp",
+                description: "Combo especial que incluye arreglo de rosas rojas y rosadas en base decorativa, peluche grande de Lotso (oso rosa), caja de Ferrero Rocher y chocolate Jet. El regalo más completo y tierno para enamorar. Ideal para cumpleaños y fechas especiales.",
+                categories: ["cajas", "chocolates", "premium", "precio-alto"]
+            },
+            {
+                id: 110,
+                name: "Besos Hechos en Flor",
+                price: 537500,
+                image: "../assets/foto95.webp",
+                description: "Mega bouquet de lujo con abundantes rosas rojas, Ferrero Rocher intercalados, corona decorativa y cinta personalizada, envuelto en papel negro y gris con bordes dorados. Una obra maestra floral para la persona más importante de tu vida.",
+                categories: ["bouquets", "chocolates", "premium", "precio-alto"]
+            }
+        ];
+
+// --- VARIABLES GLOBALES ---
+let currentLandingFilter = 'priority';
+let LANDING_PRIORITY_TAG = '';
+
+// --- FORMATEO DE PRECIO ---
+function formatCOP(price) {
+    return new Intl.NumberFormat('es-CO', {
+        style: 'currency', currency: 'COP', minimumFractionDigits: 0, maximumFractionDigits: 0
+    }).format(price);
+}
+
+// --- ORDENAR PRODUCTOS: primero los de la categoría de la landing ---
+function getSortedProducts(priorityTag) {
+    const priority = [];
+    const rest = [];
+    products.forEach(p => {
+        if (p.categories && p.categories.includes(priorityTag)) {
+            priority.push(p);
+        } else {
+            rest.push(p);
+        }
+    });
+    priority.sort((a, b) => a.price - b.price);
+    rest.sort((a, b) => a.price - b.price);
+    return [...priority, ...rest];
+}
+
+// --- FUNCIÓN PARA RENDERIZAR PRODUCTOS ---
+function renderProducts(filters = [], limit = null) {
+    const container = document.querySelector('.products-container');
+    if (!container) return;
+
+    let productsToDisplay = products;
+
+    if (LANDING_PRIORITY_TAG) {
+        productsToDisplay = getSortedProducts(LANDING_PRIORITY_TAG);
+    }
+
+    if (filters.length > 0) {
+        productsToDisplay = productsToDisplay.filter(p => 
+            filters.some(f => p.categories && p.categories.includes(f))
+        );
+    }
+
+    if (limit) {
+        productsToDisplay = productsToDisplay.slice(0, limit);
+    }
+
+    container.innerHTML = '';
+    productsToDisplay.forEach(product => {
+        const productHTML = `
+            <div class="product-item">
+                <div class="product-image">
+                    <img src="${product.image}" alt="${product.name} - Flores a domicilio Ibagué" loading="lazy">
+                </div>
+                <div class="product-info">
+                    <h3>${product.name}</h3>
+                    <p>${product.description}</p>
+                    <div class="product-footer">
+                        <span class="price">${formatCOP(product.price)}</span>
+                        <button class="btn-order" onclick="orderWA('${product.name}', '${product.price}')">
+                            Pedir por WhatsApp
+                        </button>
+                    </div>
+                </div>
+            </div>
+        `;
+        container.innerHTML += productHTML;
+    });
+}
+
+// --- FUNCIONES DE WHATSAPP ---
+function contactWA() {
+    const url = 'https://wa.me/573151100609?text=Hola,%20me%20gustar%C3%ADa%20recibir%20m%C3%A1s%20informaci%C3%B3n%20sobre%20sus%20flores.%20%C2%BFPodr%C3%ADan%20ayudarme%3F';
+    // Track conversion - Mensaje WhatsApp
+    try {
+        gtag('event', 'conversion', {
+            'send_to': 'AW-17976527804/eNHaCKmS7v4bELyX8PtC',
+            'value': 1.0,
+            'currency': 'COP',
+            'event_callback': function () {
+                window.open(url, '_blank');
+            }
+        });
+    } catch (e) {
+        window.open(url, '_blank');
+    }
+}
+
+function orderWA(productName, price) {
+    const message = `Hola, me interesa ${productName} (${formatCOP(parseFloat(price))}). ¿Podrías darme más información?`;
+    const encodedMessage = encodeURIComponent(message);
+    const url = `https://wa.me/573151100609?text=${encodedMessage}`;
+    
+    // Track conversion to Google Ads
+    try {
+        gtag('event', 'conversion', {
+            'send_to': 'AW-17976527804/eNHaCKmS7v4bELyX8PtC',
+            'value': 1.0,
+            'currency': 'COP',
+            'event_callback': function () {
+                window.open(url, '_blank');
+            }
+        });
+    } catch (e) {
+        window.open(url, '_blank');
+    }
+}
+
+// --- FILTRADO DE PRODUCTOS ---
+function filterProducts(tag) {
+    const buttons = document.querySelectorAll('.filter-btn');
+    buttons.forEach(btn => {
+        if (btn.getAttribute('data-filter') === tag) {
+            btn.classList.add('active');
+        } else {
+            btn.classList.remove('active');
+        }
+    });
+
+    if (tag === 'all') {
+        renderProducts();
+    } else {
+        renderProducts([tag]);
+    }
+}
+
+// Inicializar cuando el DOM esté listo
+document.addEventListener('DOMContentLoaded', function() {
+    renderProducts();
+});
