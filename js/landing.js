@@ -1300,6 +1300,238 @@ const products = [
                 description: "Elegante trípode fúnebre con hortensias blancas, rosas blancas, lirios, cartuchos, snapdragons y variedad de flores blancas premium con abundante follaje verde. Un homenaje distinguido y sofisticado.",
                 image: "../assets/foto162.webp",
                 categories: ["funebre", "premium", "precio-medio"]
+            },
+            {
+                id: 163,
+                name: "Bouquet 9 Tulipanes Eternos Amor",
+                price: 119000,
+                description: "Hermoso bouquet de 9 tulipanes eternos en tonos rosados y amarillos con letrero 'Amor', envuelto en papel coreano rosa con estampado de rosas. Incluye tarjeta personalizada. Un regalo duradero y romántico que nunca se marchita.",
+                image: "../assets/foto163.webp",
+                categories: ["tulipanes", "coreano", "precio-bajo"]
+            },
+            {
+                id: 164,
+                name: "Bouquet 16 Tulipanes Eternos Multicolor",
+                price: 207000,
+                description: "Espectacular bouquet de 16 tulipanes eternos en colores variados: rosados, amarillos, naranjas, morados, rojos, blancos y verdes. Envuelto en papel coreano rosa con lazo. Incluye tarjeta personalizada. Un arcoíris de tulipanes que dura para siempre.",
+                image: "../assets/foto164.webp",
+                categories: ["tulipanes", "premium", "coreano", "precio-medio"]
+            },
+            {
+                id: 165,
+                name: "Bouquet 5 Tulipanes Naturales Amarillos",
+                price: 207000,
+                description: "Elegante bouquet de 5 tulipanes naturales amarillos con gypsophila (nubes), envuelto en papel coreano rosa con detalles dorados de corazones. Incluye tarjeta personalizada. La frescura y belleza de los tulipanes naturales en su máxima expresión.",
+                image: "../assets/foto165.webp",
+                categories: ["tulipanes", "coreano", "precio-medio"]
+            },
+            {
+                id: 166,
+                name: "Mini Bouquet 3 Tulipanes Eternos",
+                price: 48000,
+                description: "Encantador mini bouquet de 3 tulipanes eternos amarillos envueltos en papel negro con estampado dorado de corazones y la palabra 'Love'. Lazo amarillo decorativo. Detalle económico, elegante y duradero perfecto para sorprender.",
+                image: "../assets/foto166.webp",
+                categories: ["tulipanes", "precio-bajo"]
+            },
+            {
+                id: 167,
+                name: "Bouquet 9 Tulipanes Eternos Blancos",
+                price: 122000,
+                description: "Delicado bouquet de 9 tulipanes eternos blancos puros envueltos en papel coreano rosa con estampado de rosas y lazo blanco de satín. Elegancia y pureza en un arreglo que perdura en el tiempo. Perfecto para expresar amor sincero.",
+                image: "../assets/foto167.webp",
+                categories: ["tulipanes", "coreano", "precio-bajo"]
+            },
+            {
+                id: 168,
+                name: "Tulipanes Naturales con Clavel Rosado",
+                price: 219000,
+                description: "Bouquet sofisticado de 5 tulipanes naturales blancos combinados con abundantes claveles rosados, envuelto en papel coreano rosa con lazo de satín. Mezcla delicada de texturas y tonos que transmite ternura y distinción.",
+                image: "../assets/foto168.webp",
+                categories: ["tulipanes", "bouquets", "precio-medio"]
+            },
+            {
+                id: 169,
+                name: "Bouquet 10 Tulipanes Naturales Lila y Blanco",
+                price: 257000,
+                description: "Impresionante bouquet de 10 tulipanes naturales en tonos lila y blanco, envuelto en papel blanco con diseño exclusivo de la marca Flore y lazo lila. Frescura y elegancia premium en cada pétalo. Un regalo inolvidable.",
+                image: "../assets/foto169.webp",
+                categories: ["tulipanes", "premium", "precio-alto"]
+            },
+            {
+                id: 170,
+                name: "Tulipanes con Rosas y Hortensia",
+                price: 232000,
+                description: "Exquisito bouquet de 5 tulipanes rosados combinados con rosas rosadas y hortensia azul, envuelto en papel coreano lila. Una combinación única de colores pastel que transmite romanticismo y sofisticación. Arreglo premium para ocasiones especiales.",
+                image: "../assets/foto170.webp",
+                categories: ["tulipanes", "bouquets", "premium", "precio-medio"]
+            },
+            {
+                id: 171,
+                name: "Gran Bouquet Tulipanes y Flores Premium",
+                price: 475000,
+                description: "Majestuoso bouquet de 8 tulipanes eternos combinados con gerberas, rosas en tonos rosa, clavel rosado y abundante follaje. Envuelto en papel coreano rosa premium. El arreglo más completo y espectacular con tulipanes. Un regalo que deja sin palabras.",
+                image: "../assets/foto171.webp",
+                categories: ["tulipanes", "gerberas", "premium", "precio-alto"]
+            },
+            {
+                id: 172,
+                name: "Tulipanes con Rosas Rojas",
+                price: 125000,
+                description: "Bouquet romántico de 3 tulipanes rojos combinados con rosas rojas, follaje verde y tarjeta personalizada. Envuelto en papel coreano rosa con lazo rojo de satín. La pasión de las rosas y la elegancia de los tulipanes en un solo arreglo.",
+                image: "../assets/foto172.webp",
+                categories: ["tulipanes", "bouquets", "precio-bajo"]
+            },
+            {
+                id: 173,
+                name: "Bouquet Tulipanes y Gerberas Rosadas",
+                price: 175000,
+                description: "Bouquet encantador de 2 tulipanes con gerberas y flores surtidas en tonalidades rosadas. Envuelto en papel coreano rosa y dorado con lazo rojo. Una explosión de color en tonos rosa que transmite alegría y cariño.",
+                image: "../assets/foto173.webp",
+                categories: ["tulipanes", "gerberas", "bouquets", "precio-medio"]
+            },
+            {
+                id: 174,
+                name: "Bouquet Tulipanes, Lirios y Gerberas",
+                price: 188000,
+                description: "Bouquet mixto espectacular de 2 tulipanes con 1 vara de lirios, gerberas, rosas y flores surtidas en tonos rosa. Envuelto en papel coreano rosa con lazo. Incluye tarjeta personalizada. Variedad floral premium en tonos cálidos.",
+                image: "../assets/foto174.webp",
+                categories: ["tulipanes", "lirios", "gerberas", "bouquets", "precio-medio"]
+            },
+            {
+                id: 175,
+                name: "Lirio con Rosas Rosadas y Fucsia",
+                price: 100000,
+                description: "Bouquet elegante con 1 vara de lirio rosado combinada con rosas en tonos rosados y fucsia. Envuelto en papel coreano rosa y dorado. Incluye tarjeta personalizada. Aroma exquisito y colores vibrantes en un arreglo compacto y sofisticado.",
+                image: "../assets/foto175.webp",
+                categories: ["lirios", "bouquets", "precio-bajo"]
+            },
+            {
+                id: 176,
+                name: "Gran Bouquet de Lirios y Flores Surtidas",
+                price: 275000,
+                description: "Impresionante bouquet de 5 lirios combinados con gerberas y flores surtidas en tonos rosa. Envuelto en papel coreano rosa. Un arreglo grande, fragante y espectacular que llena cualquier espacio de color y aroma. Regalo premium inolvidable.",
+                image: "../assets/foto176.webp",
+                categories: ["lirios", "gerberas", "premium", "precio-alto"]
+            },
+            {
+                id: 177,
+                name: "Bouquet 2 Varas de Lirio Surtido Rosa",
+                price: 98000,
+                description: "Bouquet fresco con 2 varas de lirio combinadas con flores surtidas en tono rosa, envuelto en papel coreano rosa y dorado con lazo fucsia. Incluye tarjeta personalizada. Aroma delicioso y colores vibrantes a un precio accesible.",
+                image: "../assets/foto177.webp",
+                categories: ["lirios", "bouquets", "precio-bajo"]
+            },
+            {
+                id: 178,
+                name: "Lirios con Clavel, Gerberas y Follaje",
+                price: 125000,
+                description: "Bouquet mixto de 2 varas de lirios rosados con clavel rosado, gerberas fucsia, gypsophila y abundante follaje verde. Envuelto en papel coreano rosa con lazo rosa. Variedad de texturas y colores en un arreglo fresco y aromático.",
+                image: "../assets/foto178.webp",
+                categories: ["lirios", "gerberas", "bouquets", "precio-bajo"]
+            },
+            {
+                id: 179,
+                name: "Lirios con Clavel Rosado",
+                price: 82000,
+                description: "Bouquet delicado de 2 lirios rosados combinados con clavel rosado, envuelto en papel coreano rosa y mármol dorado con lazo rosa. Un arreglo fragante y romántico a un precio accesible. Perfecto para detalles espontáneos llenos de aroma.",
+                image: "../assets/foto179.webp",
+                categories: ["lirios", "bouquets", "precio-bajo"]
+            },
+            {
+                id: 180,
+                name: "Bouquet 3 Varas de Lirios y Rosas",
+                price: 110000,
+                description: "Elegante bouquet de 3 varas de lirios blancos y rosados con rosas rosadas y flores surtidas en tonos rosados. Envuelto en papel coreano rosa. Combinación aromática y delicada que transmite amor y dulzura con estilo.",
+                image: "../assets/foto180.webp",
+                categories: ["lirios", "bouquets", "precio-bajo"]
+            },
+            {
+                id: 181,
+                name: "Gran Bouquet 8 Lirios y 40 Rosas con Listón",
+                price: 343000,
+                description: "Espectacular bouquet de 8 varas de lirios rosados con 40 rosas en tonos rosa y blanco, listón personalizado '¿Quieres ser mi novia?'. Envuelto en papel coreano rosa con margaritas. El arreglo más impactante para propuestas y declaraciones de amor.",
+                image: "../assets/foto181.webp",
+                categories: ["lirios", "premium", "precio-alto"]
+            },
+            {
+                id: 182,
+                name: "Bouquet 24 Rosas y 5 Lirios con Listón",
+                price: 244000,
+                description: "Majestuoso bouquet de 24 rosas en tonos rosados y fucsia con 5 lirios rosados y listón personalizado '¿Quieres ser mi san valentín?'. Envuelto en papel con mariposas. Arreglo romántico perfecto para declaraciones de amor y ocasiones inolvidables.",
+                image: "../assets/foto182.webp",
+                categories: ["lirios", "premium", "precio-medio"]
+            },
+            {
+                id: 183,
+                name: "Lirios y Girasoles con Globo Cumpleaños",
+                price: 175000,
+                description: "Espectacular arreglo de 4 varas de lirios blancos con 2 girasoles, rosas mini rosadas y flores surtidas, envuelto en papel coreano rosa y dorado. Incluye globo corazón personalizado 'Feliz Cumpleaños' y tarjeta. El regalo perfecto para celebrar.",
+                image: "../assets/foto183.webp",
+                categories: ["lirios", "girasoles", "bouquets", "precio-medio"]
+            },
+            {
+                id: 184,
+                name: "Gran Bouquet 10 Lirios y Clavel Rosado",
+                price: 275000,
+                description: "Impresionante bouquet de 10 lirios en tonos blancos, amarillos y rosados combinados con claveles rojos y rosados, gypsophila y abundante follaje. Envuelto en papel coreano rosa y dorado con lazo rosa. Un arreglo majestuoso y fragante.",
+                image: "../assets/foto184.webp",
+                categories: ["lirios", "premium", "precio-alto"]
+            },
+            {
+                id: 185,
+                name: "Bouquet Lirios y Clavel Surtido",
+                price: 85000,
+                description: "Bouquet fresco de 2 varas de lirios blancos con claveles rosados y fucsia, alstroemerias y flores surtidas. Envuelto en papel coreano rosa y dorado con lazo rosa. Incluye tarjeta personalizada. Variedad floral a un precio accesible.",
+                image: "../assets/foto185.webp",
+                categories: ["lirios", "bouquets", "precio-bajo"]
+            },
+            {
+                id: 186,
+                name: "Caja Lirios y Rosas con Globo Aniversario",
+                price: 182000,
+                description: "Elegante caja rosa con 6 varas de lirios rosados, rosas rosadas, 4 Ferrero Rocher, gypsophila y follaje verde. Coronada con globo burbuja personalizado 'Feliz Aniversario'. Un regalo romántico y completo para celebrar el amor.",
+                image: "../assets/foto186.webp",
+                categories: ["lirios", "cajas", "chocolates", "precio-medio"]
+            },
+            {
+                id: 187,
+                name: "Bouquet Lirios, Gerberas y Ferrero",
+                price: 157000,
+                description: "Bouquet colorido de 2 varas de lirios rosados con gerberas fucsia, claveles, gladiolos, flores moradas y 3 Ferrero Rocher. Envuelto en papel rosa y dorado con lazo rosa. Incluye tarjeta personalizada. Flores y chocolates en un solo detalle.",
+                image: "../assets/foto187.webp",
+                categories: ["lirios", "gerberas", "chocolates", "bouquets", "precio-medio"]
+            },
+            {
+                id: 188,
+                name: "Bouquet Graduación Lirios y Gerberas",
+                price: 98000,
+                description: "Bouquet especial de graduación con 2 varas de lirios, gerbera, claveles, alstroemerias y flores surtidas en tonos rosa. Incluye birrete decorativo. Envuelto en papel coreano rosa con lazo. El detalle ideal para celebrar logros académicos.",
+                image: "../assets/foto188.webp",
+                categories: ["lirios", "gerberas", "bouquets", "precio-bajo"]
+            },
+            {
+                id: 189,
+                name: "Bouquet Lirios y Rosas con Peluche Stitch Graduado",
+                price: 219000,
+                description: "Bouquet encantador de 2 varas de lirios blancos con rosas rosadas, gypsophila, eucalipto y follaje verde. Incluye peluche Stitch con birrete de graduación. Envuelto en papel coreano rosa. Regalo tierno y especial para graduaciones.",
+                image: "../assets/foto189.webp",
+                categories: ["lirios", "bouquets", "premium", "precio-medio"]
+            },
+            {
+                id: 190,
+                name: "Gran Bouquet Lirios Premium con Peluche Snoopy",
+                price: 288000,
+                description: "Majestuoso bouquet de 4 varas de lirios blancos con gerberas, claveles, rosas y flores surtidas en tonos rosa. Incluye peluche Snoopy con lazo rosa. Envuelto en papel coreano rosa. El regalo más completo y tierno para sorprender.",
+                image: "../assets/foto190.webp",
+                categories: ["lirios", "gerberas", "premium", "precio-alto"]
+            },
+            {
+                id: 191,
+                name: "Mini Bouquet Lirios con Globo Cumpleaños",
+                price: 82000,
+                description: "Delicado mini bouquet de 2 lirios blancos con clavel rosado, envuelto en papel coreano rosa con lazo. Incluye globo metalizado 'Feliz Cumpleaños' y tarjeta personalizada. Un detalle dulce y accesible para celebrar con cariño.",
+                image: "../assets/foto191.webp",
+                categories: ["lirios", "bouquets", "precio-bajo"]
             }
         ];
 
