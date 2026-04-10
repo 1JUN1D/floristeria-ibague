@@ -1227,7 +1227,8 @@ const products = [
                 price: 225000,
                 description: "Corona fúnebre sin trípode con base de pompones blancos y amarillos, rosas amarillas en la parte superior, follaje verde y listón personalizado. Diseño clásico y versátil para colocar sobre cualquier superficie.",
                 image: "../assets/foto153.webp",
-                categories: ["funebre", "precio-medio"]
+                categories: ["funebre", "precio-medio"],
+                hidden: true
             },
             {
                 id: 154,
@@ -1323,7 +1324,8 @@ const products = [
                 price: 207000,
                 description: "Elegante bouquet de 5 tulipanes naturales amarillos con gypsophila (nubes), envuelto en papel coreano rosa con detalles dorados de corazones. Incluye tarjeta personalizada. La frescura y belleza de los tulipanes naturales en su máxima expresión.",
                 image: "../assets/foto165.webp",
-                categories: ["tulipanes", "coreano", "precio-medio"]
+                categories: ["tulipanes", "coreano", "precio-medio"],
+                hidden: true
             },
             {
                 id: 166,
@@ -1532,6 +1534,30 @@ const products = [
                 description: "Delicado mini bouquet de 2 lirios blancos con clavel rosado, envuelto en papel coreano rosa con lazo. Incluye globo metalizado 'Feliz Cumpleaños' y tarjeta personalizada. Un detalle dulce y accesible para celebrar con cariño.",
                 image: "../assets/foto191.webp",
                 categories: ["lirios", "bouquets", "precio-bajo"]
+            },
+            {
+                id: 192,
+                name: "Encanto Primaveral",
+                price: 218750,
+                description: "Hermoso bouquet mixto con rosas rosadas, tulipanes naranjas y amarillos, lirio rosado, rosa blanca, mini rosas y bayas rojas decorativas. Envuelto en papel coreano rosa con lazo satinado. Incluye tarjeta personalizada. Combinación fresca y vibrante que transmite alegría y romanticismo.",
+                image: "../assets/foto192.webp",
+                categories: ["bouquets", "tulipanes", "lirios", "coreano", "precio-medio"]
+            },
+            {
+                id: 193,
+                name: "Mini Bouquet Tulipanes y Claveles",
+                price: 100000,
+                description: "Delicado mini bouquet con 2 tulipanes rosados acompañados de mini claveles blancos con detalles burdeos y eucalipto fresco. Envuelto en elegante papel crema con lazo blanco satinado. Un detalle sencillo, fresco y romántico perfecto para sorpresas espontáneas.",
+                image: "../assets/foto193.webp",
+                categories: ["tulipanes", "bouquets", "precio-bajo"]
+            },
+            {
+                id: 194,
+                name: "Romance en Tonos Pastel",
+                price: 243750,
+                description: "Exquisito bouquet premium con rosas en tono durazno y salmón, tulipanes en tonos vino y blancos, hortensia lila, claveles rosados y abundante follaje verde. Envuelto en papel coreano rosa con tarjeta personalizada. Una combinación sofisticada de texturas y tonos pastel ideal para ocasiones especiales.",
+                image: "../assets/foto194.webp",
+                categories: ["bouquets", "tulipanes", "premium", "precio-medio"]
             }
         ];
 
@@ -1556,7 +1582,7 @@ function formatCOP(price) {
 function getSortedProducts(priorityTag) {
     const priority = [];
     const rest = [];
-    products.forEach(p => {
+    products.filter(p => !p.hidden).forEach(p => {
         if (p.categories && p.categories.includes(priorityTag)) {
             priority.push(p);
         } else {
@@ -1581,7 +1607,8 @@ function renderProducts(filters = [], limit = null) {
     const container = document.querySelector('.products-container');
     if (!container) return;
 
-    let productsToDisplay = products;
+    // Excluir productos ocultos
+    let productsToDisplay = products.filter(p => !p.hidden);
 
     if (LANDING_PRIORITY_TAG) {
         productsToDisplay = getSortedProducts(LANDING_PRIORITY_TAG);
