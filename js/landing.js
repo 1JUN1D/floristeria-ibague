@@ -1381,7 +1381,8 @@ const products = [
                 price: 125000,
                 description: "Bouquet romántico de 3 tulipanes rojos combinados con rosas rojas, follaje verde y tarjeta personalizada. Envuelto en papel coreano rosa con lazo rojo de satín. La pasión de las rosas y la elegancia de los tulipanes en un solo arreglo.",
                 image: "../assets/foto172.webp",
-                categories: ["tulipanes", "bouquets", "precio-bajo"]
+                categories: ["tulipanes", "bouquets", "precio-bajo"],
+                hidden: true
             },
             {
                 id: 173,
@@ -1566,6 +1567,11 @@ let currentLandingFilter = 'todos';
 let currentSearchQuery = '';
 let LANDING_PRIORITY_TAG = '';
 
+// --- GENERAR CÓDIGO DE PRODUCTO ---
+function getProductCode(id) {
+    return 'COD-' + String(id).padStart(3, '0');
+}
+
 // --- QUITAR TILDES para búsqueda ---
 function removeAccents(str) {
     return str.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
@@ -1621,14 +1627,13 @@ function renderProducts(filters = [], limit = null) {
         );
     }
 
-    // Filtrar por búsqueda (sin tildes)
+    // Filtrar por búsqueda (sin tildes, incluye código de producto, multi-palabra)
     if (currentSearchQuery) {
-        const query = removeAccents(currentSearchQuery);
+        const queryNorm = removeAccents(currentSearchQuery.trim());
+        const queryWords = queryNorm.split(/\s+/);
         productsToDisplay = productsToDisplay.filter(p => {
-            const name = removeAccents(p.name);
-            const desc = removeAccents(p.description);
-            const cats = p.categories ? p.categories.map(c => removeAccents(c)).join(' ') : '';
-            return name.includes(query) || desc.includes(query) || cats.includes(query);
+            const text = removeAccents(p.name + ' ' + p.description + ' ' + (p.categories ? p.categories.join(' ') : '') + ' ' + getProductCode(p.id));
+            return queryWords.every(word => text.includes(word));
         });
     }
 
@@ -1685,9 +1690,11 @@ function renderProducts(filters = [], limit = null) {
     container.innerHTML = '';
     productsToDisplay.forEach(product => {
         const escapedName = product.name.replace(/'/g, "\\'");
+        const code = getProductCode(product.id);
         const productHTML = `
             <div class="product-item">
-                <div class="product-image">
+                <div class="product-image" style="position:relative;">
+                    <span class="product-code-badge" style="position:absolute;top:0.7rem;left:0.7rem;background:rgba(0,0,0,0.65);color:#fff;padding:0.3rem 0.7rem;border-radius:6px;font-size:0.75rem;font-weight:700;letter-spacing:0.5px;z-index:2;font-family:'Poppins',sans-serif;backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);">${code}</span>
                     <img src="${product.image}" alt="${product.name} - Flores a domicilio Ibagué" loading="lazy">
                 </div>
                 <div class="product-info">
@@ -1695,7 +1702,7 @@ function renderProducts(filters = [], limit = null) {
                     <p>${product.description}</p>
                     <div class="product-footer">
                         <span class="price">${formatCOP(product.price)}</span>
-                        <button class="btn-order" onclick="orderWA('${escapedName}', '${product.price}')">
+                        <button class="btn-order" onclick="orderWA('${code} - ${escapedName}', '${product.price}')">
                             Pedir por WhatsApp
                         </button>
                     </div>

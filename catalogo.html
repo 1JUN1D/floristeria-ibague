@@ -1511,7 +1511,8 @@ const products = [
                 price: 125000,
                 description: "Bouquet romántico de 3 tulipanes rojos combinados con rosas rojas, follaje verde y tarjeta personalizada. Envuelto en papel coreano rosa con lazo rojo de satín. La pasión de las rosas y la elegancia de los tulipanes en un solo arreglo.",
                 image: "assets/foto172.webp",
-                categories: ["tulipanes", "bouquets", "precio-bajo"]
+                categories: ["tulipanes", "bouquets", "precio-bajo"],
+                hidden: true
             },
             {
                 id: 173,
@@ -1691,6 +1692,11 @@ const products = [
             }
         ];
 
+        // Generar código de producto a partir del id
+        function getProductCode(id) {
+            return 'COD-' + String(id).padStart(3, '0');
+        }
+
         // Normalizar texto (quitar tildes y minúsculas)
         function normalize(str) {
             return str.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
@@ -1724,7 +1730,8 @@ const products = [
                 const searchNorm = normalize(currentSearch.trim());
                 const searchWords = searchNorm.split(/\s+/);
                 filteredProducts = filteredProducts.filter(product => {
-                    const text = normalize(product.name + ' ' + product.description + ' ' + product.categories.join(' '));
+                    const code = getProductCode(product.id);
+                    const text = normalize(product.name + ' ' + product.description + ' ' + product.categories.join(' ') + ' ' + code);
                     return searchWords.every(word => text.includes(word));
                 });
             }
@@ -1788,9 +1795,12 @@ const products = [
                 filteredProducts = [...interleaved, ...funebre];
             }
 
-            grid.innerHTML = filteredProducts.map(product => `
+            grid.innerHTML = filteredProducts.map(product => {
+                const code = getProductCode(product.id);
+                return `
                 <div class="product-card" data-categories="${product.categories.join(' ')}">
                     <div class="product-image-container" onclick="openLightbox('${product.image}', '${product.name}', '${formatPrice(product.price)}')">
+                        <span class="product-code-badge">${code}</span>
                         <img src="${product.image}" alt="${product.name}" class="product-image" loading="lazy">
                         <div class="zoom-icon">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -1809,7 +1819,7 @@ const products = [
                                 <span class="price-label">Desde</span>
                                 <div class="product-price">${formatPrice(product.price)}</div>
                             </div>
-                            <a href="https://wa.me/573151100609?text=Hola,%20me%20interesa%20el%20producto:%20${encodeURIComponent(product.name)}%20-%20${formatPrice(product.price)}"
+                            <a href="https://wa.me/573151100609?text=Hola,%20me%20interesa%20el%20producto:%20${encodeURIComponent(code + ' - ' + product.name)}%20-%20${formatPrice(product.price)}"
                                class="btn-order"
                                target="_blank">
                                 <svg viewBox="0 0 24 24" fill="currentColor">
@@ -1820,7 +1830,7 @@ const products = [
                         </div>
                     </div>
                 </div>
-            `).join('');
+            `}).join('');
         }
 
         // Formatear precio
