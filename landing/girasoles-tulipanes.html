@@ -116,16 +116,24 @@
     </script>
 </head>
 <body>
-
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="../assets/logo.webp" alt="Flore - Floristería Ibagué">
+            </div>
+            <h1 class="header-title">Flore</h1>
+        </div>
+    </header>
 
     <!-- Hero Section -->
-    <section class="hero" style="background-image: url('https://images.unsplash.com/photo-1551731409-43eb3e517a1a?w=1920&q=80');">
-        <div class="hero-overlay"></div>
+    <section class="hero" style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1487530811176-3780de880c2d?w=1920&q=80');">
         <div class="hero-content">
-            <img src="../assets/logo.webp" alt="Flore - Floristería Ibagué" class="hero-logo">
-            <h1>Ramos de Girasoles y Tulipanes Frescos</h1>
+            <h2 class="hero-title">Ramos de Girasoles y Tulipanes Frescos</h2>
             <p class="hero-subtitle">Entrega en Ibagué, Tolima - Flores de calidad para momentos especiales</p>
-            <button class="cta-primary" onclick="contactWA(); return false;">Contáctanos por WhatsApp</button>
+            <button class="cta-button" onclick="contactWA(); return false;">
+                <span class="whatsapp-icon">📱</span> Contáctanos por WhatsApp
+            </button>
         </div>
     </section>
 
@@ -146,6 +154,7 @@
             <div class="filters-container">
                 <span class="filter-label">Filtrar:</span>
                 <button class="filter-btn active" data-filter="todos">Todos</button>
+                <button class="filter-btn filter-btn-madres" data-filter="dia-madres">Día de las Madres</button>
                 <button class="filter-btn" data-filter="girasoles">Girasoles</button>
                 <button class="filter-btn" data-filter="gerberas">Gerberas</button>
                 <button class="filter-btn" data-filter="bouquets">Bouquets</button>

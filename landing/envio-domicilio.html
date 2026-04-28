@@ -147,15 +147,24 @@
     <title>Envío de Flores a Domicilio en Ibagué - Flore | Entregas 24h</title>
 </head>
 <body>
-
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="../assets/logo.webp" alt="Flore - Floristería Ibagué">
+            </div>
+            <h1 class="header-title">Flore</h1>
+        </div>
+    </header>
 
     <!-- Hero Section -->
-    <section class="hero" style="background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1591768793355-74d04bb6608f?w=1920&q=80') center/cover no-repeat;">
+    <section class="hero" style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1487530811176-3780de880c2d?w=1920&q=80');">
         <div class="hero-content">
-            <img src="../assets/logo.webp" alt="Flore - Floristería Ibagué" class="logo">
-            <h1>Envío de Flores a Domicilio en Ibagué</h1>
-            <p>Flores frescas, arreglos únicos y entregas express 24 horas en tu puerta</p>
-            <button class="cta-button" onclick="contactWA(); return false;">Enviar Flores Ahora</button>
+            <h2 class="hero-title">Envío de Flores a Domicilio en Ibagué</h2>
+            <p class="hero-subtitle">Flores frescas, arreglos únicos y entregas express 24 horas en tu puerta</p>
+            <button class="cta-button" onclick="contactWA(); return false;">
+                <span class="whatsapp-icon">📱</span> Enviar Flores Ahora
+            </button>
         </div>
     </section>
 
@@ -176,6 +185,7 @@
             <div class="filters-container">
                 <span class="filter-label">Filtrar:</span>
                 <button class="filter-btn active" data-filter="todos">Todos</button>
+                <button class="filter-btn filter-btn-madres" data-filter="dia-madres">Día de las Madres</button>
                 <button class="filter-btn" data-filter="girasoles">Girasoles</button>
                 <button class="filter-btn" data-filter="gerberas">Gerberas</button>
                 <button class="filter-btn" data-filter="bouquets">Bouquets</button>

@@ -441,6 +441,83 @@ img { max-width: 100%; height: auto; display: block; }
     color: #fff;
     border-color: #2c2c2c;
 }
+
+/* --- DÍA DE LAS MADRES - BOTÓN ESPECIAL --- */
+.filter-btn-madres {
+    background: linear-gradient(135deg, #e91e63, #ec407a, #f06292) !important;
+    color: white !important;
+    border: 2px solid #e91e63 !important;
+    font-size: 0.95rem !important;
+    font-weight: 700 !important;
+    padding: 0.6rem 1.4rem !important;
+    position: relative;
+    overflow: visible;
+    animation: madres-pulse 2s ease-in-out infinite;
+    box-shadow: 0 4px 15px rgba(233, 30, 99, 0.4) !important;
+    letter-spacing: 0.3px;
+}
+.filter-btn-madres:hover {
+    background: linear-gradient(135deg, #c2185b, #e91e63, #ec407a) !important;
+    transform: translateY(-3px) scale(1.05) !important;
+    box-shadow: 0 6px 20px rgba(233, 30, 99, 0.5) !important;
+}
+.filter-btn-madres.active {
+    background: linear-gradient(135deg, #ad1457, #c2185b, #e91e63) !important;
+    box-shadow: 0 6px 20px rgba(233, 30, 99, 0.5) !important;
+}
+@keyframes madres-pulse {
+    0%, 100% { box-shadow: 0 4px 15px rgba(233, 30, 99, 0.4); }
+    50% { box-shadow: 0 4px 25px rgba(233, 30, 99, 0.7); }
+}
+.filter-btn-madres::before,
+.filter-btn-madres::after {
+    position: absolute;
+    font-size: 0.7rem;
+    animation: float-heart 3s ease-in-out infinite;
+    pointer-events: none;
+    opacity: 0;
+}
+.filter-btn-madres::before {
+    content: "\2665";
+    top: -5px;
+    left: 10%;
+    animation-delay: 0s;
+}
+.filter-btn-madres::after {
+    content: "\2665";
+    top: -5px;
+    right: 10%;
+    animation-delay: 1.5s;
+}
+@keyframes float-heart {
+    0% { opacity: 0; transform: translateY(0) scale(0.5); }
+    20% { opacity: 1; transform: translateY(-8px) scale(1); }
+    60% { opacity: 0.8; transform: translateY(-20px) scale(1.1); }
+    100% { opacity: 0; transform: translateY(-35px) scale(0.6); }
+}
+.hearts-container {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    pointer-events: none;
+    z-index: 9999;
+    overflow: hidden;
+}
+.hearts-container .heart {
+    position: absolute;
+    bottom: -20px;
+    font-size: 1.2rem;
+    color: #e91e63;
+    animation: hearts-rise 4s ease-in forwards;
+    opacity: 0;
+}
+@keyframes hearts-rise {
+    0% { opacity: 0; transform: translateY(0) rotate(0deg) scale(0.5); }
+    10% { opacity: 1; }
+    50% { opacity: 0.8; transform: translateY(-50vh) rotate(15deg) scale(1); }
+    100% { opacity: 0; transform: translateY(-100vh) rotate(-10deg) scale(0.3); }
+}
+
 .results-counter {
     padding: 10px 0;
     font-family: 'Poppins', sans-serif;
