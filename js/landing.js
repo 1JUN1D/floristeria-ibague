@@ -1570,7 +1570,7 @@ const products = [
             },
             {
                 id: 196,
-                name: "Primavera de Mamá",
+                name: "Dulzura Silvestre",
                 price: 122500,
                 image: "../assets/madres/ramo2.webp",
                 description: "Base encartonada especial para mamá con rosas, claveles y lirios blancos, girasol mini . Presentación única y sofisticada con detalles florales variados. Un arreglo fresco y delicado para sorprender a mamá con la belleza de la primavera.",
@@ -1594,7 +1594,7 @@ const products = [
             },
             {
                 id: 199,
-                name: "Primavera de Mamá",
+                name: "Suspiro de Mamá",
                 price: 68750,
                 image: "../assets/madres/ramo5.webp",
                 description: "Delicado bouquet con gerbera, pompón, 2 rosas, astromelia y follaje verde. Envuelto en papel crema con lazo rosa. Fresco, colorido y lleno de vida, como el jardín de mamá. Un detalle tierno y accesible.",
