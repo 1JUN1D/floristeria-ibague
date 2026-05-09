@@ -117,6 +117,7 @@ const products = [
                 description: "Bouquet en forma de corazón con 3 girasoles, manzanilla y follaje en papel negro elegante. Incluye Nutella y tarjeta personalizada. Detalle creativo y original que combina flores, dulzura y amor en una presentación única.",
                 categories: ["girasoles", "chocolates", "precio-bajo"]
             },
+            /* OCULTO - Referencia 15 (gerberas)
             {
                 id: 15,
                 name: "Dulce Serenidad",
@@ -125,6 +126,7 @@ const products = [
                 description: "Bouquet delicado con gerberas rosadas, claveles suaves y follaje verde natural. Envuelto en elegante papel coreano bicolor rosa y blanco con lazo decorativo. Detalle tierno perfecto para gestos espontáneos llenos de cariño.",
                 categories: ["gerberas", "coreano", "precio-bajo"]
             },
+            */
             {
                 id: 16,
                 name: "Tres Veces Te Amo",
@@ -181,6 +183,7 @@ const products = [
                 description: "Delicado bouquet de rosas rosadas con eucalipto envuelto en papel blanco estilo minimalista. Sencillo, fresco y romántico. El detalle perfecto para decir 'te amo' con elegancia y naturalidad sin necesidad de excesos.",
                 categories: ["rosas", "bouquets", "coreano", "precio-bajo"]
             },
+            /* OCULTO - Referencia 23 (gerberas)
             {
                 id: 23,
                 name: "Detalle Natural",
@@ -189,6 +192,7 @@ const products = [
                 description: "Ramo fresco con 3 gerberas moradas, astromelias y margaritas blancas acompañadas de solidago verde. Envuelto en papel decorativo con tarjeta de la marca. Detalle económico y bonito perfecto para expresar gratitud y cariño sincero.",
                 categories: ["gerberas", "bouquets", "precio-bajo"]
             },
+            */
             {
                 id: 24,
                 name: "Rosas Eternas Bouquet",
@@ -229,6 +233,7 @@ const products = [
                 description: "Bouquet premium de rosas rojas intensas con follaje de eucalipto, envuelto en papel negro elegante con lazo de cinta negra. Presentación sofisticada y moderna que combina pasión y distinción. El regalo perfecto para impresionar.",
                 categories: ["rosas", "bouquets", "coreano", "precio-bajo"]
             },
+            /* OCULTO - Referencia 29 (gerberas)
             {
                 id: 29,
                 name: "Encanto Sencillo",
@@ -237,6 +242,7 @@ const products = [
                 description: "Bouquet compacto y encantador con gerberas rosadas y clavellinas blancas envueltas en papel coreano rosa. Detalle sencillo pero impactante que demuestra cariño con estilo. Ideal para sorpresas espontáneas y gestos del corazón.",
                 categories: ["gerberas", "coreano", "precio-bajo"]
             },
+            */
             {
                 id: 30,
                 name: "Trío Ferrero Solar",
@@ -341,6 +347,7 @@ const products = [
                 description: "Elegante bouquet de rosas rosadas con ramas de eucalipto, envuelto en papel blanco y rosa con lazo delicado. Estilo coreano fresco y romántico con tarjeta decorativa. Perfecto para sorprender a alguien especial con dulzura y estilo.",
                 categories: ["rosas", "bouquets", "coreano", "precio-bajo"]
             },
+            /* OCULTO - Referencia 43 (gerberas)
             {
                 id: 43,
                 name: "Jardín de Primavera",
@@ -349,6 +356,8 @@ const products = [
                 description: "Bouquet fresco y encantador con gerberas rosadas, pompones, manzanilla, rosas y claveles. Combinación delicada que transmite alegría y ternura. Envuelto en papel decorativo con tarjeta de la marca. Ideal para sorprender con frescura y color.",
                 categories: ["rosas", "gerberas", "bouquets", "precio-bajo"]
             },
+            */
+            /* OCULTO - Referencia 44 (gerberas)
             {
                 id: 44,
                 name: "Alegría Campestre",
@@ -357,6 +366,7 @@ const products = [
                 description: "Bouquet colorido con gerberas rosadas, rosas, follaje verde y pompones en tonos variados. Presentación envuelta con tarjeta personalizada. Arreglo fresco y vibrante que transmite felicidad, vitalidad y buenos deseos para cualquier ocasión.",
                 categories: ["rosas", "gerberas", "bouquets", "precio-bajo"]
             },
+            */
             {
                 id: 45,
                 name: "Dulzura Floral",
@@ -389,6 +399,7 @@ const products = [
                 description: "Bouquet mixto de rosas rosadas con lirios blancos, gypsophila y follaje verde, envuelto en papel verde menta con lazo rosa. Una combinación exquisita de texturas y aromas que transmite amor puro y perfección.",
                 categories: ["rosas", "bouquets", "premium", "precio-bajo"]
             },
+            /* OCULTO - Referencia 49 (gerberas)
             {
                 id: 49,
                 name: "Terroncito de Amor",
@@ -397,6 +408,7 @@ const products = [
                 description: "Bouquet encantador de rosas rojas con gerberas rosadas y ramas de eucalipto, envuelto en papel rosa y crema con lazo rojo satinado y tarjeta personalizada. La mezcla perfecta entre dulzura y pasión en un solo ramo.",
                 categories: ["rosas", "bouquets", "gerberas", "coreano", "precio-bajo"]
             },
+            */
             {
                 id: 50,
                 name: "Pasión con Perlas",
@@ -421,6 +433,7 @@ const products = [
                 description: "Bouquet de rosas rojas con gypsophila y caja de Ferrero Rocher, envuelto en papel rosa con diseño mármol dorado y lazo rosa satinado. Un regalo que combina romance y dulzura en una presentación moderna y llamativa.",
                 categories: ["rosas", "bouquets", "chocolates", "coreano", "precio-medio"]
             },
+            /* OCULTO - Referencia 53 (gerberas)
             {
                 id: 53,
                 name: "Brisa Lavanda",
@@ -429,6 +442,7 @@ const products = [
                 description: "Bouquet armonioso que combina hortensias moradas, rosas, gerberas rosadas y astromelias. Envuelto en delicado papel lavanda con lazo. Combinación única de colores que transmite elegancia, misterio y romanticismo.",
                 categories: ["rosas", "gerberas", "bouquets", "precio-medio"]
             },
+            */
             {
                 id: 54,
                 name: "Amanecer Dorado",
@@ -469,6 +483,7 @@ const products = [
                 description: "Bouquet nupcial con astromelias blancas y rosas en tonos crema con follaje verde. Atado con cuerda natural estilo rústico. Combinación fresca y delicada que transmite paz y armonía. Ideal para bodas al aire libre.",
                 categories: ["rosas", "novia", "precio-medio"]
             },
+            /* OCULTO - Referencia 59 (gerberas)
             {
                 id: 59,
                 name: "Explosión de Color",
@@ -477,6 +492,7 @@ const products = [
                 description: "Bouquet vibrante con 2 girasoles, 2 gerberas, boca de dragón, nubes, margaritas y solidago. Envuelto en papel coreano rosa. Mezcla multicolor llena de vida y alegría que celebra cada momento con intensidad.",
                 categories: ["girasoles", "gerberas", "bouquets", "precio-medio"]
             },
+            */
             {
                 id: 60,
                 name: "Mi Amor Bonito",
@@ -485,6 +501,7 @@ const products = [
                 description: "Bouquet de rosas rojas con eucalipto envuelto en papel rosa suave con lazo rojo y tarjeta personalizada. Estilo coreano elegante y romántico con un toque natural. El equilibrio perfecto entre sencillez y sofisticación para expresar amor.",
                 categories: ["rosas", "bouquets", "coreano", "precio-medio"]
             },
+            /* OCULTO - Referencia 61 (gerberas)
             {
                 id: 61,
                 name: "Canasta Dulce Rosa",
@@ -493,6 +510,8 @@ const products = [
                 description: "Canasta decorativa con gerberas rosadas intensas, nubes (gypsophila) y margaritas blancas sobre follaje verde. Combinación tierna y fresca que transmite cariño y delicadeza. Perfecta para regalar en cualquier ocasión especial.",
                 categories: ["gerberas", "canastas", "precio-medio"]
             },
+            */
+            /* OCULTO - Referencia 62 (gerberas)
             {
                 id: 62,
                 name: "Jardín del Sol",
@@ -501,6 +520,7 @@ const products = [
                 description: "Ramo abundante con 3 girasoles, 3 rosas rosadas, 4 gerberas y margaritas con follaje. Envuelto en papel coreano rosa. Combinación exuberante que fusiona la alegría del girasol con la delicadeza de las gerberas y rosas.",
                 categories: ["rosas", "girasoles", "gerberas", "bouquets", "precio-medio"]
             },
+            */
             {
                 id: 63,
                 name: "Nube de Rosas",
@@ -549,6 +569,7 @@ const products = [
                 description: "Caja corazón blanca con 9 girasoles, follaje y nubes. Incluye cartel decorativo 'Para la más hermosa'. Diseño romántico y luminoso que combina la calidez del girasol con el símbolo del amor. Regalo premium para momentos especiales.",
                 categories: ["girasoles", "cajas", "precio-medio"]
             },
+            /* OCULTO - Referencia 69 (gerberas)
             {
                 id: 69,
                 name: "Fusión Silvestre",
@@ -557,6 +578,8 @@ const products = [
                 description: "Ramo exuberante y llamativo con gerberas en tonos rosa y fucsia, margaritas y rosas. Presentación abundante envuelta en papel periódico decorativo con lazo rosado. Diseño moderno con personalidad que transmite energía y pasión.",
                 categories: ["rosas", "gerberas", "bouquets", "precio-medio"]
             },
+            */
+            /* OCULTO - Referencia 70 (gerberas)
             {
                 id: 70,
                 name: "Romance Coreano",
@@ -565,6 +588,7 @@ const products = [
                 description: "Hermoso bouquet con rosas en tonos pastel, gerbera, margaritas, tulipán y alelís. Decorado en elegante estilo coreano con papel rosa suave. Combinación romántica y delicada perfecta para enamorar desde la primera mirada.",
                 categories: ["rosas", "gerberas", "bouquets", "coreano", "precio-medio"]
             },
+            */
             {
                 id: 71,
                 name: "Cumpleaños Radiante",
@@ -653,6 +677,7 @@ const products = [
                 description: "Caja cilíndrica rosa con abundantes rosas fucsia frescas perfectamente acomodadas, decorada con lazo de cinta rosa. Presentación elegante tipo hat box que impacta a primera vista. Un regalo lleno de color y romance.",
                 categories: ["rosas", "cajas", "premium", "precio-medio"]
             },
+            /* OCULTO - Referencia 82 (gerberas)
             {
                 id: 82,
                 name: "Corazón de Gerberas",
@@ -661,6 +686,7 @@ const products = [
                 description: "Espectacular arreglo en forma de corazón con abundantes gerberas rosadas rodeadas de nubes (gypsophila). Presentación en elegante papel coreano rosa. Un regalo romántico e impactante que roba suspiros y deja huella.",
                 categories: ["gerberas", "coreano", "premium", "precio-medio"]
             },
+            */
             {
                 id: 83,
                 name: "Rosas y Sol",
@@ -717,6 +743,7 @@ const products = [
                 description: "Bouquet de novia en cascada con rosas blancas, yicsu y follaje verde cayendo en forma de lágrima. Diseño clásico y majestuoso que transmite elegancia suprema. Ideal para novias que buscan un ramo con presencia y dramatismo.",
                 categories: ["rosas", "novia", "premium", "precio-medio"]
             },
+            /* OCULTO - Referencia 90 (gerberas)
             {
                 id: 90,
                 name: "Elegancia con Tulipanes",
@@ -725,6 +752,8 @@ const products = [
                 description: "Bouquet sofisticado que combina gerberas con tulipanes rosados, pompones blancos y alelís. Presentación en papel coreano bicolor con lazo. Mezcla exclusiva de texturas y tonos que transmite distinción y romanticismo.",
                 categories: ["gerberas", "bouquets", "coreano", "premium", "precio-medio"]
             },
+            */
+            /* OCULTO - Referencia 91 (gerberas)
             {
                 id: 91,
                 name: "Fiesta Floral",
@@ -733,6 +762,7 @@ const products = [
                 description: "Ramo abundante y festivo con gerberas, margaritas, rosas, claveles y corona decorativa. Incluye 2 globos de helio que añaden un toque celebratorio. Envuelto en papel coreano rosa con corazones. Ideal para cumpleaños y celebraciones.",
                 categories: ["rosas", "gerberas", "bouquets", "coreano", "precio-medio"]
             },
+            */
             {
                 id: 92,
                 name: "Canasta Primaveral",
@@ -741,6 +771,7 @@ const products = [
                 description: "Canasta decorativa con 3 girasoles, rosas en tonos durazno, lisianthus verde, nubes y follaje. Presentación con lazo naranja. Arreglo fresco y armonioso que llena cualquier espacio de vida, color y elegancia natural.",
                 categories: ["rosas", "girasoles", "canastas", "precio-medio"]
             },
+            /* OCULTO - Referencia 93 (gerberas)
             {
                 id: 93,
                 name: "Festival Floral con Ferrero",
@@ -749,6 +780,7 @@ const products = [
                 description: "Ramo generoso con girasoles, gerberas rosadas y fucsia, rosas rojas y amarillas, claveles y pompones. Incluye caja de Ferrero Rocher. Envuelto en papel coreano rosa. Combinación festiva de flores y dulzura para momentos inolvidables.",
                 categories: ["rosas", "girasoles", "gerberas", "bouquets", "chocolates", "premium", "precio-medio"]
             },
+            */
             {
                 id: 94,
                 name: "Mariposas Doradas",
@@ -757,6 +789,7 @@ const products = [
                 description: "Impresionante ramo con 13 girasoles decorados con 4 mariposas doradas y moño elegante en papel negro. Incluye tarjeta del día de las flores amarillas. Diseño espectacular y simbólico que transmite admiración y grandeza.",
                 categories: ["girasoles", "premium", "precio-medio"]
             },
+            /* OCULTO - Referencia 95 (gerberas)
             {
                 id: 95,
                 name: "Canasta Arcoíris",
@@ -765,6 +798,7 @@ const products = [
                 description: "Canasta de mimbre natural repleta de gerberas multicolores en tonos rojo, naranja, amarillo, rosa y blanco con follaje verde abundante. Arreglo vibrante y alegre que llena de vida cualquier espacio. Presentación rústica y elegante.",
                 categories: ["gerberas", "canastas", "precio-medio"]
             },
+            */
             {
                 id: 96,
                 name: "Tierno Amor Bicolor",
@@ -773,6 +807,7 @@ const products = [
                 description: "Bouquet romántico de rosas rojas con claveles rosados y abundante gypsophila, envuelto en papel negro con corte decorativo y mariposa dorada. Combinación clásica y tierna que mezcla pasión con dulzura en una presentación moderna.",
                 categories: ["rosas", "bouquets", "coreano", "precio-medio"]
             },
+            /* OCULTO - Referencia 97 (gerberas)
             {
                 id: 97,
                 name: "Corazón Multicolor",
@@ -781,6 +816,8 @@ const products = [
                 description: "Impresionante caja negra en forma de corazón repleta de gerberas multicolores: fucsia, naranja, amarillo, blanco y rosa. Arreglo vibrante y alegre que irradia felicidad. Incluye tarjeta personalizada y lazo decorativo.",
                 categories: ["gerberas", "cajas", "premium", "precio-alto"]
             },
+            */
+            /* OCULTO - Referencia 98 (gerberas)
             {
                 id: 98,
                 name: "Esplendor en Base",
@@ -789,6 +826,8 @@ const products = [
                 description: "Arreglo floral premium en elegante base cilíndrica blanca con gerberas, rosas, margaritas, astromelias, eucalipto, rosas mini y claveles. Diseño abundante y sofisticado con lazo fucsia que decora cualquier espacio con lujo.",
                 categories: ["rosas", "gerberas", "cajas", "premium", "precio-alto"]
             },
+            */
+            /* OCULTO - Referencia 99 (gerberas)
             {
                 id: 99,
                 name: "Torre de Pasión",
@@ -797,6 +836,7 @@ const products = [
                 description: "Lujoso arreglo en caja cilíndrica blanca con gerberas, pompones, rosas naturales rojas y rosadas, y clavellinas. Coronado con elegante lazo fucsia. Diseño imponente que combina dulzura y pasión en un solo detalle memorable.",
                 categories: ["rosas", "gerberas", "cajas", "premium", "precio-alto"]
             },
+            */
             {
                 id: 100,
                 name: "Reina de las Rosas",
@@ -837,6 +877,7 @@ const products = [
                 description: "Gran bouquet de lujo con abundantes rosas rojas, claveles, alstroemeria rosada y cinta personalizada 'Por Bonita', envuelto en papel kraft dorado. Un homenaje floral imponente para la mujer más especial. Arreglo premium de máxima elegancia.",
                 categories: ["rosas", "bouquets", "premium", "precio-alto"]
             },
+            /* OCULTO - Referencia 105 (gerberas)
             {
                 id: 105,
                 name: "Sinfonía Multicolor",
@@ -845,6 +886,7 @@ const products = [
                 description: "Ramo espectacular y abundante con girasoles, gerberas rosadas y fucsia, rosas rojas y claveles. Envuelto en elegante papel coreano rosa con estampado decorativo. Explosión de color y alegría que deja sin palabras. Un regalo de alto impacto.",
                 categories: ["rosas", "girasoles", "gerberas", "bouquets", "premium", "precio-alto"]
             },
+            */
             {
                 id: 106,
                 name: "Majestuosidad de Girasoles",
@@ -885,6 +927,7 @@ const products = [
                 description: "Mega bouquet de lujo con abundantes rosas rojas, Ferrero Rocher intercalados, corona decorativa y cinta personalizada, envuelto en papel negro y gris con bordes dorados. Una obra maestra floral para la persona más importante de tu vida.",
                 categories: ["rosas", "bouquets", "chocolates", "premium", "precio-alto"]
             },
+            /* OCULTO - Referencia 111 (gerberas)
             {
                 id: 111,
                 name: "Dulce Amor",
@@ -893,6 +936,8 @@ const products = [
                 image: "../assets/foto111.webp",
                 categories: ["rosas", "canastas", "gerberas", "precio-medio"]
             },
+            */
+            /* OCULTO - Referencia 112 (gerberas)
             {
                 id: 112,
                 name: "Color de Amor",
@@ -901,6 +946,7 @@ const products = [
                 image: "../assets/foto112.webp",
                 categories: ["cajas", "girasoles", "gerberas", "precio-medio"]
             },
+            */
             {
                 id: 113,
                 name: "Unidos por Siempre",
@@ -925,6 +971,7 @@ const products = [
                 image: "../assets/foto115.webp",
                 categories: ["rosas", "cajas", "chocolates", "precio-medio"]
             },
+            /* OCULTO - Referencia 116 (gerberas)
             {
                 id: 116,
                 name: "Tierno Amor Campestre",
@@ -933,6 +980,8 @@ const products = [
                 image: "../assets/foto116.webp",
                 categories: ["rosas", "cajas", "girasoles", "gerberas", "precio-medio"]
             },
+            */
+            /* OCULTO - Referencia 117 (gerberas)
             {
                 id: 117,
                 name: "Un Cumpleaños Inolvidable",
@@ -941,6 +990,7 @@ const products = [
                 image: "../assets/foto117.webp",
                 categories: ["rosas", "gerberas", "precio-medio"]
             },
+            */
             {
                 id: 118,
                 name: "Cariñito",
@@ -965,6 +1015,7 @@ const products = [
                 image: "../assets/foto120.webp",
                 categories: ["cajas", "chocolates", "precio-medio"]
             },
+            /* OCULTO - Referencia 121 (gerberas)
             {
                 id: 121,
                 name: "Pétalos de Amor",
@@ -973,6 +1024,7 @@ const products = [
                 image: "../assets/foto121.webp",
                 categories: ["rosas", "cajas", "gerberas", "precio-medio"]
             },
+            */
             {
                 id: 122,
                 name: "Belleza Floral",
@@ -1213,6 +1265,7 @@ const products = [
                 image: "../assets/foto151.webp",
                 categories: ["funebre", "precio-alto"]
             },
+            /* OCULTO - Referencia 152 (gerberas)
             {
                 id: 152,
                 name: "Para Siempre en Mi Corazón",
@@ -1221,6 +1274,7 @@ const products = [
                 image: "../assets/foto152.webp",
                 categories: ["funebre", "gerberas", "premium", "precio-alto"]
             },
+            */
             {
                 id: 153,
                 name: "Corona Fúnebre sin Trípode",
@@ -1367,6 +1421,7 @@ const products = [
                 image: "../assets/foto170.webp",
                 categories: ["rosas", "tulipanes", "bouquets", "premium", "precio-medio"]
             },
+            /* OCULTO - Referencia 171 (gerberas)
             {
                 id: 171,
                 name: "Gran Bouquet Tulipanes y Flores Premium",
@@ -1375,6 +1430,7 @@ const products = [
                 image: "../assets/foto171.webp",
                 categories: ["rosas", "tulipanes", "gerberas", "premium", "precio-alto"]
             },
+            */
             {
                 id: 172,
                 name: "Tulipanes con Rosas Rojas",
@@ -1384,6 +1440,7 @@ const products = [
                 categories: ["rosas", "tulipanes", "bouquets", "precio-bajo"],
                 hidden: true
             },
+            /* OCULTO - Referencia 173 (gerberas)
             {
                 id: 173,
                 name: "Bouquet Tulipanes y Gerberas Rosadas",
@@ -1392,6 +1449,8 @@ const products = [
                 image: "../assets/foto173.webp",
                 categories: ["tulipanes", "gerberas", "bouquets", "precio-medio"]
             },
+            */
+            /* OCULTO - Referencia 174 (gerberas)
             {
                 id: 174,
                 name: "Bouquet Tulipanes, Lirios y Gerberas",
@@ -1400,6 +1459,7 @@ const products = [
                 image: "../assets/foto174.webp",
                 categories: ["rosas", "tulipanes", "lirios", "gerberas", "bouquets", "precio-medio"]
             },
+            */
             {
                 id: 175,
                 name: "Lirio con Rosas Rosadas y Fucsia",
@@ -1408,6 +1468,7 @@ const products = [
                 image: "../assets/foto175.webp",
                 categories: ["rosas", "lirios", "bouquets", "precio-bajo"]
             },
+            /* OCULTO - Referencia 176 (gerberas)
             {
                 id: 176,
                 name: "Gran Bouquet de Lirios y Flores Surtidas",
@@ -1416,6 +1477,7 @@ const products = [
                 image: "../assets/foto176.webp",
                 categories: ["lirios", "gerberas", "premium", "precio-alto"]
             },
+            */
             {
                 id: 177,
                 name: "Bouquet 2 Varas de Lirio Surtido Rosa",
@@ -1424,6 +1486,7 @@ const products = [
                 image: "../assets/foto177.webp",
                 categories: ["lirios", "bouquets", "precio-bajo"]
             },
+            /* OCULTO - Referencia 178 (gerberas)
             {
                 id: 178,
                 name: "Lirios con Clavel, Gerberas y Follaje",
@@ -1432,6 +1495,7 @@ const products = [
                 image: "../assets/foto178.webp",
                 categories: ["lirios", "gerberas", "bouquets", "precio-bajo"]
             },
+            */
             {
                 id: 179,
                 name: "Lirios con Clavel Rosado",
@@ -1496,6 +1560,7 @@ const products = [
                 image: "../assets/foto186.webp",
                 categories: ["rosas", "lirios", "cajas", "chocolates", "precio-medio"]
             },
+            /* OCULTO - Referencia 187 (gerberas)
             {
                 id: 187,
                 name: "Bouquet Lirios, Gerberas y Ferrero",
@@ -1504,6 +1569,8 @@ const products = [
                 image: "../assets/foto187.webp",
                 categories: ["lirios", "gerberas", "chocolates", "bouquets", "precio-medio"]
             },
+            */
+            /* OCULTO - Referencia 188 (gerberas)
             {
                 id: 188,
                 name: "Bouquet Graduación Lirios y Gerberas",
@@ -1512,6 +1579,7 @@ const products = [
                 image: "../assets/foto188.webp",
                 categories: ["lirios", "gerberas", "bouquets", "precio-bajo"]
             },
+            */
             {
                 id: 189,
                 name: "Bouquet Lirios y Rosas con Peluche Stitch Graduado",
@@ -1520,6 +1588,7 @@ const products = [
                 image: "../assets/foto189.webp",
                 categories: ["rosas", "lirios", "bouquets", "premium", "precio-medio"]
             },
+            /* OCULTO - Referencia 190 (gerberas)
             {
                 id: 190,
                 name: "Gran Bouquet Lirios Premium con Peluche Snoopy",
@@ -1528,6 +1597,7 @@ const products = [
                 image: "../assets/foto190.webp",
                 categories: ["rosas", "lirios", "gerberas", "premium", "precio-alto"]
             },
+            */
             {
                 id: 191,
                 name: "Mini Bouquet Lirios con Globo Cumpleaños",
