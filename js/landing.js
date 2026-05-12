@@ -5,6 +5,7 @@
 
 // --- DATOS DEL CATÁLOGO COMPLETO ---
 const products = [
+            /* OCULTO - Referencia 1 (flor amarilla)
             {
                 id: 1,
                 name: "Para Ti con Cariño",
@@ -13,6 +14,8 @@ const products = [
                 description: "Mini bouquet de margaritas amarillas en cartulina negra con mensaje 'Para Ti' escrito a mano y lazo dorado. El detalle más económico y tierno. Pequeño en tamaño pero grande en significado. Perfecto para sorpresas rápidas y emotivas.",
                 categories: ["bouquets", "precio-bajo"]
             },
+            */
+            /* OCULTO - Referencia 2 (flor amarilla)
             {
                 id: 2,
                 name: "Rosa Eterna Mini",
@@ -21,6 +24,7 @@ const products = [
                 description: "Mini bouquet con 1 rosa eterna amarilla dorada envuelta en papel blanco con lazo amarillo y texto personalizado. El detalle más económico y duradero. Perfecto para expresar cariño con un regalo que nunca se marchita.",
                 categories: ["rosas-eternas", "precio-bajo"]
             },
+            */
             {
                 id: 3,
                 name: "Te Quiero Solar",
@@ -47,6 +51,7 @@ const products = [
                 categories: ["pompones", "precio-bajo"]
             },
             */
+            /* OCULTO - Referencia 6 (flor amarilla)
             {
                 id: 6,
                 name: "Frescura Amarilla",
@@ -55,6 +60,7 @@ const products = [
                 description: "Bouquet sencillo y fresco de margaritas amarillas con follaje verde envuelto en papel durazno. Detalle económico y alegre que transmite optimismo y buenos deseos. Perfecto para gestos espontáneos llenos de color y vitalidad.",
                 categories: ["bouquets", "precio-bajo"]
             },
+            */
             /* OCULTO - Referencia 7 (pompon amarillo)
             {
                 id: 7,
@@ -89,6 +95,7 @@ const products = [
                 description: "Bouquet compacto y colorido con 1 girasol central, rosas rosadas, flores surtidas en tonos vibrantes. Envuelto en papel coreano rosa con lazo. Detalle económico pero lleno de vida y alegría, perfecto para sorpresas espontáneas.",
                 categories: ["rosas", "girasoles", "bouquets", "precio-bajo"]
             },
+            /* OCULTO - Referencia 11 (flor amarilla)
             {
                 id: 11,
                 name: "Rosas Eternas Doradas",
@@ -97,6 +104,7 @@ const products = [
                 description: "Elegante caja redonda negra con 4 rosas eternas doradas, follaje verde y tarjeta personalizada con mensaje especial. Diseño sofisticado con lazo dorado. Un regalo duradero que simboliza amor eterno e inmortal.",
                 categories: ["rosas-eternas", "cajas", "precio-bajo"]
             },
+            */
             {
                 id: 12,
                 name: "Giras en Mi Mente",
@@ -193,6 +201,7 @@ const products = [
                 description: "Ramo fresco con 3 gerberas moradas, astromelias y margaritas blancas acompañadas de solidago verde. Envuelto en papel decorativo con tarjeta de la marca. Detalle económico y bonito perfecto para expresar gratitud y cariño sincero.",
                 categories: ["gerberas", "bouquets", "precio-bajo"]
             },
+            /* OCULTO - Referencia 24 (flor amarilla)
             {
                 id: 24,
                 name: "Rosas Eternas Bouquet",
@@ -201,6 +210,7 @@ const products = [
                 description: "Bouquet de 8 rosas eternas amarillas doradas con moñito blanco decorado en papel fotográfico con corazones. Diseño delicado y duradero que simboliza amor imperecedero. Regalo sofisticado que no se marchita y perdura en el tiempo.",
                 categories: ["rosas-eternas", "precio-bajo"]
             },
+            */
             {
                 id: 25,
                 name: "Cuatro Soles con Margarita",
