@@ -1974,16 +1974,18 @@ function spawnHearts() {
 }
 
 // Soporte #dia-madre en URL
+// SEGURO: Auto-filtro por hash desactivado para que SIEMPRE muestre todos los productos al entrar
 function checkHashMadres() {
-    if (window.location.hash === '#dia-madre' || window.location.hash === '#dia-madres') {
-        filterProducts('dia-madres');
-        spawnHearts();
-        setTimeout(function() {
-            var section = document.getElementById('productos');
-            if (section) section.scrollIntoView({ behavior: 'smooth' });
-        }, 300);
-    }
-    // Agregar lanzamiento de corazones al hacer clic en botón Madres
+    // Comportamiento original deshabilitado:
+    // if (window.location.hash === '#dia-madre' || window.location.hash === '#dia-madres') {
+    //     filterProducts('dia-madres');
+    //     spawnHearts();
+    //     setTimeout(function() {
+    //         var section = document.getElementById('productos');
+    //         if (section) section.scrollIntoView({ behavior: 'smooth' });
+    //     }, 300);
+    // }
+    // Agregar lanzamiento de corazones al hacer clic en botón Madres (mantiene el efecto al hacer clic)
     var madresBtn = document.querySelector('.filter-btn-madres');
     if (madresBtn) {
         madresBtn.addEventListener('click', function() {
