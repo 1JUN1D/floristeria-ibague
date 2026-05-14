@@ -1826,6 +1826,14 @@ const products = [
                 description: "Espectacular canasta de mimbre con arreglo abundante de rosas fucsia, lirios rosados, claveles, gypsophila, follaje verde y selección premium de frutas frescas (peras, uvas y mango). Combinación gourmet de flores y frutas con lazo rosa satinado. Ideal para cumpleaños, agradecimientos o detalles especiales.",
                 categories: ["rosas", "lirios", "canastas", "frutas", "premium", "precio-medio"]
             },
+            {
+                id: 210,
+                name: "Esplendor Premium Flore",
+                price: 322500,
+                image: "assets/foto197.webp",
+                description: "Espectacular arreglo premium en exclusiva caja negra con sello Flore que combina orquídeas phalaenopsis fucsia, girasol, gerberas naranjas, rosas en tonos lila, fucsia y rosa, claveles, boca de dragón y aster morado con abundante follaje verde. Incluye tarjeta personalizada con mensaje especial. Una obra floral imponente y multicolor para ocasiones realmente especiales.",
+                categories: ["rosas", "girasoles", "gerberas", "cajas", "premium", "precio-alto"]
+            },
         ];
 
         // Generar código de producto a partir del id
@@ -1955,7 +1963,7 @@ const products = [
                                 <span class="price-label">Desde</span>
                                 <div class="product-price">${formatPrice(product.price)}</div>
                             </div>
-                            <a href="https://wa.me/573151100609?text=Hola,%20me%20interesa%20el%20producto:%20${encodeURIComponent(code + ' - ' + product.name)}%20-%20${formatPrice(product.price)}"
+                            <a href="https://wa.me/573151100609?text=${encodeURIComponent('Hola, me interesa el producto: ' + code + ' - ' + product.name + ' - ' + formatPrice(product.price) + '\nFoto: https://floristeriaibague.dondeseria.com/' + product.image.replace('../', ''))}"
                                class="btn-order"
                                target="_blank">
                                 <svg viewBox="0 0 24 24" fill="currentColor">

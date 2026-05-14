@@ -1694,6 +1694,14 @@ const products = [
                 description: "Espectacular canasta de mimbre con arreglo abundante de rosas fucsia, lirios rosados, claveles, gypsophila, follaje verde y selección premium de frutas frescas (peras, uvas y mango). Combinación gourmet de flores y frutas con lazo rosa satinado. Ideal para cumpleaños, agradecimientos o detalles especiales.",
                 categories: ["rosas", "lirios", "canastas", "frutas", "premium", "precio-medio"]
             },
+            {
+                id: 210,
+                name: "Esplendor Premium Flore",
+                price: 322500,
+                image: "../assets/foto197.webp",
+                description: "Espectacular arreglo premium en exclusiva caja negra con sello Flore que combina orquídeas phalaenopsis fucsia, girasol, gerberas naranjas, rosas en tonos lila, fucsia y rosa, claveles, boca de dragón y aster morado con abundante follaje verde. Incluye tarjeta personalizada con mensaje especial. Una obra floral imponente y multicolor para ocasiones realmente especiales.",
+                categories: ["rosas", "girasoles", "gerberas", "cajas", "premium", "precio-alto"]
+            },
         ];
 
 // --- VARIABLES GLOBALES ---
@@ -1836,7 +1844,7 @@ function renderProducts(filters = [], limit = null) {
                     <p>${product.description}</p>
                     <div class="product-footer">
                         <span class="price">${formatCOP(product.price)}</span>
-                        <button class="btn-order" onclick="orderWA('${code} - ${escapedName}', '${product.price}')">
+                        <button class="btn-order" onclick="orderWA('${code} - ${escapedName}', '${product.price}', '${product.image.replace(/'/g, "\\'")}')">
                             Pedir por WhatsApp
                         </button>
                     </div>
@@ -1864,8 +1872,12 @@ function contactWA() {
     }
 }
 
-function orderWA(productName, price) {
-    const message = `Hola, me interesa ${productName} (${formatCOP(parseFloat(price))}). ¿Podrías darme más información?`;
+function orderWA(productName, price, image) {
+    let message = `Hola, me interesa ${productName} (${formatCOP(parseFloat(price))}). ¿Podrías darme más información?`;
+    if (image) {
+        const photoUrl = 'https://floristeriaibague.dondeseria.com/' + String(image).replace('../', '');
+        message = `Hola, me interesa el producto: ${productName} - ${formatCOP(parseFloat(price))}\nFoto: ${photoUrl}`;
+    }
     const encodedMessage = encodeURIComponent(message);
     const url = `https://wa.me/573151100609?text=${encodedMessage}`;
     try {
