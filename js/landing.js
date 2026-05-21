@@ -1319,7 +1319,7 @@ const products = [
             {
                 id: 163,
                 name: "Bouquet 9 Tulipanes Eternos Amor",
-                price: 123165,
+                price: 148750,
                 description: "Hermoso bouquet de 9 tulipanes eternos en tonos rosados y amarillos con letrero 'Amor', envuelto en papel coreano rosa con estampado de rosas. Incluye tarjeta personalizada. Un regalo duradero y romántico que nunca se marchita.",
                 image: "../assets/foto163.webp",
                 categories: ["rosas", "tulipanes", "coreano", "precio-bajo"]
@@ -1327,7 +1327,7 @@ const products = [
             {
                 id: 164,
                 name: "Bouquet 16 Tulipanes Eternos Multicolor",
-                price: 214245,
+                price: 258750,
                 description: "Espectacular bouquet de 16 tulipanes eternos en colores variados: rosados, amarillos, naranjas, morados, rojos, blancos y verdes. Envuelto en papel coreano rosa con lazo. Incluye tarjeta personalizada. Un arcoíris de tulipanes que dura para siempre.",
                 image: "../assets/foto164.webp",
                 categories: ["tulipanes", "premium", "coreano", "precio-medio"]
@@ -1335,7 +1335,7 @@ const products = [
             {
                 id: 165,
                 name: "Bouquet 5 Tulipanes Naturales Amarillos",
-                price: 214245,
+                price: 257094,
                 description: "Elegante bouquet de 5 tulipanes naturales amarillos con gypsophila (nubes), envuelto en papel coreano rosa con detalles dorados de corazones. Incluye tarjeta personalizada. La frescura y belleza de los tulipanes naturales en su máxima expresión.",
                 image: "../assets/foto165.webp",
                 categories: ["tulipanes", "coreano", "precio-medio"],
@@ -1344,7 +1344,7 @@ const products = [
             {
                 id: 166,
                 name: "Mini Bouquet 3 Tulipanes Eternos",
-                price: 49680,
+                price: 60000,
                 description: "Encantador mini bouquet de 3 tulipanes eternos amarillos envueltos en papel negro con estampado dorado de corazones y la palabra 'Love'. Lazo amarillo decorativo. Detalle económico, elegante y duradero perfecto para sorprender.",
                 image: "../assets/foto166.webp",
                 categories: ["tulipanes", "precio-bajo"]
@@ -1352,7 +1352,7 @@ const products = [
             {
                 id: 167,
                 name: "Bouquet 9 Tulipanes Eternos Blancos",
-                price: 126270,
+                price: 152500,
                 description: "Delicado bouquet de 9 tulipanes eternos blancos puros envueltos en papel coreano rosa con estampado de rosas y lazo blanco de satín. Elegancia y pureza en un arreglo que perdura en el tiempo. Perfecto para expresar amor sincero.",
                 image: "../assets/foto167.webp",
                 categories: ["rosas", "tulipanes", "coreano", "precio-bajo"]
@@ -1360,7 +1360,7 @@ const products = [
             {
                 id: 168,
                 name: "Tulipanes Naturales con Clavel Rosado",
-                price: 226665,
+                price: 273750,
                 description: "Bouquet sofisticado de 5 tulipanes naturales blancos combinados con abundantes claveles rosados, envuelto en papel coreano rosa con lazo de satín. Mezcla delicada de texturas y tonos que transmite ternura y distinción.",
                 image: "../assets/foto168.webp",
                 categories: ["tulipanes", "bouquets", "precio-medio"]
@@ -1368,7 +1368,7 @@ const products = [
             {
                 id: 169,
                 name: "Bouquet 10 Tulipanes Naturales Lila y Blanco",
-                price: 265995,
+                price: 321250,
                 description: "Impresionante bouquet de 10 tulipanes naturales en tonos lila y blanco, envuelto en papel blanco con diseño exclusivo de la marca Flore y lazo lila. Frescura y elegancia premium en cada pétalo. Un regalo inolvidable.",
                 image: "../assets/foto169.webp",
                 categories: ["tulipanes", "premium", "precio-alto"]
@@ -1376,7 +1376,7 @@ const products = [
             {
                 id: 170,
                 name: "Tulipanes con Rosas y Hortensia",
-                price: 240120,
+                price: 290000,
                 description: "Exquisito bouquet de 5 tulipanes rosados combinados con rosas rosadas y hortensia azul, envuelto en papel coreano lila. Una combinación única de colores pastel que transmite romanticismo y sofisticación. Arreglo premium para ocasiones especiales.",
                 image: "../assets/foto170.webp",
                 categories: ["rosas", "tulipanes", "bouquets", "premium", "precio-medio"]
@@ -1384,7 +1384,7 @@ const products = [
                         {
                 id: 171,
                 name: "Gran Bouquet Tulipanes y Flores Premium",
-                price: 491625,
+                price: 593750,
                 description: "Majestuoso bouquet de 8 tulipanes eternos combinados con gerberas, rosas en tonos rosa, clavel rosado y abundante follaje. Envuelto en papel coreano rosa premium. El arreglo más completo y espectacular con tulipanes. Un regalo que deja sin palabras.",
                 image: "../assets/foto171.webp",
                 categories: ["rosas", "tulipanes", "gerberas", "premium", "precio-alto"]
@@ -1392,7 +1392,7 @@ const products = [
             {
                 id: 172,
                 name: "Tulipanes con Rosas Rojas",
-                price: 129375,
+                price: 218750,
                 description: "Bouquet romántico de 3 tulipanes rojos combinados con rosas rojas, follaje verde y tarjeta personalizada. Envuelto en papel coreano rosa con lazo rojo de satín. La pasión de las rosas y la elegancia de los tulipanes en un solo arreglo.",
                 image: "../assets/foto172.webp",
                 categories: ["rosas", "tulipanes", "bouquets", "precio-bajo"],
@@ -1401,7 +1401,7 @@ const products = [
                         {
                 id: 173,
                 name: "Bouquet Tulipanes y Gerberas Rosadas",
-                price: 181125,
+                price: 217350,
                 description: "Bouquet encantador de 2 tulipanes con gerberas y flores surtidas en tonalidades rosadas. Envuelto en papel coreano rosa y dorado con lazo rojo. Una explosión de color en tonos rosa que transmite alegría y cariño.",
                 image: "../assets/foto173.webp",
                 categories: ["tulipanes", "gerberas", "bouquets", "precio-medio"]
@@ -1409,7 +1409,7 @@ const products = [
                         {
                 id: 174,
                 name: "Bouquet Tulipanes, Lirios y Gerberas",
-                price: 194580,
+                price: 235000,
                 description: "Bouquet mixto espectacular de 2 tulipanes con 1 vara de lirios, gerberas, rosas y flores surtidas en tonos rosa. Envuelto en papel coreano rosa con lazo. Incluye tarjeta personalizada. Variedad floral premium en tonos cálidos.",
                 image: "../assets/foto174.webp",
                 categories: ["rosas", "tulipanes", "lirios", "gerberas", "bouquets", "precio-medio"]
@@ -1553,7 +1553,7 @@ const products = [
             {
                 id: 192,
                 name: "Encanto Primaveral",
-                price: 226406,
+                price: 271687,
                 description: "Hermoso bouquet mixto con rosas rosadas, tulipanes naranjas y amarillos, lirio rosado, rosa blanca, mini rosas y bayas rojas decorativas. Envuelto en papel coreano rosa con lazo satinado. Incluye tarjeta personalizada. Combinación fresca y vibrante que transmite alegría y romanticismo.",
                 image: "../assets/foto192.webp",
                 categories: ["rosas", "bouquets", "tulipanes", "lirios", "coreano", "precio-medio"]
@@ -1561,7 +1561,7 @@ const products = [
             {
                 id: 193,
                 name: "Mini Bouquet Tulipanes y Claveles",
-                price: 103500,
+                price: 124200,
                 description: "Delicado mini bouquet con 2 tulipanes rosados acompañados de mini claveles blancos con detalles burdeos y eucalipto fresco. Envuelto en elegante papel crema con lazo blanco satinado. Un detalle sencillo, fresco y romántico perfecto para sorpresas espontáneas.",
                 image: "../assets/foto193.webp",
                 categories: ["tulipanes", "bouquets", "precio-bajo"]
@@ -1569,7 +1569,7 @@ const products = [
             {
                 id: 194,
                 name: "Romance en Tonos Pastel",
-                price: 252281,
+                price: 302737,
                 description: "Exquisito bouquet premium con rosas en tono durazno y salmón, tulipanes en tonos vino y blancos, hortensia lila, claveles rosados y abundante follaje verde. Envuelto en papel coreano rosa con tarjeta personalizada. Una combinación sofisticada de texturas y tonos pastel ideal para ocasiones especiales.",
                 image: "../assets/foto194.webp",
                 categories: ["rosas", "bouquets", "tulipanes", "premium", "precio-medio"]
@@ -1619,7 +1619,7 @@ const products = [
             {
                 id: 200,
                 name: "Lo Merece Mamá",
-                price: 163125,
+                price: 195750,
                 image: "../assets/madres/ramo6.webp",
                 description: "Encantador bouquet de 4 tulipanes en tonos naranjas y amarillos envueltos en papel kraft y tissue con lazo verde agua. Elegante, delicado y lleno de significado. Porque mamá merece lo más bonito.",
                 categories: ["dia-madres", "tulipanes", "bouquets", "precio-medio"]
