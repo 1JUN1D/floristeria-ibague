@@ -833,7 +833,8 @@ const products = [
                 price: 310500,
                 image: "../assets/foto31.webp",
                 description: "Caja corazón blanca repleta de girasoles con nubes y cartel decorativo 'Para la más hermosa'. Diseño romántico y luminoso que combina amor y alegría. Regalo premium perfecto para declaraciones especiales y momentos únicos.",
-                categories: ["girasoles", "cajas", "premium", "precio-alto"]
+                categories: ["girasoles", "cajas", "premium", "precio-alto"],
+                hidden: true
             },
             {
                 id: 103,
@@ -841,7 +842,8 @@ const products = [
                 price: 310500,
                 image: "../assets/foto58.webp",
                 description: "Arreglo premium en caja con 6 girasoles, chocolates Ferrero Rocher, globo burbuja 'Feliz Día' y peluche de gato. Regalo completo que combina flores, dulzura, diversión y ternura. Perfecto para cumpleaños y celebraciones especiales.",
-                categories: ["girasoles", "cajas", "chocolates", "premium", "precio-alto"]
+                categories: ["girasoles", "cajas", "chocolates", "premium", "precio-alto"],
+                hidden: true
             },
             {
                 id: 104,
