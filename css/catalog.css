@@ -229,6 +229,70 @@
     100% { opacity: 0; transform: translateY(-35px) scale(0.6); }
 }
 
+/* ===================================
+   DÍA DEL PADRE - BOTÓN ESPECIAL
+   =================================== */
+.filter-btn-padres {
+    background: linear-gradient(135deg, #1565c0, #1976d2, #2196f3) !important;
+    color: white !important;
+    border: 2px solid #1565c0 !important;
+    font-size: 0.95rem !important;
+    font-weight: 700 !important;
+    padding: 0.6rem 1.4rem !important;
+    position: relative;
+    overflow: visible;
+    animation: padres-pulse 2s ease-in-out infinite;
+    box-shadow: 0 4px 15px rgba(21, 101, 192, 0.4) !important;
+    letter-spacing: 0.3px;
+}
+
+.filter-btn-padres:hover {
+    background: linear-gradient(135deg, #0d47a1, #1565c0, #1976d2) !important;
+    transform: translateY(-3px) scale(1.05) !important;
+    box-shadow: 0 6px 20px rgba(21, 101, 192, 0.5) !important;
+}
+
+.filter-btn-padres.active {
+    background: linear-gradient(135deg, #0d47a1, #1565c0, #1976d2) !important;
+    box-shadow: 0 6px 20px rgba(21, 101, 192, 0.5) !important;
+}
+
+@keyframes padres-pulse {
+    0%, 100% { box-shadow: 0 4px 15px rgba(21, 101, 192, 0.4); }
+    50% { box-shadow: 0 4px 25px rgba(21, 101, 192, 0.7); }
+}
+
+/* Bigotes flotantes */
+.filter-btn-padres::before,
+.filter-btn-padres::after {
+    position: absolute;
+    font-size: 0.85rem;
+    animation: float-mustache 3s ease-in-out infinite;
+    pointer-events: none;
+    opacity: 0;
+}
+
+.filter-btn-padres::before {
+    content: "\1F454";
+    top: -6px;
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.filter-btn-padres::after {
+    content: "\1F37A";
+    top: -6px;
+    right: 10%;
+    animation-delay: 1.5s;
+}
+
+@keyframes float-mustache {
+    0% { opacity: 0; transform: translateY(0) scale(0.5); }
+    20% { opacity: 1; transform: translateY(-8px) scale(1); }
+    60% { opacity: 0.8; transform: translateY(-20px) scale(1.1); }
+    100% { opacity: 0; transform: translateY(-35px) scale(0.6); }
+}
+
 /* Contenedor de corazones animados extra */
 .hearts-container {
     position: fixed;

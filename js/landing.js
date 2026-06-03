@@ -1707,6 +1707,54 @@ const products = [
                 categories: ["rosas", "girasoles", "gerberas", "cajas", "premium", "precio-alto"]
             },
             {
+                id: 212,
+                name: "Base Papá Corona Trío",
+                price: 157500,
+                image: "../assets/foto199.webp",
+                description: "Base negra con 3 coronitas Corona Extra decoradas con bigotes, rosas azules y gypsophila blanca. Diseño especial para Día del Padre que combina cerveza, flores y estilo. Regalo único y memorable para celebrar a papá.",
+                categories: ["dia-padres", "rosas", "cajas", "precio-medio"]
+            },
+            {
+                id: 213,
+                name: "Recuerdos para Papá",
+                price: 110300,
+                image: "../assets/foto200.webp",
+                description: "Ramo de 5 rosas azules con fotos familiares personalizadas, gypsophila y lazo 'Feliz Día del Padre'. Un regalo emotivo que combina flores y recuerdos para hacer sentir único a papá. Edición especial Día del Padre.",
+                categories: ["dia-padres", "rosas", "bouquets", "precio-bajo"]
+            },
+            {
+                id: 214,
+                name: "Caja Cervecera Eterna",
+                price: 110000,
+                image: "../assets/foto201.webp",
+                description: "Caja con 3 coronitas Corona Extra, 3 rosas eternas azules con lazos y tarjeta 'Feliz Día del Padre'. Diseño compacto y elegante con la combinación perfecta de cerveza y flores que no se marchitan. Regalo especial Día del Padre.",
+                categories: ["dia-padres", "rosas-eternas", "cajas", "precio-bajo"]
+            },
+            {
+                id: 215,
+                name: "Bouquet Papá Eterno",
+                price: 170200,
+                image: "../assets/foto202.webp",
+                description: "Elegante ramo de 12 rosas eternas en tonos azul y negro envuelto en papel negro con lazo 'Feliz Día Papá'. Diseño moderno y sofisticado que perdura como tu amor. Regalo especial Día del Padre.",
+                categories: ["dia-padres", "rosas-eternas", "bouquets", "precio-medio"]
+            },
+            {
+                id: 216,
+                name: "Base Maderada Ferrero & Corona",
+                price: 119700,
+                image: "../assets/foto203.webp",
+                description: "Base de madera con 2 coronitas Corona Extra, 4 chocolates Ferrero Rocher y rosas azules con lazo satinado. Combinación rústica y deliciosa de cerveza, chocolates y flores. Regalo perfecto Día del Padre.",
+                categories: ["dia-padres", "cajas", "chocolates", "rosas", "precio-bajo"]
+            },
+            {
+                id: 217,
+                name: "Mini Ramito Para Papá",
+                price: 86200,
+                image: "../assets/foto204.webp",
+                description: "Mini ramito con 1 coronita Corona Extra, 2 chocolates Ferrero Rocher y 3 rosas eternas azules envuelto en papel blanco con detalles dorados y lazo azul. Detalle compacto y especial para papá. Regalo Día del Padre.",
+                categories: ["dia-padres", "rosas-eternas", "chocolates", "bouquets", "precio-bajo"]
+            },
+            {
                 id: 211,
                 name: "Reina de mi Corazón",
                 price: 475000,
