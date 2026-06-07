@@ -1888,6 +1888,46 @@ const products = [
                 categories: ["dia-padres", "rosas-eternas", "chocolates", "bouquets", "precio-bajo"]
             },
             {
+                id: 218,
+                name: "Set Cervecero Personalizado Papá",
+                price: 63000,
+                images: ["assets/foto205_1.webp", "assets/foto205_2.webp", "assets/foto205_3.webp", "assets/foto205_4.webp"],
+                description: "Caja regalo con jarra de cerveza esmerilada, llavero y bolígrafo a juego, todos personalizados con frases especiales para papá. Disponible en 4 diseños únicos: cervecero, príncipe azul, mejor papá del mundo y gracias por estar.",
+                categories: ["dia-padres", "personalizados", "precio-bajo"]
+            },
+            {
+                id: 219,
+                name: "Set Mug Personalizado Papá",
+                price: 56000,
+                images: ["assets/foto206_1.webp", "assets/foto206_2.webp", "assets/foto206_3.webp"],
+                description: "Caja regalo con mug de cerámica, llavero y bolígrafo a juego, todos personalizados con mensajes emotivos para papá. Disponible en 3 diseños: bendición de Dios, monumento a papá y príncipe azul.",
+                categories: ["dia-padres", "personalizados", "precio-bajo"]
+            },
+            {
+                id: 220,
+                name: "Termo Aluminio Papá Edición #10",
+                price: 45000,
+                image: "assets/foto207.webp",
+                description: "Termo de aluminio personalizado con diseño futbolero edición #10 presentado en caja regalo con lazo dorado y tarjeta 'Feliz Día del Padre'. Detalle ideal para el papá hincha que ama el fútbol.",
+                categories: ["dia-padres", "personalizados", "precio-bajo"]
+            },
+            {
+                id: 221,
+                name: "Set Deportivo Papá Sos Mi 10",
+                price: 65000,
+                images: ["assets/foto208_1.webp", "assets/foto208_2.webp"],
+                description: "Set deportivo con morral tipo tula y termo de aluminio a juego, ambos con diseño futbolero 'Papá sos mi 10'. Regalo perfecto para el papá deportista que vive el fútbol con su hijo.",
+                categories: ["dia-padres", "personalizados", "precio-bajo"]
+            },
+            {
+                id: 222,
+                name: "Set Cervecero Premium con Destapador",
+                price: 68000,
+                images: ["assets/foto209_1.webp", "assets/foto209_2.webp"],
+                description: "Caja regalo con jarra de cerveza esmerilada, destapador en forma de botella y llavero personalizados con diseños para el mejor papá del mundo. Disponible en 2 estilos: clásico azul y papá cervecero.",
+                categories: ["dia-padres", "personalizados", "precio-bajo"]
+            },
+            {
                 id: 211,
                 name: "Reina de mi Corazón",
                 price: 475000,
@@ -2002,11 +2042,27 @@ const products = [
 
             grid.innerHTML = filteredProducts.map(product => {
                 const code = getProductCode(product.id);
+                const imageList = product.images && product.images.length ? product.images : [product.image];
+                const firstImage = imageList[0];
+                const hasCarousel = imageList.length > 1;
+                const carouselId = `carousel-${product.id}`;
+                const slidesHtml = imageList.map((img, idx) => `
+                    <img src="${img}" alt="${product.name} - vista ${idx+1}" class="product-image carousel-slide${idx===0?' active':''}" loading="lazy" data-index="${idx}">
+                `).join('');
+                const dotsHtml = hasCarousel ? `
+                    <div class="carousel-dots">
+                        ${imageList.map((_, idx) => `<span class="carousel-dot${idx===0?' active':''}" data-index="${idx}" onclick="event.stopPropagation(); goToSlide('${carouselId}', ${idx})"></span>`).join('')}
+                    </div>
+                    <button class="carousel-arrow carousel-prev" onclick="event.stopPropagation(); prevSlide('${carouselId}')" aria-label="Anterior">&#8249;</button>
+                    <button class="carousel-arrow carousel-next" onclick="event.stopPropagation(); nextSlide('${carouselId}')" aria-label="Siguiente">&#8250;</button>
+                    <span class="carousel-badge">${imageList.length} variaciones</span>
+                ` : '';
                 return `
                 <div class="product-card" data-categories="${product.categories.join(' ')}">
-                    <div class="product-image-container" onclick="openLightbox('${product.image}', '${product.name}', '${formatPrice(product.price)}')">
+                    <div class="product-image-container${hasCarousel?' has-carousel':''}" id="${carouselId}" data-images='${JSON.stringify(imageList)}' onclick="openLightbox(this.querySelector('.carousel-slide.active').src, '${product.name.replace(/'/g, "&#39;")}', '${formatPrice(product.price)}')">
                         <span class="product-code-badge">${code}</span>
-                        <img src="${product.image}" alt="${product.name}" class="product-image" loading="lazy">
+                        ${slidesHtml}
+                        ${dotsHtml}
                         <div class="zoom-icon">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <circle cx="11" cy="11" r="8"/>
@@ -2024,7 +2080,7 @@ const products = [
                                 <span class="price-label">Desde</span>
                                 <div class="product-price">${formatPrice(product.price)}</div>
                             </div>
-                            <a href="https://wa.me/573151100609?text=${encodeURIComponent('Hola, me interesa el producto: ' + code + ' - ' + product.name + ' - ' + formatPrice(product.price) + '\nFoto: https://floristeriaibague.dondeseria.com/' + product.image.replace('../', ''))}"
+                            <a href="https://wa.me/573151100609?text=${encodeURIComponent('Hola, me interesa el producto: ' + code + ' - ' + product.name + ' - ' + formatPrice(product.price) + '\nFoto: https://floristeriaibague.dondeseria.com/' + firstImage.replace('../', ''))}"
                                class="btn-order"
                                target="_blank">
                                 <svg viewBox="0 0 24 24" fill="currentColor">
@@ -2037,6 +2093,40 @@ const products = [
                 </div>
             `}).join('');
         }
+
+        // ========== CARRUSEL DE IMÁGENES ==========
+        function goToSlide(carouselId, index) {
+            const carousel = document.getElementById(carouselId);
+            if (!carousel) return;
+            const slides = carousel.querySelectorAll('.carousel-slide');
+            const dots = carousel.querySelectorAll('.carousel-dot');
+            slides.forEach(s => s.classList.remove('active'));
+            dots.forEach(d => d.classList.remove('active'));
+            if (slides[index]) slides[index].classList.add('active');
+            if (dots[index]) dots[index].classList.add('active');
+        }
+        function nextSlide(carouselId) {
+            const carousel = document.getElementById(carouselId);
+            if (!carousel) return;
+            const slides = carousel.querySelectorAll('.carousel-slide');
+            const current = carousel.querySelector('.carousel-slide.active');
+            const idx = Array.from(slides).indexOf(current);
+            goToSlide(carouselId, (idx + 1) % slides.length);
+        }
+        function prevSlide(carouselId) {
+            const carousel = document.getElementById(carouselId);
+            if (!carousel) return;
+            const slides = carousel.querySelectorAll('.carousel-slide');
+            const current = carousel.querySelector('.carousel-slide.active');
+            const idx = Array.from(slides).indexOf(current);
+            goToSlide(carouselId, (idx - 1 + slides.length) % slides.length);
+        }
+        // Auto-rotación cada 3.5s
+        setInterval(() => {
+            document.querySelectorAll('.product-image-container.has-carousel').forEach(c => {
+                nextSlide(c.id);
+            });
+        }, 3500);
 
         // Formatear precio
         function formatPrice(price) {

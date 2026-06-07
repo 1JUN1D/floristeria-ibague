@@ -1755,6 +1755,46 @@ const products = [
                 categories: ["dia-padres", "rosas-eternas", "chocolates", "bouquets", "precio-bajo"]
             },
             {
+                id: 218,
+                name: "Set Cervecero Personalizado Papá",
+                price: 63000,
+                images: ["../assets/foto205_1.webp", "../assets/foto205_2.webp", "../assets/foto205_3.webp", "../assets/foto205_4.webp"],
+                description: "Caja regalo con jarra de cerveza esmerilada, llavero y bolígrafo a juego, todos personalizados con frases especiales para papá. Disponible en 4 diseños únicos: cervecero, príncipe azul, mejor papá del mundo y gracias por estar.",
+                categories: ["dia-padres", "personalizados", "precio-bajo"]
+            },
+            {
+                id: 219,
+                name: "Set Mug Personalizado Papá",
+                price: 56000,
+                images: ["../assets/foto206_1.webp", "../assets/foto206_2.webp", "../assets/foto206_3.webp"],
+                description: "Caja regalo con mug de cerámica, llavero y bolígrafo a juego, todos personalizados con mensajes emotivos para papá. Disponible en 3 diseños: bendición de Dios, monumento a papá y príncipe azul.",
+                categories: ["dia-padres", "personalizados", "precio-bajo"]
+            },
+            {
+                id: 220,
+                name: "Termo Aluminio Papá Edición #10",
+                price: 45000,
+                image: "../assets/foto207.webp",
+                description: "Termo de aluminio personalizado con diseño futbolero edición #10 presentado en caja regalo con lazo dorado y tarjeta 'Feliz Día del Padre'. Detalle ideal para el papá hincha que ama el fútbol.",
+                categories: ["dia-padres", "personalizados", "precio-bajo"]
+            },
+            {
+                id: 221,
+                name: "Set Deportivo Papá Sos Mi 10",
+                price: 65000,
+                images: ["../assets/foto208_1.webp", "../assets/foto208_2.webp"],
+                description: "Set deportivo con morral tipo tula y termo de aluminio a juego, ambos con diseño futbolero 'Papá sos mi 10'. Regalo perfecto para el papá deportista que vive el fútbol con su hijo.",
+                categories: ["dia-padres", "personalizados", "precio-bajo"]
+            },
+            {
+                id: 222,
+                name: "Set Cervecero Premium con Destapador",
+                price: 68000,
+                images: ["../assets/foto209_1.webp", "../assets/foto209_2.webp"],
+                description: "Caja regalo con jarra de cerveza esmerilada, destapador en forma de botella y llavero personalizados con diseños para el mejor papá del mundo. Disponible en 2 estilos: clásico azul y papá cervecero.",
+                categories: ["dia-padres", "personalizados", "precio-bajo"]
+            },
+            {
                 id: 211,
                 name: "Reina de mi Corazón",
                 price: 475000,
@@ -1893,18 +1933,32 @@ function renderProducts(filters = [], limit = null) {
     productsToDisplay.forEach(product => {
         const escapedName = product.name.replace(/'/g, "\\'");
         const code = getProductCode(product.id);
+        const imageList = product.images && product.images.length ? product.images : [product.image];
+        const firstImage = imageList[0];
+        const hasCarousel = imageList.length > 1;
+        const carouselId = `landing-carousel-${product.id}`;
+        const slidesHtml = imageList.map((img, idx) => `<img src="${img}" alt="${product.name} - vista ${idx+1}" class="landing-carousel-slide${idx===0?' active':''}" loading="lazy">`).join('');
+        const dotsHtml = hasCarousel ? `
+            <div class="landing-carousel-dots">
+                ${imageList.map((_, idx) => `<span class="landing-carousel-dot${idx===0?' active':''}" onclick="event.stopPropagation(); landingGoToSlide('${carouselId}', ${idx})"></span>`).join('')}
+            </div>
+            <button class="landing-carousel-arrow landing-carousel-prev" onclick="event.stopPropagation(); landingPrevSlide('${carouselId}')" aria-label="Anterior">&#8249;</button>
+            <button class="landing-carousel-arrow landing-carousel-next" onclick="event.stopPropagation(); landingNextSlide('${carouselId}')" aria-label="Siguiente">&#8250;</button>
+            <span class="landing-carousel-badge">${imageList.length} variaciones</span>
+        ` : '';
         const productHTML = `
             <div class="product-item">
-                <div class="product-image" style="position:relative;">
+                <div class="product-image${hasCarousel?' has-carousel':''}" id="${carouselId}" style="position:relative;">
                     <span class="product-code-badge" style="position:absolute;top:0.7rem;left:0.7rem;background:rgba(0,0,0,0.65);color:#fff;padding:0.3rem 0.7rem;border-radius:6px;font-size:0.75rem;font-weight:700;letter-spacing:0.5px;z-index:2;font-family:'Poppins',sans-serif;backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);">${code}</span>
-                    <img src="${product.image}" alt="${product.name} - Flores a domicilio Ibagué" loading="lazy">
+                    ${slidesHtml}
+                    ${dotsHtml}
                 </div>
                 <div class="product-info">
                     <h3>${product.name}</h3>
                     <p>${product.description}</p>
                     <div class="product-footer">
                         <span class="price">${formatCOP(product.price)}</span>
-                        <button class="btn-order" onclick="orderWA('${code} - ${escapedName}', '${product.price}', '${product.image.replace(/'/g, "\\'")}')">
+                        <button class="btn-order" onclick="orderWA('${code} - ${escapedName}', '${product.price}', '${firstImage.replace(/'/g, "\\'")}')">
                             Pedir por WhatsApp
                         </button>
                     </div>
@@ -1914,6 +1968,39 @@ function renderProducts(filters = [], limit = null) {
         container.innerHTML += productHTML;
     });
 }
+
+// ========== CARRUSEL LANDING ==========
+function landingGoToSlide(carouselId, index) {
+    const carousel = document.getElementById(carouselId);
+    if (!carousel) return;
+    const slides = carousel.querySelectorAll('.landing-carousel-slide');
+    const dots = carousel.querySelectorAll('.landing-carousel-dot');
+    slides.forEach(s => s.classList.remove('active'));
+    dots.forEach(d => d.classList.remove('active'));
+    if (slides[index]) slides[index].classList.add('active');
+    if (dots[index]) dots[index].classList.add('active');
+}
+function landingNextSlide(carouselId) {
+    const carousel = document.getElementById(carouselId);
+    if (!carousel) return;
+    const slides = carousel.querySelectorAll('.landing-carousel-slide');
+    const current = carousel.querySelector('.landing-carousel-slide.active');
+    const idx = Array.from(slides).indexOf(current);
+    landingGoToSlide(carouselId, (idx + 1) % slides.length);
+}
+function landingPrevSlide(carouselId) {
+    const carousel = document.getElementById(carouselId);
+    if (!carousel) return;
+    const slides = carousel.querySelectorAll('.landing-carousel-slide');
+    const current = carousel.querySelector('.landing-carousel-slide.active');
+    const idx = Array.from(slides).indexOf(current);
+    landingGoToSlide(carouselId, (idx - 1 + slides.length) % slides.length);
+}
+setInterval(() => {
+    document.querySelectorAll('.product-image.has-carousel').forEach(c => {
+        if (c.id) landingNextSlide(c.id);
+    });
+}, 3500);
 
 // --- FUNCIONES DE WHATSAPP ---
 function contactWA() {
