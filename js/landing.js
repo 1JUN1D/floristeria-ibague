@@ -585,7 +585,7 @@ const products = [
                 price: 200531,
                 image: "../assets/foto37.webp",
                 description: "Caja elegante repleta de girasoles con globo burbuja personalizado 'Feliz Cumpleaños Amor'. Arreglo festivo y luminoso ideal para celebraciones especiales. Presentación premium con tarjeta incluida que hace de cada cumpleaños un momento mágico.",
-                categories: ["girasoles", "cajas", "precio-medio"]
+                categories: ["girasoles", "cajas", "precio-medio", "cumpleanos"]
             },
             {
                 id: 72,
@@ -641,7 +641,7 @@ const products = [
                 price: 207000,
                 image: "../assets/foto105.webp",
                 description: "Espectacular ramo de rosas rojas dispuestas en forma escalonada con papel negro transparente y mensaje personalizado de feliz cumpleaños. Presentación única tipo escalera que impacta visualmente. Ideal para cumpleaños y celebraciones especiales.",
-                categories: ["rosas", "bouquets", "coreano", "premium", "precio-medio"]
+                categories: ["rosas", "bouquets", "coreano", "premium", "precio-medio", "cumpleanos"]
             },
             {
                 id: 79,
@@ -745,7 +745,7 @@ const products = [
                 price: 239343,
                 image: "../assets/foto11.webp",
                 description: "Ramo abundante y festivo con gerberas, margaritas, rosas, claveles y corona decorativa. Incluye 2 globos de helio que añaden un toque celebratorio. Envuelto en papel coreano rosa con corazones. Ideal para cumpleaños y celebraciones.",
-                categories: ["rosas", "gerberas", "bouquets", "coreano", "precio-medio"]
+                categories: ["rosas", "gerberas", "bouquets", "coreano", "precio-medio", "cumpleanos"]
             },
             {
                 id: 92,
@@ -842,7 +842,7 @@ const products = [
                 price: 310500,
                 image: "../assets/foto58.webp",
                 description: "Arreglo premium en caja con 6 girasoles, chocolates Ferrero Rocher, globo burbuja 'Feliz Día' y peluche de gato. Regalo completo que combina flores, dulzura, diversión y ternura. Perfecto para cumpleaños y celebraciones especiales.",
-                categories: ["girasoles", "cajas", "chocolates", "premium", "precio-alto"],
+                categories: ["girasoles", "cajas", "chocolates", "premium", "precio-alto", "cumpleanos"],
                 hidden: true
             },
             {
@@ -891,7 +891,7 @@ const products = [
                 price: 530438,
                 image: "../assets/foto94.webp",
                 description: "Combo especial que incluye arreglo de rosas rojas y rosadas en base decorativa, peluche grande de Lotso (oso rosa), caja de Ferrero Rocher y chocolate Jet. El regalo más completo y tierno para enamorar. Ideal para cumpleaños y fechas especiales.",
-                categories: ["rosas", "cajas", "chocolates", "premium", "precio-alto"]
+                categories: ["rosas", "cajas", "chocolates", "premium", "precio-alto", "cumpleanos"]
             },
             {
                 id: 110,
@@ -907,7 +907,7 @@ const products = [
                 price: 226406,
                 description: "Hermosa canasta de mimbre con gerberas rosadas, rosas en tonos rosa y blanco, claveles y follaje verde con lazo rosa. Un arreglo tierno y romántico que transmite dulzura y cariño. Ideal para cumpleaños, aniversarios o sorpresas especiales.",
                 image: "../assets/foto111.webp",
-                categories: ["rosas", "canastas", "gerberas", "precio-medio"]
+                categories: ["rosas", "canastas", "gerberas", "precio-medio", "cumpleanos"]
             },
                         {
                 id: 112,
@@ -915,7 +915,7 @@ const products = [
                 price: 245812,
                 description: "Caja decorativa blanca con arreglo multicolor de girasoles, gerberas fucsia, baby rose, hortensias verdes y lilas. Explosión de color y alegría perfecta para cumpleaños. Un regalo vibrante que ilumina cualquier espacio.",
                 image: "../assets/foto112.webp",
-                categories: ["cajas", "girasoles", "gerberas", "precio-medio"]
+                categories: ["cajas", "girasoles", "gerberas", "precio-medio", "cumpleanos"]
             },
             {
                 id: 113,
@@ -939,7 +939,7 @@ const products = [
                 price: 230288,
                 description: "Caja rosada con rosas blancas y rosadas, 6 Ferrero Rocher intercalados y globo burbuja personalizado con nombre. Un detalle completo y especial que combina flores, chocolates y personalización. Ideal para cumpleaños memorables.",
                 image: "../assets/foto115.webp",
-                categories: ["rosas", "cajas", "chocolates", "precio-medio"]
+                categories: ["rosas", "cajas", "chocolates", "precio-medio", "cumpleanos"]
             },
                         {
                 id: 116,
@@ -955,7 +955,7 @@ const products = [
                 price: 200531,
                 description: "Arreglo de cumpleaños con rosas coral y rosadas, gerberas, margaritas blancas, follaje verde, tul blanco decorativo, globo corazón rosado de 'Feliz Cumpleaños' y tarjeta personalizada. Todo lo que necesitas para un cumpleaños perfecto.",
                 image: "../assets/foto117.webp",
-                categories: ["rosas", "gerberas", "precio-medio"]
+                categories: ["rosas", "gerberas", "precio-medio", "cumpleanos"]
             },
             {
                 id: 118,
@@ -963,7 +963,7 @@ const products = [
                 price: 252281,
                 description: "Detalle exclusivo en caja gris con rosas rosadas, lirio oriental, gypsophila y globo burbuja transparente con globos internos rosados y mensaje de 'Feliz Cumpleaños'. Un regalo espectacular para la persona que amas.",
                 image: "../assets/foto118.webp",
-                categories: ["rosas", "cajas", "precio-medio"]
+                categories: ["rosas", "cajas", "precio-medio", "cumpleanos"]
             },
             {
                 id: 119,
@@ -987,7 +987,7 @@ const products = [
                 price: 168188,
                 description: "Delicada caja blanca con rosas blancas, gerberas rosadas y globo burbuja personalizado con globitos rosados internos y mensaje especial. Arreglo tierno y romántico. Perfecto para sorpresas de cumpleaños y fechas especiales.",
                 image: "../assets/foto121.webp",
-                categories: ["rosas", "cajas", "gerberas", "precio-medio"]
+                categories: ["rosas", "cajas", "gerberas", "precio-medio", "cumpleanos"]
             },
             {
                 id: 122,
@@ -1051,7 +1051,7 @@ const products = [
                 price: 226406,
                 description: "Arreglo con rosas lilas, claveles rosados y globo burbuja personalizado con globitos internos lilas y mariposas decorativas. Tonos púrpura y rosa que transmiten dulzura y ternura. Perfecto para cumpleaños especiales.",
                 image: "../assets/foto129.webp",
-                categories: ["rosas", "cajas", "precio-medio"]
+                categories: ["rosas", "cajas", "precio-medio", "cumpleanos"]
             },
             {
                 id: 130,
@@ -1091,7 +1091,7 @@ const products = [
                 price: 217350,
                 description: "Arreglo alegre con girasoles, astromelias, Ferrero Rocher y globo burbuja personalizado con globitos amarillos y dorados internos. Combinación vibrante que irradia felicidad y energía positiva. Perfecto para cumpleaños llenos de alegría.",
                 image: "../assets/foto134.webp",
-                categories: ["girasoles", "chocolates", "precio-medio"]
+                categories: ["girasoles", "chocolates", "precio-medio", "cumpleanos"]
             },
             {
                 id: 135,
@@ -1107,7 +1107,7 @@ const products = [
                 price: 238050,
                 description: "Caja con abundantes rosas rosadas, astromelias y flores en tonos rosa intenso con globo burbuja personalizado con globitos rosados metálicos internos. Arreglo exuberante y llamativo que conquista a primera vista. Ideal para cumpleaños memorables.",
                 image: "../assets/foto136.webp",
-                categories: ["rosas", "cajas", "precio-medio"]
+                categories: ["rosas", "cajas", "precio-medio", "cumpleanos"]
             },
             {
                 id: 137,
@@ -1486,7 +1486,7 @@ const products = [
                 price: 218750,
                 description: "Espectacular arreglo de 4 varas de lirios blancos con 2 girasoles, rosas mini rosadas y flores surtidas, envuelto en papel coreano rosa y dorado. Incluye globo corazón personalizado 'Feliz Cumpleaños' y tarjeta. El regalo perfecto para celebrar.",
                 image: "../assets/foto183.webp",
-                categories: ["rosas", "lirios", "girasoles", "bouquets", "precio-medio"]
+                categories: ["rosas", "lirios", "girasoles", "bouquets", "precio-medio", "cumpleanos"]
             },
             {
                 id: 184,
@@ -1526,7 +1526,7 @@ const products = [
                 price: 156250,
                 description: "Bouquet especial de graduación con 2 varas de lirios, gerbera, claveles, alstroemerias y flores surtidas en tonos rosa. Incluye birrete decorativo. Envuelto en papel coreano rosa con lazo. El detalle ideal para celebrar logros académicos.",
                 image: "../assets/foto188.webp",
-                categories: ["lirios", "gerberas", "bouquets", "precio-bajo"]
+                categories: ["lirios", "gerberas", "bouquets", "precio-bajo", "graduacion"]
             },
             {
                 id: 189,
@@ -1534,7 +1534,7 @@ const products = [
                 price: 273750,
                 description: "Bouquet encantador de 2 varas de lirios blancos con rosas rosadas, gypsophila, eucalipto y follaje verde. Incluye peluche Stitch con birrete de graduación. Envuelto en papel coreano rosa. Regalo tierno y especial para graduaciones.",
                 image: "../assets/foto189.webp",
-                categories: ["rosas", "lirios", "bouquets", "premium", "precio-medio"]
+                categories: ["rosas", "lirios", "bouquets", "premium", "precio-medio", "graduacion"]
             },
                         {
                 id: 190,
@@ -1550,7 +1550,7 @@ const products = [
                 price: 102500,
                 description: "Delicado mini bouquet de 2 lirios blancos con clavel rosado, envuelto en papel coreano rosa con lazo. Incluye globo metalizado 'Feliz Cumpleaños' y tarjeta personalizada. Un detalle dulce y accesible para celebrar con cariño.",
                 image: "../assets/foto191.webp",
-                categories: ["lirios", "bouquets", "precio-bajo"]
+                categories: ["lirios", "bouquets", "precio-bajo", "cumpleanos"]
             },
             {
                 id: 192,
@@ -1696,7 +1696,7 @@ const products = [
                 price: 195000,
                 image: "../assets/foto196.webp",
                 description: "Espectacular canasta de mimbre con arreglo abundante de rosas fucsia, lirios rosados, claveles, gypsophila, follaje verde y selección premium de frutas frescas (peras, uvas y mango). Combinación gourmet de flores y frutas con lazo rosa satinado. Ideal para cumpleaños, agradecimientos o detalles especiales.",
-                categories: ["rosas", "lirios", "canastas", "frutas", "premium", "precio-medio"]
+                categories: ["rosas", "lirios", "canastas", "frutas", "premium", "precio-medio", "cumpleanos"]
             },
             {
                 id: 210,
@@ -1795,12 +1795,100 @@ const products = [
                 categories: ["dia-padres", "personalizados", "precio-bajo"]
             },
             {
+                id: 223,
+                name: "Caja Festiva Papá Globos Azules",
+                price: 185000,
+                image: "../assets/foto210.webp",
+                description: "Caja decorada con arco de globos azules y plateados con bigotes, postre, bonyurt, Ferrero x3, bebida caliente, 3 dulces variados y 3 toppers con frutos secos. Regalo completo y festivo para celebrar a papá con dulzura y estilo.",
+                categories: ["dia-padres", "cajas", "chocolates", "precio-medio"]
+            },
+            {
+                id: 224,
+                name: "Caja Desayuno Padre Monumento",
+                price: 108000,
+                image: "../assets/foto211.webp",
+                description: "Caja decorada 'Feliz día del Padre' con rollitos de jamón y queso, pocillo personalizado 'Papá Monumento', galletas, jugo en caja, papitas y sándwich. Un desayuno completo lleno de sabor y cariño para papá.",
+                categories: ["dia-padres", "cajas", "precio-bajo"]
+            },
+            {
+                id: 225,
+                name: "Caja Tricolor Desayuno Papá",
+                price: 106000,
+                image: "../assets/foto212.webp",
+                description: "Caja decorada 'Feliz día del Padre' con detalles tricolores: porción de fruta, rollitos de jamón y queso, bonyurt, coronita Corona Extra, galletas y sándwich. Desayuno colombiano completo para sorprender a papá.",
+                categories: ["dia-padres", "cajas", "precio-bajo"]
+            },
+            {
+                id: 226,
+                name: "Caja Premium Padre Chocolates",
+                price: 108000,
+                image: "../assets/foto213.webp",
+                description: "Caja gris elegante 'Feliz día del padre' con rollito de jamón y queso, empanaditas, sándwich, coronita y 2 cajas de chocolates con frase especial. Detalle gourmet y emotivo para el día más esperado.",
+                categories: ["dia-padres", "cajas", "chocolates", "precio-bajo"]
+            },
+            {
+                id: 227,
+                name: "Bandeja Papá Cervecera con Snacks",
+                price: 113000,
+                image: "../assets/foto214.webp",
+                description: "Bandeja decorada con 2 coronitas Corona Extra, jugo HIT, sándwich, nuggets, galletas, maní y papas fritas con lazo azul plateado. Una experiencia completa de snacks y cerveza para disfrutar con papá.",
+                categories: ["dia-padres", "cajas", "precio-bajo"]
+            },
+            {
+                id: 228,
+                name: "Caja Gorra NY Padre Premium",
+                price: 152000,
+                image: "../assets/foto215.webp",
+                description: "Caja blanca elegante con lazo café 'Feliz día del padre' que contiene gorra NY negra, 6 chocolates Ferrero Rocher y 1 coronita Corona Extra. Regalo sofisticado para el papá con estilo.",
+                categories: ["dia-padres", "cajas", "chocolates", "precio-medio"]
+            },
+            {
+                id: 229,
+                name: "Base Globos Premium Papá",
+                price: 168000,
+                image: "../assets/foto216.webp",
+                description: "Base decorada con globos negros y plateados con porción de fruta, nuggets, sándwich, bebida caliente, 3 dulces variados y fotos personalizadas. Detalle premium para hacer del Día del Padre un momento inolvidable.",
+                categories: ["dia-padres", "cajas", "premium", "precio-medio"]
+            },
+            {
+                id: 230,
+                name: "Caja Gracias Papá Reloj",
+                price: 118000,
+                image: "../assets/foto217.webp",
+                description: "Caja decorada 'GRACIAS PAPÁ' con papitas, pocillo personalizado, 4 chocolates Ferrero Rocher, reloj y 1 paquete de dulces. Un regalo útil y dulce para honrar al mejor papá.",
+                categories: ["dia-padres", "cajas", "chocolates", "precio-bajo"]
+            },
+            {
+                id: 231,
+                name: "Caja Gracias Papá Tolima",
+                price: 118000,
+                image: "../assets/foto218.webp",
+                description: "Caja 'GRACIAS PAPÁ' con 2 coronitas Corona Extra, pocillo 'Feliz día', lámpara con escudo del Deportes Tolima y caja decorada. Regalo especial para el papá hincha pijao.",
+                categories: ["dia-padres", "cajas", "precio-bajo"]
+            },
+            {
+                id: 232,
+                name: "Caja Snack Papá Globo",
+                price: 82000,
+                image: "../assets/foto219.webp",
+                description: "Caja decorada con globo personalizado 'Feliz Día del Padre', sándwich, bebida caliente, bebida fría, galletas y maní. Una opción económica y completa para consentir a papá.",
+                categories: ["dia-padres", "cajas", "precio-bajo"]
+            },
+            {
+                id: 233,
+                name: "Caja Desayuno Lazo Azul Papá",
+                price: 94000,
+                image: "../assets/foto220.webp",
+                description: "Caja blanca decorada con lazo azul 'Feliz día del padre' que contiene sándwich, jugo, porción de fruta, bonyurt y galletas. Desayuno fresco y balanceado para empezar el día celebrando a papá.",
+                categories: ["dia-padres", "cajas", "precio-bajo"]
+            },
+            {
                 id: 211,
                 name: "Reina de mi Corazón",
                 price: 475000,
                 image: "../assets/foto198.webp",
                 description: "Espectacular ramo buchón premium con domo central de aproximadamente 60 rosas rojas frescas coronado por una elegante tiara plateada y banda personalizada 'Feliz Cumpleaños Mi persona favorita' con letras doradas. Rodeado por un majestuoso anillo de girasoles frescos con delicados toques de gypsophila. Envuelto en lujoso papel negro con puntos dorados en presentación tipo estrella de capas. El regalo más imponente y romántico para coronar a esa persona especial en su día de cumpleaños.",
-                categories: ["rosas", "girasoles", "bouquets", "premium", "precio-alto"]
+                categories: ["rosas", "girasoles", "bouquets", "premium", "precio-alto", "cumpleanos"]
             },
         ];
 
