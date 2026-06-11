@@ -2326,4 +2326,63 @@ const products = [
             if (window.scrollY > 500) {
                 scrollTop.classList.add('visible');
             } else {
-                scrollTop.classList.remove('vis
+                scrollTop.classList.remove('visible');
+            }
+        });
+
+        scrollTop.addEventListener('click', function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Animación de corazones al activar filtro Día de las Madres
+        function spawnHearts() {
+            let container = document.querySelector('.hearts-container');
+            if (!container) {
+                container = document.createElement('div');
+                container.className = 'hearts-container';
+                document.body.appendChild(container);
+            }
+            const hearts = ['♥', '❤', '♡', '❣'];
+            for (let i = 0; i < 15; i++) {
+                const heart = document.createElement('span');
+                heart.className = 'heart';
+                heart.textContent = hearts[Math.floor(Math.random() * hearts.length)];
+                heart.style.left = Math.random() * 100 + '%';
+                heart.style.animationDelay = Math.random() * 2 + 's';
+                heart.style.fontSize = (0.8 + Math.random() * 1.2) + 'rem';
+                heart.style.color = ['#e91e63', '#ec407a', '#f06292', '#ff4081', '#ff80ab'][Math.floor(Math.random() * 5)];
+                container.appendChild(heart);
+                setTimeout(() => heart.remove(), 5000);
+            }
+        }
+
+        // Soporte #dia-madre en URL
+        // SEGURO: Auto-filtro por hash desactivado para que SIEMPRE muestre todos los productos al entrar
+        function checkHash() {
+            // Comportamiento original deshabilitado:
+            // if (window.location.hash === '#dia-madre' || window.location.hash === '#dia-madres') {
+            //     document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+            //     const madresBtn = document.querySelector('.filter-btn-madres');
+            //     if (madresBtn) {
+            //         madresBtn.classList.add('active');
+            //         renderProducts('dia-madres');
+            //         spawnHearts();
+            //         setTimeout(() => {
+            //             window.scrollTo({ top: 400, behavior: 'smooth' });
+            //         }, 300);
+            //     }
+            // }
+            // Si querés reactivar el deep-link al filtro de mamás, descomentá el bloque de arriba.
+        }
+
+        // Agregar lanzamiento de corazones al hacer clic en botón Madres
+        document.querySelector('.filter-btn-madres').addEventListener('click', function() {
+            spawnHearts();
+        });
+
+        // Inicializar
+        renderProducts();
+        checkHash();
+    </script>
+</body>
+</html>
