@@ -585,7 +585,8 @@ const products = [
                 price: 201000,
                 image: "../assets/foto37.webp",
                 description: "Caja elegante repleta de girasoles con globo burbuja personalizado 'Feliz Cumpleaños Amor'. Arreglo festivo y luminoso ideal para celebraciones especiales. Presentación premium con tarjeta incluida que hace de cada cumpleaños un momento mágico.",
-                categories: ["girasoles", "cajas", "precio-medio", "cumpleanos"]
+                categories: ["girasoles", "cajas", "precio-medio", "cumpleanos"],
+                hidden: true
             },
             {
                 id: 72,
