@@ -63,7 +63,7 @@
                 <span class="filter-label">Filtrar por:</span>
                 <button class="filter-btn active" data-filter="todos">Todos los Productos</button>
                 <button class="filter-btn filter-btn-madres" data-filter="dia-madres">Día de las Madres</button>
-                <button class="filter-btn filter-btn-padres" data-filter="dia-padres">Día del Padre</button>
+                <button class="filter-btn filter-btn-padres" data-filter="dia-padres" style="display:none;">Día del Padre</button>
                 <button class="filter-btn filter-btn-cumple" data-filter="cumpleanos">Cumpleaños</button>
                 <button class="filter-btn filter-btn-grad" data-filter="graduacion">Graduación</button>
                 <button class="filter-btn" data-filter="rosas">Rosas</button>
@@ -2100,7 +2100,7 @@ const products = [
             const resultsCount = document.getElementById('results-count');
 
             // Excluir productos ocultos
-            let filteredProducts = products.filter(p => !p.hidden);
+            let filteredProducts = products.filter(p => !p.hidden && !p.categories.includes('dia-padres'));
 
             // Aplicar filtro de categoría
             if (currentFilter !== 'todos') {

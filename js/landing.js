@@ -1959,7 +1959,7 @@ function formatCOP(price) {
 function getSortedProducts(priorityTag) {
     const priority = [];
     const rest = [];
-    products.filter(p => !p.hidden).forEach(p => {
+    products.filter(p => !p.hidden && !p.categories.includes('dia-padres')).forEach(p => {
         if (p.categories && p.categories.includes(priorityTag)) {
             priority.push(p);
         } else {
@@ -1985,7 +1985,7 @@ function renderProducts(filters = [], limit = null) {
     if (!container) return;
 
     // Excluir productos ocultos
-    let productsToDisplay = products.filter(p => !p.hidden);
+    let productsToDisplay = products.filter(p => !p.hidden && !p.categories.includes('dia-padres'));
 
     if (LANDING_PRIORITY_TAG) {
         productsToDisplay = getSortedProducts(LANDING_PRIORITY_TAG);
