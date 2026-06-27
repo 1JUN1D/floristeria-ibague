@@ -101,7 +101,8 @@ const products = [
                 price: 79000,
                 image: "../assets/foto65.webp",
                 description: "Elegante caja redonda negra con 4 rosas eternas doradas, follaje verde y tarjeta personalizada con mensaje especial. Diseño sofisticado con lazo dorado. Un regalo duradero que simboliza amor eterno e inmortal.",
-                categories: ["rosas-eternas", "cajas", "precio-bajo"]
+                categories: ["rosas-eternas", "cajas", "precio-bajo"],
+                hidden: true
             },
             {
                 id: 12,
@@ -117,7 +118,8 @@ const products = [
                 price: 75000,
                 image: "../assets/foto73.webp",
                 description: "Bouquet elegante con 3 girasoles grandes y follaje verde envuelto en cartulina negra. Incluye tarjeta personalizada. Contraste sofisticado entre el amarillo dorado y el negro que transmite distinción y carácter. Detalle con personalidad.",
-                categories: ["girasoles", "precio-bajo"]
+                categories: ["girasoles", "precio-bajo"],
+                hidden: true
             },
             {
                 id: 14,
@@ -449,7 +451,8 @@ const products = [
                 price: 162000,
                 image: "../assets/foto24.webp",
                 description: "Bouquet delicado con 3 girasoles, clavellinas, rosas en tonos durazno y nubes (gypsophila). Envuelto en papel blanco con lazo. Combinación suave y luminosa que transmite paz, esperanza y cariño genuino.",
-                categories: ["rosas", "girasoles", "bouquets", "precio-medio"]
+                categories: ["rosas", "girasoles", "bouquets", "precio-medio"],
+                hidden: true
             },
             {
                 id: 55,
@@ -602,7 +605,8 @@ const products = [
                 price: 201000,
                 image: "../assets/foto67.webp",
                 description: "Caja redonda negra elegante con 7 girasoles, moño decorativo y tarjeta personalizada. Diseño moderno y sofisticado que combina la calidez del girasol con la elegancia del negro. Pieza central perfecta para decorar con distinción.",
-                categories: ["girasoles", "cajas", "precio-medio"]
+                categories: ["girasoles", "cajas", "precio-medio"],
+                hidden: true
             },
             {
                 id: 74,
@@ -682,7 +686,8 @@ const products = [
                 price: 217000,
                 image: "../assets/foto23.webp",
                 description: "Bouquet premium con 4 girasoles, 12 rosas rosadas, follaje verde y boca de dragón. Envuelto en papel blanco elegante con lazo rosa. Arreglo sofisticado y generoso que combina romance y luminosidad en perfecta armonía.",
-                categories: ["rosas", "girasoles", "bouquets", "premium", "precio-medio"]
+                categories: ["rosas", "girasoles", "bouquets", "premium", "precio-medio"],
+                hidden: true
             },
             {
                 id: 84,
@@ -690,7 +695,8 @@ const products = [
                 price: 217000,
                 image: "../assets/foto26.webp",
                 description: "Caja blanca con 6 girasoles, 4 chocolates Ferrero Rocher, nubes y globo de aniversario dorado. Presentación festiva con lazo dorado. Regalo completo que combina flores, dulzura y celebración en un solo detalle inolvidable.",
-                categories: ["girasoles", "cajas", "chocolates", "precio-medio"]
+                categories: ["girasoles", "cajas", "chocolates", "precio-medio"],
+                hidden: true
             },
             {
                 id: 85,
@@ -770,7 +776,8 @@ const products = [
                 price: 239000,
                 image: "../assets/foto62.webp",
                 description: "Impresionante ramo con 13 girasoles decorados con 4 mariposas doradas y moño elegante en papel negro. Incluye tarjeta del día de las flores amarillas. Diseño espectacular y simbólico que transmite admiración y grandeza.",
-                categories: ["girasoles", "premium", "precio-medio"]
+                categories: ["girasoles", "premium", "precio-medio"],
+                hidden: true
             },
                         {
                 id: 95,
@@ -1052,7 +1059,8 @@ const products = [
                 price: 226000,
                 description: "Arreglo con rosas lilas, claveles rosados y globo burbuja personalizado con globitos internos lilas y mariposas decorativas. Tonos púrpura y rosa que transmiten dulzura y ternura. Perfecto para cumpleaños especiales.",
                 image: "../assets/foto129.webp",
-                categories: ["rosas", "cajas", "precio-medio", "cumpleanos"]
+                categories: ["rosas", "cajas", "precio-medio", "cumpleanos"],
+                hidden: true
             },
             {
                 id: 130,
@@ -1487,7 +1495,8 @@ const products = [
                 price: 219000,
                 description: "Espectacular arreglo de 4 varas de lirios blancos con 2 girasoles, rosas mini rosadas y flores surtidas, envuelto en papel coreano rosa y dorado. Incluye globo corazón personalizado 'Feliz Cumpleaños' y tarjeta. El regalo perfecto para celebrar.",
                 image: "../assets/foto183.webp",
-                categories: ["rosas", "lirios", "girasoles", "bouquets", "precio-medio", "cumpleanos"]
+                categories: ["rosas", "lirios", "girasoles", "bouquets", "precio-medio", "cumpleanos"],
+                hidden: true
             },
             {
                 id: 184,
@@ -1567,7 +1576,8 @@ const products = [
                 price: 124000,
                 description: "Delicado mini bouquet con 2 tulipanes rosados acompañados de mini claveles blancos con detalles burdeos y eucalipto fresco. Envuelto en elegante papel crema con lazo blanco satinado. Un detalle sencillo, fresco y romántico perfecto para sorpresas espontáneas.",
                 image: "../assets/foto193.webp",
-                categories: ["tulipanes", "bouquets", "precio-bajo"]
+                categories: ["tulipanes", "bouquets", "precio-bajo"],
+                hidden: true
             },
             {
                 id: 194,
