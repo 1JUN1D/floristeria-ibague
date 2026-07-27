@@ -1941,6 +1941,30 @@ const products = [
                 description: "Frondosa caja con girasoles, rosas rosadas, lirios, claveles y follaje verde, coronada con un globo de mariposas. Un arreglo abundante y primaveral, ideal para llenar de color el cumpleaños de alguien especial.",
                 categories: ["cumpleanos", "cajas", "girasoles", "precio-medio"]
             },
+            {
+                id: 239,
+                name: "Combo Peluche, Ferrero y Rosas Eternas",
+                price: 198000,
+                image: "../assets/foto235.webp",
+                description: "Adorable combo con peluche naranja de gatito con moño rojo, caja de chocolates Ferrero Rocher y sombrerera negra con rosas eternas rojas de satín con perlas y follaje verde, terminada con lazos rojos y tarjeta personalizada. Un regalo completo, tierno y duradero para enamorar en aniversarios, cumpleaños o para pedir perdón con estilo.",
+                categories: ["rosas-eternas", "cajas", "chocolates", "precio-medio"]
+            },
+            {
+                id: 240,
+                name: "Bouquet Rosas Eternas Lila con Corona",
+                price: 295000,
+                image: "../assets/foto236.webp",
+                description: "Espectacular bouquet de rosas eternas lila de satín con perlas, coronado con una corona dorada, mariposas metálicas y banda personalizada con tu mensaje, envuelto en papel blanco con detalles dorados e incluye tarjeta. Un regalo premium que nunca se marchita, ideal para relaciones a distancia, aniversarios y momentos que merecen recordarse para siempre.",
+                categories: ["rosas-eternas", "bouquets", "premium", "precio-alto"]
+            },
+            {
+                id: 241,
+                name: "Bouquet Rosas Eternas Azules Mi Princesa",
+                price: 188000,
+                image: "../assets/foto237.webp",
+                description: "Elegante bouquet de rosas eternas azules de satín con perlas, decorado con mariposas doradas y banda personalizada 'Mi Princesa Hermosa', envuelto en papel azul con corazones y gran moño blanco. Un detalle original y duradero para sorprender a esa persona especial en cumpleaños, aniversarios o solo porque sí.",
+                categories: ["rosas-eternas", "bouquets", "precio-medio"]
+            },
         ];
 
 // --- VARIABLES GLOBALES ---
