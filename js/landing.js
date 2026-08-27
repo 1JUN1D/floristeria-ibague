@@ -1973,6 +1973,22 @@ const products = [
                 description: "Frondoso ramo de rosas rojas y rosadas con eucalipto y follaje verde, envuelto en papel rosa con encaje blanco y gran lazo. Incluye caja de 4 chocolates Ferrero Rocher, birrete de graduación negro con borla amarilla y tarjeta personalizada. El regalo perfecto para celebrar ese logro tan esperado con elegancia y dulzura.",
                 categories: ["rosas", "bouquets", "chocolates", "graduacion", "precio-medio"]
             },
+            {
+                id: 252,
+                name: "Ramo Gigante Primaveral Rosa y Lila",
+                price: 750000,
+                image: "../assets/foto239.webp",
+                description: "Imponente ramo XL en tonos rosa, fucsia y lila con rosas, mini rosas, gerberas, tulipanes, claveles, escabiosas moradas, ranúnculos y bayas de hypericum, envuelto en papel rosa en forma de estrella e incluye tarjeta personalizada. Nuestro arreglo más frondoso y espectacular, ideal para aniversarios, cumpleaños y esos momentos en los que quieres sorprender en grande.",
+                categories: ["rosas", "gerberas", "tulipanes", "bouquets", "premium", "precio-alto"]
+            },
+            {
+                id: 253,
+                name: "Base Blanca Lirios y Claveles Rosados",
+                price: 350000,
+                image: "../assets/foto240.webp",
+                description: "Elegante base de cerámica blanca acanalada con lirios rosados abiertos, claveles rosados y blancos, rosas, mini rosas, gypsophila y follaje verde, con tarjeta personalizada. Un arreglo delicado, aromático y listo para lucir en cualquier espacio: perfecto para cumpleaños, agradecimientos y detalles corporativos.",
+                categories: ["lirios", "rosas", "cajas", "premium", "precio-alto"]
+            },
         ];
 
 // --- VARIABLES GLOBALES ---
