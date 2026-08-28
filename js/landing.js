@@ -268,18 +268,18 @@ const products = [
             {
                 id: 32,
                 name: "Elegancia en Cartuchos",
-                price: 123000,
+                price: 172000,
                 image: "../assets/foto45.webp",
                 description: "Bouquet nupcial con 10 cartuchos blancos (calas) atados con cinta de encaje y perlas. Diseño minimalista y refinado que transmite sofisticación absoluta. Perfecto para novias con estilo moderno y elegante.",
-                categories: ["novia", "precio-bajo"]
+                categories: ["novia", "precio-medio"]
             },
             {
                 id: 33,
                 name: "Dulzura Rosada",
-                price: 123000,
+                price: 157000,
                 image: "../assets/foto48.webp",
                 description: "Bouquet de novia con rosas rosadas y blancas acompañadas de yicsu delicado. Envuelto con cinta dorada satinada. Obsequio incluido: ramillete del novio a juego. Detalle tierno y romántico para parejas que combinan sus accesorios.",
-                categories: ["rosas", "novia", "precio-bajo"]
+                categories: ["rosas", "novia", "precio-medio"]
             },
             /* OCULTO - Referencia 34 (pompon amarillo)
             {
@@ -312,18 +312,18 @@ const products = [
             {
                 id: 37,
                 name: "Ternura Rosada",
-                price: 127000,
+                price: 175000,
                 image: "../assets/foto50.webp",
                 description: "Bouquet compacto y redondo con claveles rosados, rosas en tonos pastel y yicsu. Diseño esférico delicado que transmite dulzura y romanticismo. Perfecto para novias que aman los tonos suaves y la feminidad.",
-                categories: ["rosas", "novia", "precio-bajo"]
+                categories: ["rosas", "novia", "precio-medio"]
             },
             {
                 id: 38,
                 name: "Coral y Nieve",
-                price: 127000,
+                price: 168000,
                 image: "../assets/foto51.webp",
                 description: "Bouquet nupcial con rosas coral, claveles blancos, yicsu y eucalipto. Decorado con elegante lazo lavanda. Incluye ramillete del novio. Combinación fresca y moderna que aporta un toque de color sin perder la elegancia nupcial.",
-                categories: ["rosas", "novia", "precio-bajo"]
+                categories: ["rosas", "novia", "precio-medio"]
             },
             {
                 id: 39,
@@ -384,10 +384,10 @@ const products = [
             {
                 id: 46,
                 name: "Blancura Celestial",
-                price: 149000,
+                price: 195000,
                 image: "../assets/foto42.webp",
                 description: "Bouquet nupcial de rosas blancas con yicsu (gypsophila) abundante. Clásico y delicado, perfecto para ceremonias tradicionales. Transmite inocencia y amor puro. Presentación compacta y elegante con acabado impecable.",
-                categories: ["rosas", "novia", "precio-bajo"]
+                categories: ["rosas", "novia", "precio-medio"]
             },
             {
                 id: 47,
@@ -416,7 +416,7 @@ const products = [
             {
                 id: 50,
                 name: "Pasión con Perlas",
-                price: 155000,
+                price: 198000,
                 image: "../assets/foto52.webp",
                 description: "Bouquet de novia con rosas rojas, blancas y rosadas decoradas con perlas y yicsu. Incluye ramillete del novio a juego. Diseño romántico que combina colores intensos con detalles delicados. Perfecto para bodas llenas de amor.",
                 categories: ["rosas", "novia", "precio-medio"]
@@ -465,7 +465,7 @@ const products = [
             {
                 id: 56,
                 name: "Pureza Natural",
-                price: 162000,
+                price: 210000,
                 image: "../assets/foto41.webp",
                 description: "Bouquet de novia con rosas blancas y eucalipto verde. Diseño elegante y minimalista con tallos envueltos en cinta blanca. Transmite frescura, pureza y sofisticación. Ideal para novias que buscan un estilo natural y romántico.",
                 categories: ["rosas", "novia", "precio-medio"]
@@ -473,7 +473,7 @@ const products = [
             {
                 id: 57,
                 name: "Romance Bicolor",
-                price: 162000,
+                price: 207000,
                 image: "../assets/foto46.webp",
                 description: "Bouquet de novia con rosas rojas y blancas entrelazadas con yicsu abundante. Combinación clásica que simboliza amor apasionado y pureza. Diseño redondo y compacto con acabado impecable para una boda memorable.",
                 categories: ["rosas", "novia", "precio-medio"]
@@ -481,7 +481,7 @@ const products = [
             {
                 id: 58,
                 name: "Serenidad Blanca",
-                price: 162000,
+                price: 213000,
                 image: "../assets/foto47.webp",
                 description: "Bouquet nupcial con astromelias blancas y rosas en tonos crema con follaje verde. Atado con cuerda natural estilo rústico. Combinación fresca y delicada que transmite paz y armonía. Ideal para bodas al aire libre.",
                 categories: ["rosas", "novia", "precio-medio"]
@@ -521,7 +521,7 @@ const products = [
             {
                 id: 63,
                 name: "Nube de Rosas",
-                price: 175000,
+                price: 225000,
                 image: "../assets/foto43.webp",
                 description: "Bouquet redondo de rosas blancas con base de yicsu (gypsophila). Diseño esférico compacto y sofisticado. Cada rosa transmite elegancia y distinción. Perfecto para novias que desean un ramo clásico con presencia imponente.",
                 categories: ["rosas", "novia", "precio-medio"]
@@ -594,10 +594,10 @@ const products = [
             {
                 id: 72,
                 name: "Gracia Nupcial",
-                price: 201000,
+                price: 262000,
                 image: "../assets/foto44.webp",
                 description: "Bouquet de novia con rosas blancas, lirios elegantes y yicsu. Combinación sofisticada que aporta volumen y textura. Los lirios añaden un toque de distinción y fragancia. Ideal para ceremonias formales y elegantes.",
-                categories: ["rosas", "novia", "premium", "precio-medio"]
+                categories: ["rosas", "novia", "premium", "precio-alto"]
             },
             {
                 id: 73,
@@ -733,10 +733,10 @@ const products = [
             {
                 id: 89,
                 name: "Cascada Imperial",
-                price: 233000,
+                price: 296000,
                 image: "../assets/foto49.webp",
                 description: "Bouquet de novia en cascada con rosas blancas, yicsu y follaje verde cayendo en forma de lágrima. Diseño clásico y majestuoso que transmite elegancia suprema. Ideal para novias que buscan un ramo con presencia y dramatismo.",
-                categories: ["rosas", "novia", "premium", "precio-medio"]
+                categories: ["rosas", "novia", "premium", "precio-alto"]
             },
                         {
                 id: 90,
