@@ -1015,68 +1015,86 @@
     flex-shrink: 0;
 }
 
-
 /* ===================================
    FLORES AMARILLAS - BOTON ESPECIAL
    =================================== */
 .filter-btn-amarillas {
-    background: linear-gradient(135deg, #f9a825, #fbc02d, #ffd54f) !important;
-    color: #4a3000 !important;
+    background: linear-gradient(135deg, #f9a825 0%, #ffd54f 45%, #ffb300 100%) !important;
+    color: #4a2f00 !important;
     border: 2px solid #f9a825 !important;
     font-size: 0.95rem !important;
-    font-weight: 700 !important;
-    padding: 0.6rem 1.4rem !important;
+    font-weight: 800 !important;
+    padding: 0.6rem 1.5rem 0.6rem 2.5rem !important;
     position: relative;
-    overflow: visible;
-    animation: amarillas-pulse 2s ease-in-out infinite;
-    box-shadow: 0 4px 15px rgba(249, 168, 37, 0.45) !important;
+    overflow: hidden;
+    border-radius: 50px !important;
     letter-spacing: 0.3px;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.45);
+    box-shadow: 0 4px 14px rgba(249, 168, 37, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.65) !important;
+    animation: amarillas-glow 2.8s ease-in-out infinite;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+}
+
+/* Girasol fijo a la izquierda */
+.filter-btn-amarillas::before {
+    content: "\1F33B";
+    position: absolute;
+    left: 0.85rem;
+    top: 50%;
+    font-size: 1.05rem;
+    transform: translateY(-50%);
+    animation: amarillas-bloom 2.8s ease-in-out infinite;
+    pointer-events: none;
+}
+
+/* Brillo que recorre el boton */
+.filter-btn-amarillas::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -70%;
+    width: 45%;
+    height: 100%;
+    background: linear-gradient(100deg, transparent, rgba(255, 255, 255, 0.7), transparent);
+    transform: skewX(-20deg);
+    animation: amarillas-shine 3.4s ease-in-out infinite;
+    pointer-events: none;
 }
 
 .filter-btn-amarillas:hover {
-    background: linear-gradient(135deg, #f57f17, #f9a825, #fbc02d) !important;
-    transform: translateY(-3px) scale(1.05) !important;
-    box-shadow: 0 6px 20px rgba(249, 168, 37, 0.6) !important;
+    background: linear-gradient(135deg, #f57f17 0%, #ffca28 45%, #f9a825 100%) !important;
+    transform: translateY(-3px) scale(1.04) !important;
+    box-shadow: 0 8px 22px rgba(249, 168, 37, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.65) !important;
 }
 
 .filter-btn-amarillas.active {
-    background: linear-gradient(135deg, #e65100, #f57f17, #f9a825) !important;
+    background: linear-gradient(135deg, #e65100 0%, #f9a825 55%, #ef6c00 100%) !important;
     color: #fff !important;
-    box-shadow: 0 6px 20px rgba(249, 168, 37, 0.6) !important;
+    border-color: #e65100 !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 8px 22px rgba(230, 81, 0, 0.55), inset 0 1px 0 rgba(255, 255, 255, 0.35) !important;
+    animation: none;
 }
 
-@keyframes amarillas-pulse {
-    0%, 100% { box-shadow: 0 4px 15px rgba(249, 168, 37, 0.45); }
-    50% { box-shadow: 0 4px 25px rgba(249, 168, 37, 0.8); }
+@keyframes amarillas-glow {
+    0%, 100% { box-shadow: 0 4px 14px rgba(249, 168, 37, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.65); }
+    50% { box-shadow: 0 6px 24px rgba(249, 168, 37, 0.8), inset 0 1px 0 rgba(255, 255, 255, 0.65); }
 }
 
-/* Girasoles flotantes */
-.filter-btn-amarillas::before,
-.filter-btn-amarillas::after {
-    position: absolute;
-    font-size: 0.75rem;
-    animation: float-sun 3s ease-in-out infinite;
-    pointer-events: none;
-    opacity: 0;
+@keyframes amarillas-bloom {
+    0%, 100% { transform: translateY(-50%) scale(1) rotate(0deg); }
+    50% { transform: translateY(-50%) scale(1.18) rotate(12deg); }
 }
 
-.filter-btn-amarillas::before {
-    content: "\1F33B";
-    top: -5px;
-    left: 10%;
-    animation-delay: 0s;
+@keyframes amarillas-shine {
+    0% { left: -70%; }
+    55%, 100% { left: 140%; }
 }
 
-.filter-btn-amarillas::after {
-    content: "\1F33B";
-    top: -5px;
-    right: 10%;
-    animation-delay: 1.5s;
-}
-
-@keyframes float-sun {
-    0% { opacity: 0; transform: translateY(0) scale(0.5); }
-    20% { opacity: 1; transform: translateY(-8px) scale(1); }
-    60% { opacity: 0.8; transform: translateY(-20px) scale(1.1); }
-    100% { opacity: 0; transform: translateY(-35px) scale(0.6); }
+@media (max-width: 600px) {
+    .filter-btn-amarillas {
+        font-size: 0.85rem !important;
+        padding: 0.5rem 1.1rem 0.5rem 2.1rem !important;
+    }
+    .filter-btn-amarillas::before { left: 0.7rem; font-size: 0.95rem; }
 }
