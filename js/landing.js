@@ -19,8 +19,7 @@ const products = [
                 price: 19000,
                 image: "../assets/foto84.webp",
                 description: "Mini bouquet con 1 rosa eterna amarilla dorada envuelta en papel blanco con lazo amarillo y texto personalizado. El detalle más económico y duradero. Perfecto para expresar cariño con un regalo que nunca se marchita.",
-                categories: ["rosas-eternas", "precio-bajo"],
-                hidden: true
+                categories: ["flores-amarillas", "rosas-eternas", "precio-bajo"]
             },
             {
                 id: 3,
@@ -28,8 +27,7 @@ const products = [
                 price: 23000,
                 image: "../assets/foto60.webp",
                 description: "Mini bouquet con 1 girasol envuelto en cartulina negra con mensaje 'Te Quiero' y lazo amarillo. El detalle más económico y tierno para expresar amor. Incluye tarjeta personalizada. Pequeño en tamaño, grande en significado.",
-                categories: ["girasoles", "precio-bajo"],
-                hidden: true
+                categories: ["flores-amarillas", "girasoles", "precio-bajo"]
             },
             {
                 id: 4,
@@ -93,8 +91,7 @@ const products = [
                 price: 79000,
                 image: "../assets/foto65.webp",
                 description: "Elegante caja redonda negra con 4 rosas eternas doradas, follaje verde y tarjeta personalizada con mensaje especial. Diseño sofisticado con lazo dorado. Un regalo duradero que simboliza amor eterno e inmortal.",
-                categories: ["rosas-eternas", "cajas", "precio-bajo"],
-                hidden: true
+                categories: ["flores-amarillas", "rosas-eternas", "cajas", "precio-bajo"]
             },
             {
                 id: 12,
@@ -110,8 +107,7 @@ const products = [
                 price: 75000,
                 image: "../assets/foto73.webp",
                 description: "Bouquet elegante con 3 girasoles grandes y follaje verde envuelto en cartulina negra. Incluye tarjeta personalizada. Contraste sofisticado entre el amarillo dorado y el negro que transmite distinción y carácter. Detalle con personalidad.",
-                categories: ["girasoles", "precio-bajo"],
-                hidden: true
+                categories: ["flores-amarillas", "girasoles", "precio-bajo"]
             },
             {
                 id: 14,
@@ -604,8 +600,7 @@ const products = [
                 price: 201000,
                 image: "../assets/foto67.webp",
                 description: "Caja redonda negra elegante con 7 girasoles, moño decorativo y tarjeta personalizada. Diseño moderno y sofisticado que combina la calidez del girasol con la elegancia del negro. Pieza central perfecta para decorar con distinción.",
-                categories: ["girasoles", "cajas", "precio-medio"],
-                hidden: true
+                categories: ["flores-amarillas", "girasoles", "cajas", "precio-medio"]
             },
             {
                 id: 74,
@@ -776,8 +771,7 @@ const products = [
                 price: 239000,
                 image: "../assets/foto62.webp",
                 description: "Impresionante ramo con 13 girasoles decorados con 4 mariposas doradas y moño elegante en papel negro. Incluye tarjeta del día de las flores amarillas. Diseño espectacular y simbólico que transmite admiración y grandeza.",
-                categories: ["girasoles", "premium", "precio-medio"],
-                hidden: true
+                categories: ["flores-amarillas", "girasoles", "premium", "precio-medio"]
             },
                         {
                 id: 95,
@@ -850,8 +844,7 @@ const products = [
                 price: 311000,
                 image: "../assets/foto58.webp",
                 description: "Arreglo premium en caja con 6 girasoles, chocolates Ferrero Rocher, globo burbuja 'Feliz Día' y peluche de gato. Regalo completo que combina flores, dulzura, diversión y ternura. Perfecto para cumpleaños y celebraciones especiales.",
-                categories: ["girasoles", "cajas", "chocolates", "premium", "precio-alto", "cumpleanos"],
-                hidden: true
+                categories: ["flores-amarillas", "girasoles", "cajas", "chocolates", "premium", "precio-alto", "cumpleanos"]
             },
             {
                 id: 104,
