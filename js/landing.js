@@ -11,7 +11,8 @@ const products = [
                 price: 19000,
                 image: "../assets/foto81.webp",
                 description: "Mini bouquet de margaritas amarillas en cartulina negra con mensaje 'Para Ti' escrito a mano y lazo dorado. El detalle más económico y tierno. Pequeño en tamaño pero grande en significado. Perfecto para sorpresas rápidas y emotivas.",
-                categories: ["flores-amarillas", "bouquets", "precio-bajo"]
+                categories: ["flores-amarillas", "bouquets", "precio-bajo"],
+                hidden: true
             },
                         {
                 id: 2,
@@ -19,7 +20,8 @@ const products = [
                 price: 19000,
                 image: "../assets/foto84.webp",
                 description: "Mini bouquet con 1 rosa eterna amarilla dorada envuelta en papel blanco con lazo amarillo y texto personalizado. El detalle más económico y duradero. Perfecto para expresar cariño con un regalo que nunca se marchita.",
-                categories: ["flores-amarillas", "rosas-eternas", "precio-bajo"]
+                categories: ["flores-amarillas", "rosas-eternas", "precio-bajo"],
+                hidden: true
             },
             {
                 id: 3,
@@ -27,7 +29,8 @@ const products = [
                 price: 23000,
                 image: "../assets/foto60.webp",
                 description: "Mini bouquet con 1 girasol envuelto en cartulina negra con mensaje 'Te Quiero' y lazo amarillo. El detalle más económico y tierno para expresar amor. Incluye tarjeta personalizada. Pequeño en tamaño, grande en significado.",
-                categories: ["flores-amarillas", "girasoles", "precio-bajo"]
+                categories: ["flores-amarillas", "girasoles", "precio-bajo"],
+                hidden: true
             },
             {
                 id: 4,
@@ -285,7 +288,8 @@ const products = [
                 price: 123000,
                 image: "../assets/foto71.webp",
                 description: "Caja en forma de corazón rosa repleta de pompones amarillos decorados con 2 mariposas doradas. Incluye tarjeta personalizada. Diseño romántico y original que combina la calidez del amarillo con la forma del amor. Regalo encantador.",
-                categories: ["flores-amarillas", "pompones", "cajas", "precio-bajo"]
+                categories: ["flores-amarillas", "pompones", "cajas", "precio-bajo"],
+                hidden: true
             },
             {
                 id: 36,
