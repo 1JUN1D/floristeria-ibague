@@ -726,7 +726,8 @@ const products = [
                 price: 231000,
                 image: "../assets/foto34.webp",
                 description: "Impresionante ramo circular con 13 girasoles decorados con mariposas doradas en papel negro. Diseño espectacular y moderno que transmite poder, admiración y grandeza. Presentación de alto impacto con tarjeta personalizada.",
-                categories: ["flores-amarillas", "girasoles", "premium", "precio-medio"]
+                categories: ["flores-amarillas", "girasoles", "premium", "precio-medio"],
+                hidden: true
             },
             {
                 id: 89,
@@ -848,7 +849,8 @@ const products = [
                 price: 311000,
                 image: "../assets/foto58.webp",
                 description: "Arreglo premium en caja con 6 girasoles, chocolates Ferrero Rocher, globo burbuja 'Feliz Día' y peluche de gato. Regalo completo que combina flores, dulzura, diversión y ternura. Perfecto para cumpleaños y celebraciones especiales.",
-                categories: ["flores-amarillas", "girasoles", "cajas", "chocolates", "premium", "precio-alto", "cumpleanos"]
+                categories: ["flores-amarillas", "girasoles", "cajas", "chocolates", "premium", "precio-alto", "cumpleanos"],
+                hidden: true
             },
             {
                 id: 104,
@@ -879,7 +881,7 @@ const products = [
                 name: "Amor de Mi Vida",
                 price: 479000,
                 image: "../assets/foto103.webp",
-                description: "Impresionante mega bouquet redondo con más de 100 rosas rojas intensas envueltas en papel blanco con elegante lazo de cinta crema. Una declaración de amor absoluta que deja sin palabras. El regalo más grandioso para el amor de tu vida.",
+                description: "Impresionante mega bouquet redondo con 100 rosas rojas intensas envueltas en papel blanco con elegante lazo de cinta crema. Una declaración de amor absoluta que deja sin palabras. El regalo más grandioso para el amor de tu vida.",
                 categories: ["rosas", "bouquets", "premium", "precio-alto"]
             },
             {
