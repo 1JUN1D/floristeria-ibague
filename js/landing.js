@@ -328,10 +328,10 @@ const products = [
             {
                 id: 40,
                 name: "Rosas y Ferrero Dorado",
-                price: 147000,
+                price: 168750,
                 image: "../assets/foto101.webp",
                 description: "Bouquet de rosas rojas con 5 Ferrero Rocher, gypsophila y abundante follaje verde, envuelto en papel negro con interior dorado y lazo rojo. La combinación perfecta de flores y chocolate para un regalo irresistible y delicioso.",
-                categories: ["rosas", "bouquets", "chocolates", "precio-bajo"]
+                categories: ["amor-amistad", "rosas", "bouquets", "chocolates", "precio-medio"]
             },
             {
                 id: 41,
@@ -1671,10 +1671,10 @@ const products = [
             {
                 id: 205,
                 name: "El Reflejo del Amor Más Puro",
-                price: 248000,
+                price: 287500,
                 image: "../assets/madres/ramo11.webp",
                 description: "Espectacular arreglo de rosas rojas en cartulina negra con 1 espejo central grabado 'Eres Hermosa'. Diseño único y artístico que combina la belleza de las rosas con un mensaje de amor. El regalo más original para mamá.",
-                categories: ["dia-madres", "rosas", "premium", "precio-alto"]
+                categories: ["amor-amistad", "dia-madres", "rosas", "premium", "precio-alto"]
             },
             {
                 id: 206,
@@ -1695,10 +1695,10 @@ const products = [
             {
                 id: 208,
                 name: "Eterno Amor Rojo",
-                price: 130000,
+                price: 110000,
                 image: "../assets/foto195.webp",
                 description: "Hermoso bouquet de 12 rosas rojas frescas combinadas con eucalipto, envuelto en papel coreano blanco con tarjeta personalizada y lazo blanco satinado. Un clásico romántico que expresa amor profundo y pasión. Perfecto para aniversarios, San Valentín o para conquistar.",
-                categories: ["rosas", "bouquets", "coreano", "premium", "precio-bajo"]
+                categories: ["amor-amistad", "rosas", "bouquets", "coreano", "premium", "precio-bajo"]
             },
             {
                 id: 209,
@@ -2003,6 +2003,94 @@ const products = [
                 image: "../assets/foto242.webp",
                 description: "Bouquet de 10 rosas eternas amarillas con perla en el centro, envuelto en papel translúcido de corazones y lazo blanco. Un regalo luminoso que nunca se marchita, ideal para aniversarios, cumpleaños y ocasiones que merecen durar para siempre.",
                 categories: ["flores-amarillas", "rosas-eternas", "bouquets", "precio-bajo"]
+            },
+            {
+                id: 256,
+                name: "Reina de Corazones",
+                price: 310000,
+                image: "../assets/foto243.webp",
+                description: "Espectacular ramo circular con 50 rosas rojas, cinturón de gypsophila blanca y corona dorada al centro, envuelto en papel translúcido tipo flor. Una declaración de amor de alto impacto, pensada para coronar a quien reina en tu corazón.",
+                categories: ["rosas", "bouquets", "premium", "amor-amistad", "precio-alto"]
+            },
+            {
+                id: 257,
+                name: "Todo Mi Corazón",
+                price: 387500,
+                image: "../assets/foto244.webp",
+                description: "Bouquet en forma de corazón con rosas rojas compactas, envuelto en papel blanco tipo pétalos y rematado con lazo de raso blanco y broche de perlas. El diseño más romántico del catálogo, ideal para aniversarios y propuestas.",
+                categories: ["rosas", "bouquets", "premium", "amor-amistad", "precio-alto"]
+            },
+            {
+                id: 258,
+                name: "Romance en Rosa",
+                price: 318750,
+                image: "../assets/foto245.webp",
+                description: "Bouquet de rosas rojas, tulipanes blancos, pompones blancos y eucalipto, envuelto en papel rosa estampado con lazo de raso e incluye tarjeta personalizada. Combinación fresca y elegante que mezcla pasión y ternura.",
+                categories: ["rosas", "tulipanes", "bouquets", "premium", "amor-amistad", "precio-alto"]
+            },
+            {
+                id: 259,
+                name: "Ternura y Chocolate",
+                price: 247500,
+                image: "../assets/foto246.webp",
+                description: "Combo con peluche de gatito naranja, caja negra con 3 rosas rojas con perlas, estuche de chocolates Ferrero Rocher y carta personalizada. Un regalo completo que mezcla ternura, dulzura y flores en una sola sorpresa.",
+                categories: ["rosas", "cajas", "chocolates", "amor-amistad", "precio-medio"]
+            },
+            {
+                id: 260,
+                name: "Mi Sol y Mi Amor",
+                price: 218750,
+                image: "../assets/foto247.webp",
+                description: "Bouquet con 12 rosas rojas y 1 girasol al centro, gypsophila, eucalipto y chocolates Ferrero Rocher entre las flores, envuelto en papel negro con corazones e incluye tarjeta personalizada. El equilibrio perfecto entre pasión y alegría.",
+                categories: ["rosas", "girasoles", "bouquets", "chocolates", "amor-amistad", "precio-medio"]
+            },
+            {
+                id: 261,
+                name: "Fuego y Sol",
+                price: 362500,
+                image: "../assets/foto248.webp",
+                description: "Ramo frondoso de girasoles grandes y rosas rojas con follaje, envuelto en papel beige y lazo rojo. Un arreglo imponente y luminoso que combina admiración y amor en una presentación de gran tamaño.",
+                categories: ["girasoles", "rosas", "bouquets", "premium", "amor-amistad", "precio-alto"]
+            },
+            {
+                id: 262,
+                name: "Corazón Dorado",
+                price: 212500,
+                image: "../assets/foto249.webp",
+                description: "Caja blanca en forma de corazón con rosas rojas con perlas, borde completo de chocolates Ferrero Rocher, mariposas doradas decorativas y lazo rojo. Un detalle dulce y elegante, listo para entregar y sorprender.",
+                categories: ["rosas", "cajas", "chocolates", "amor-amistad", "precio-medio"]
+            },
+            {
+                id: 263,
+                name: "Dulce Primavera",
+                price: 131250,
+                image: "../assets/foto250.webp",
+                description: "Bouquet mixto con girasol, gerbera rosada, rosas rojas y fucsias, claveles, margaritas y flores de temporada, con estuche de chocolates Ferrero Rocher y papel rosa estampado. Colorido, alegre y con excelente relación precio-tamaño.",
+                categories: ["rosas", "gerberas", "girasoles", "bouquets", "chocolates", "amor-amistad", "precio-bajo"]
+            },
+            {
+                id: 264,
+                name: "Jardín de Colores",
+                price: 225000,
+                image: "../assets/foto251.webp",
+                description: "Ramo grande de girasoles, mini girasoles, rosas lila y rosadas, claveles y margaritas blancas, envuelto en papel kraft con lazo rojo e incluye tarjeta personalizada. Un jardín completo para quien alegra tus días.",
+                categories: ["girasoles", "rosas", "bouquets", "premium", "amor-amistad", "precio-medio"]
+            },
+            {
+                id: 265,
+                name: "Canasta de Amor",
+                price: 218750,
+                image: "../assets/foto252.webp",
+                description: "Canasta blanca de mimbre con rosas rojas abiertas, follaje verde y lazos de raso rojo y plateado. Presentación clásica y romántica, lista para ubicar en casa u oficina sin necesidad de florero.",
+                categories: ["rosas", "canastas", "amor-amistad", "precio-medio"]
+            },
+            {
+                id: 266,
+                name: "Orquídea Enamorada",
+                price: 212500,
+                image: "../assets/foto253.webp",
+                description: "Orquídea Phalaenopsis viva de dos varas en tonos fucsia y blanco, envuelta en papel rosa con lazo de raso e incluye tarjeta personalizada. Un regalo duradero y sofisticado que sigue floreciendo semanas después.",
+                categories: ["premium", "amor-amistad", "precio-medio"]
             },
         ];
 

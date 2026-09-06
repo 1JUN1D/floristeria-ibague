@@ -1098,3 +1098,244 @@
     }
     .filter-btn-amarillas::before { left: 0.7rem; font-size: 0.95rem; }
 }
+
+/* ===================================
+   AMOR Y AMISTAD - BOTON ESPECIAL
+   =================================== */
+.filter-btn-amor {
+    background: linear-gradient(135deg, #c2185b 0%, #ff5c8a 45%, #e91e63 100%) !important;
+    color: #fff !important;
+    border: 2px solid #c2185b !important;
+    font-size: 0.95rem !important;
+    font-weight: 800 !important;
+    padding: 0.6rem 1.5rem 0.6rem 2.5rem !important;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50px !important;
+    letter-spacing: 0.3px;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.22);
+    box-shadow: 0 4px 14px rgba(233, 30, 99, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.35) !important;
+    animation: amor-glow 2.8s ease-in-out infinite;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+}
+
+/* Corazon latiendo a la izquierda */
+.filter-btn-amor::before {
+    content: "\2764\FE0F";
+    position: absolute;
+    left: 0.85rem;
+    top: 50%;
+    font-size: 1.05rem;
+    transform: translateY(-50%);
+    animation: amor-beat 1.4s ease-in-out infinite;
+    pointer-events: none;
+}
+
+/* Brillo que recorre el boton */
+.filter-btn-amor::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -70%;
+    width: 45%;
+    height: 100%;
+    background: linear-gradient(100deg, transparent, rgba(255, 255, 255, 0.65), transparent);
+    transform: skewX(-20deg);
+    animation: amor-shine 3.4s ease-in-out infinite;
+    pointer-events: none;
+}
+
+.filter-btn-amor:hover {
+    background: linear-gradient(135deg, #ad1457 0%, #ff7fa3 45%, #d81b60 100%) !important;
+    transform: translateY(-3px) scale(1.04) !important;
+    box-shadow: 0 8px 22px rgba(233, 30, 99, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.35) !important;
+}
+
+.filter-btn-amor.active {
+    background: linear-gradient(135deg, #880e4f 0%, #e91e63 55%, #ad1457 100%) !important;
+    color: #fff !important;
+    border-color: #880e4f !important;
+    box-shadow: 0 8px 22px rgba(136, 14, 79, 0.55), inset 0 1px 0 rgba(255, 255, 255, 0.3) !important;
+    animation: none;
+}
+
+@keyframes amor-glow {
+    0%, 100% { box-shadow: 0 4px 14px rgba(233, 30, 99, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.35); }
+    50% { box-shadow: 0 6px 24px rgba(233, 30, 99, 0.85), inset 0 1px 0 rgba(255, 255, 255, 0.35); }
+}
+
+@keyframes amor-beat {
+    0%, 100% { transform: translateY(-50%) scale(1); }
+    25% { transform: translateY(-50%) scale(1.25); }
+    40% { transform: translateY(-50%) scale(1.05); }
+    60% { transform: translateY(-50%) scale(1.2); }
+}
+
+@keyframes amor-shine {
+    0% { left: -70%; }
+    55%, 100% { left: 140%; }
+}
+
+@media (max-width: 600px) {
+    .filter-btn-amor {
+        font-size: 0.85rem !important;
+        padding: 0.5rem 1.1rem 0.5rem 2.1rem !important;
+    }
+    .filter-btn-amor::before { left: 0.7rem; font-size: 0.95rem; }
+}
+
+
+/* ===================================
+   FLYER FLOTANTE - AMOR Y AMISTAD
+   =================================== */
+.amor-flyer-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.2rem;
+    background: rgba(60, 10, 30, 0.42);
+    backdrop-filter: blur(3px);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.45s ease, visibility 0.45s ease;
+}
+
+.amor-flyer-overlay.visible { opacity: 1; visibility: visible; }
+
+.amor-flyer {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    background: linear-gradient(160deg, #fff5f8 0%, #ffffff 55%, #ffeef4 100%);
+    border: 2px solid #f8bbd0;
+    border-radius: 22px;
+    padding: 1.6rem 1.4rem 1.1rem;
+    text-align: center;
+    box-shadow: 0 22px 60px rgba(136, 14, 79, 0.32);
+    transform: translateY(28px) scale(0.94);
+    opacity: 0;
+    transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.5s ease;
+}
+
+.amor-flyer-overlay.visible .amor-flyer { transform: translateY(0) scale(1); opacity: 1; }
+
+.amor-flyer-close {
+    position: absolute;
+    top: 0.55rem;
+    right: 0.75rem;
+    background: none;
+    border: none;
+    font-size: 1.7rem;
+    line-height: 1;
+    color: #ad1457;
+    cursor: pointer;
+    padding: 0.1rem 0.35rem;
+    border-radius: 50%;
+    transition: background 0.2s ease;
+}
+
+.amor-flyer-close:hover { background: rgba(233, 30, 99, 0.12); }
+
+.amor-flyer-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, #c2185b, #ff5c8a);
+    color: #fff;
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 1.1px;
+    text-transform: uppercase;
+    padding: 0.3rem 0.85rem;
+    border-radius: 50px;
+    margin-bottom: 0.7rem;
+}
+
+.amor-flyer-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.65rem;
+    color: #880e4f;
+    margin: 0 0 0.45rem;
+    line-height: 1.2;
+}
+
+.amor-flyer-title span { display: inline-block; animation: amor-beat 1.4s ease-in-out infinite; }
+
+.amor-flyer-text {
+    font-size: 0.9rem;
+    color: #6d4152;
+    margin: 0 0 1rem;
+    line-height: 1.45;
+}
+
+.amor-flyer-photos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+    margin-bottom: 1.1rem;
+}
+
+.amor-flyer-photos img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 2px solid #fce4ec;
+    box-shadow: 0 4px 12px rgba(136, 14, 79, 0.16);
+}
+
+.amor-flyer-cta {
+    display: block;
+    width: 100%;
+    background: linear-gradient(135deg, #c2185b 0%, #ff5c8a 50%, #e91e63 100%);
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    padding: 0.8rem 1.2rem;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    cursor: pointer;
+    box-shadow: 0 6px 18px rgba(233, 30, 99, 0.45);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.amor-flyer-cta:hover { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(233, 30, 99, 0.55); }
+
+.amor-flyer-bar {
+    margin-top: 0.85rem;
+    height: 3px;
+    width: 100%;
+    background: #f8d7e3;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.amor-flyer-bar span {
+    display: block;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(90deg, #c2185b, #ff5c8a);
+    transform-origin: left center;
+    transform: scaleX(1);
+}
+
+.amor-flyer-overlay.visible .amor-flyer-bar span { animation: amor-flyer-countdown 5s linear forwards; }
+
+@keyframes amor-flyer-countdown {
+    from { transform: scaleX(1); }
+    to   { transform: scaleX(0); }
+}
+
+@media (max-width: 480px) {
+    .amor-flyer { padding: 1.3rem 1.1rem 1rem; }
+    .amor-flyer-title { font-size: 1.4rem; }
+    .amor-flyer-text { font-size: 0.84rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .amor-flyer, .amor-flyer-overlay { transition: none; }
+    .amor-flyer-title span { animation: none; }
+}
