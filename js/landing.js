@@ -1184,10 +1184,10 @@ const products = [
             {
                 id: 145,
                 name: "Eterno Recuerdo",
-                price: 256000,
+                price: 315000,
                 description: "Trípode fúnebre con rosas naranjas, lirios blancos, hortensias verdes y variedad de flores con listón personalizado. Combinación de colores cálidos que celebran la vida. Un homenaje distinguido y memorable.",
                 image: "../assets/foto145.webp",
-                categories: ["funebre", "precio-medio"]
+                categories: ["funebre", "precio-alto"]
             },
             {
                 id: 146,
@@ -1216,7 +1216,7 @@ const products = [
             {
                 id: 149,
                 name: "Trípode Fúnebre",
-                price: 272000,
+                price: 330000,
                 description: "Trípode fúnebre con lirios blancos, rosas blancas, claveles, pompones y follaje verde con listón personalizado y lazo blanco. Un tributo clásico y solemne que honra con dignidad y respeto.",
                 image: "../assets/foto149.webp",
                 categories: ["funebre", "precio-alto"]
