@@ -330,7 +330,7 @@ const products = [
                 name: "Rosas y Ferrero Dorado",
                 price: 168750,
                 image: "../assets/foto101.webp",
-                description: "Bouquet de rosas rojas con 5 Ferrero Rocher, gypsophila y abundante follaje verde, envuelto en papel negro con interior dorado y lazo rojo. La combinación perfecta de flores y chocolate para un regalo irresistible y delicioso.",
+                description: "Bouquet de rosas rojas con 4 Ferrero Rocher y abundante follaje verde, envuelto en papel con interior dorado y lazo. La combinación perfecta de flores y chocolate para un regalo irresistible y delicioso.",
                 categories: ["amor-amistad", "rosas", "bouquets", "chocolates", "precio-medio"]
             },
             {
@@ -1673,7 +1673,7 @@ const products = [
                 name: "El Reflejo del Amor Más Puro",
                 price: 287500,
                 image: "../assets/madres/ramo11.webp",
-                description: "Espectacular arreglo de rosas rojas en cartulina negra con 1 espejo central grabado 'Eres Hermosa'. Diseño único y artístico que combina la belleza de las rosas con un mensaje de amor. El regalo más original para mamá.",
+                description: "Espectacular arreglo de rosas rojas en papel coreano con espejo central grabado 'Eres Hermosa'. Diseño único y artístico que combina las flores con un mensaje de amor. El detalle más original para sorprender a quien amas.",
                 categories: ["amor-amistad", "dia-madres", "rosas", "premium", "precio-alto"]
             },
             {
@@ -1697,8 +1697,8 @@ const products = [
                 name: "Eterno Amor Rojo",
                 price: 110000,
                 image: "../assets/foto195.webp",
-                description: "Hermoso bouquet de 12 rosas rojas frescas combinadas con eucalipto, envuelto en papel coreano blanco con tarjeta personalizada y lazo blanco satinado. Un clásico romántico que expresa amor profundo y pasión. Perfecto para aniversarios, San Valentín o para conquistar.",
-                categories: ["amor-amistad", "rosas", "bouquets", "coreano", "premium", "precio-bajo"]
+                description: "Hermoso bouquet de 12 rosas rojas frescas con follaje, envuelto en cartulina con tarjeta personalizada y lazo. Un clásico romántico que expresa amor profundo y pasión. Perfecto para aniversarios, amor y amistad o para conquistar.",
+                categories: ["amor-amistad", "rosas", "bouquets", "premium", "precio-bajo"]
             },
             {
                 id: 209,
@@ -2001,7 +2001,7 @@ const products = [
                 name: "Ramo Eterno Amarillo",
                 price: 88000,
                 image: "../assets/foto242.webp",
-                description: "Bouquet de 10 rosas eternas amarillas con perla en el centro, envuelto en papel translúcido de corazones y lazo blanco. Un regalo luminoso que nunca se marchita, ideal para aniversarios, cumpleaños y ocasiones que merecen durar para siempre.",
+                description: "Bouquet de 8 rosas eternas amarillas, envuelto en papel translúcido con lazo. Un regalo luminoso que nunca se marchita, ideal para aniversarios, cumpleaños y ocasiones que merecen durar para siempre.",
                 categories: ["flores-amarillas", "rosas-eternas", "bouquets", "precio-bajo"]
             },
             {
@@ -2009,7 +2009,7 @@ const products = [
                 name: "Reina de Corazones",
                 price: 310000,
                 image: "../assets/foto243.webp",
-                description: "Espectacular ramo circular con 50 rosas rojas, cinturón de gypsophila blanca y corona dorada al centro, envuelto en papel translúcido tipo flor. Una declaración de amor de alto impacto, pensada para coronar a quien reina en tu corazón.",
+                description: "Espectacular ramo circular con 40 rosas rojas y cinturón de flores blancas tipo nube, con corona dorada al centro y envuelto en papel coreano. Una declaración de amor de alto impacto, pensada para coronar a quien reina en tu corazón.",
                 categories: ["rosas", "bouquets", "premium", "amor-amistad", "precio-alto"]
             },
             {
@@ -2033,7 +2033,7 @@ const products = [
                 name: "Ternura y Chocolate",
                 price: 247500,
                 image: "../assets/foto246.webp",
-                description: "Combo con peluche de gatito naranja, caja negra con 3 rosas rojas con perlas, estuche de chocolates Ferrero Rocher y carta personalizada. Un regalo completo que mezcla ternura, dulzura y flores en una sola sorpresa.",
+                description: "Combo con peluche disponible, caja con 3 rosas rojas, chocolates Ferrero Rocher y carta personalizada. Un regalo completo que mezcla ternura, dulzura y flores en una sola sorpresa.",
                 categories: ["rosas", "cajas", "chocolates", "amor-amistad", "precio-medio"]
             },
             {
@@ -2057,23 +2057,23 @@ const products = [
                 name: "Corazón Dorado",
                 price: 212500,
                 image: "../assets/foto249.webp",
-                description: "Caja blanca en forma de corazón con rosas rojas con perlas, borde completo de chocolates Ferrero Rocher, mariposas doradas decorativas y lazo rojo. Un detalle dulce y elegante, listo para entregar y sorprender.",
+                description: "Caja en forma de corazón con rosas rojas, borde completo de chocolates Ferrero Rocher, mariposas doradas decorativas y lazo. Un detalle dulce y elegante, listo para entregar y sorprender.",
                 categories: ["rosas", "cajas", "chocolates", "amor-amistad", "precio-medio"]
             },
             {
                 id: 263,
                 name: "Dulce Primavera",
-                price: 131250,
+                price: 155000,
                 image: "../assets/foto250.webp",
-                description: "Bouquet mixto con girasol, gerbera rosada, rosas rojas y fucsias, claveles, margaritas y flores de temporada, con estuche de chocolates Ferrero Rocher y papel rosa estampado. Colorido, alegre y con excelente relación precio-tamaño.",
-                categories: ["rosas", "gerberas", "girasoles", "bouquets", "chocolates", "amor-amistad", "precio-bajo"]
+                description: "Bouquet mixto con girasol y surtido de flores disponibles de temporada, acompañado de 4 chocolates Zeus y envuelto en papel decorativo con lazo. Colorido, alegre y con excelente relación precio-tamaño.",
+                categories: ["rosas", "gerberas", "girasoles", "bouquets", "chocolates", "amor-amistad", "precio-medio"]
             },
             {
                 id: 264,
                 name: "Jardín de Colores",
                 price: 225000,
                 image: "../assets/foto251.webp",
-                description: "Ramo grande de girasoles, mini girasoles, rosas lila y rosadas, claveles y margaritas blancas, envuelto en papel kraft con lazo rojo e incluye tarjeta personalizada. Un jardín completo para quien alegra tus días.",
+                description: "Bouquet de girasoles con surtido de flores disponibles de temporada, envuelto en papel kraft con lazo e incluye tarjeta personalizada. Un jardín completo para quien alegra tus días.",
                 categories: ["girasoles", "rosas", "bouquets", "premium", "amor-amistad", "precio-medio"]
             },
             {
@@ -2089,7 +2089,7 @@ const products = [
                 name: "Orquídea Enamorada",
                 price: 212500,
                 image: "../assets/foto253.webp",
-                description: "Orquídea Phalaenopsis viva de dos varas en tonos fucsia y blanco, envuelta en papel rosa con lazo de raso e incluye tarjeta personalizada. Un regalo duradero y sofisticado que sigue floreciendo semanas después.",
+                description: "Orquídea viva de dos varas, con color según disponibilidad, envuelta en papel decorativo con lazo de raso e incluye tarjeta personalizada. Un regalo duradero y sofisticado que sigue floreciendo semanas después.",
                 categories: ["premium", "amor-amistad", "precio-medio"]
             },
         ];
@@ -2246,7 +2246,7 @@ function renderProducts(filters = [], limit = null) {
                 <div class="product-info">
                     <h3>${product.name}</h3>
                     <p>${product.description}</p>
-                    ${product.categories.includes('funebre') ? `<div class="product-notice"><span class="product-notice-icon">\u{2139}\u{FE0F}</span>Este arreglo se elabora con la flor disponible del día, logrando un diseño lo más similar posible a la imagen.</div>` : ''}
+                    ${product.categories.includes('funebre') ? `<div class="product-notice"><span class="product-notice-icon">\u{2139}\u{FE0F}</span>Este arreglo se elabora con la flor disponible del día, logrando un diseño lo más similar posible a la imagen.</div>` : `<div class="product-notice"><span class="product-notice-icon">\u{2139}\u{FE0F}</span>Las flores, colores y detalles decorativos pueden variar según la disponibilidad del día. Conservamos el estilo, el tamaño y el valor del arreglo.</div>`}
                     ${product.gift ? `<div class="product-gift"><span class="product-gift-icon">\u{1F381}</span>${product.gift}</div>` : ''}
                     <div class="product-footer">
                         <span class="price">${formatCOP(product.price)}</span>
