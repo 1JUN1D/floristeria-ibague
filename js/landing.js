@@ -8,7 +8,7 @@ const products = [
             {
                 id: 1,
                 name: "Para Ti con Cariño",
-                price: 19000,
+                price: 20900,
                 image: "../assets/foto81.webp",
                 description: "Mini bouquet de margaritas amarillas en cartulina negra con mensaje 'Para Ti' escrito a mano y lazo dorado. El detalle más económico y tierno. Pequeño en tamaño pero grande en significado. Perfecto para sorpresas rápidas y emotivas.",
                 categories: ["flores-amarillas", "bouquets", "precio-bajo"],
@@ -17,7 +17,7 @@ const products = [
                         {
                 id: 2,
                 name: "Rosa Eterna Mini",
-                price: 19000,
+                price: 20900,
                 image: "../assets/foto84.webp",
                 description: "Mini bouquet con 1 rosa eterna amarilla dorada envuelta en papel blanco con lazo amarillo y texto personalizado. El detalle más económico y duradero. Perfecto para expresar cariño con un regalo que nunca se marchita.",
                 categories: ["flores-amarillas", "rosas-eternas", "precio-bajo"],
@@ -26,7 +26,7 @@ const products = [
             {
                 id: 3,
                 name: "Te Quiero Solar",
-                price: 23000,
+                price: 25300,
                 image: "../assets/foto60.webp",
                 description: "Mini bouquet con 1 girasol envuelto en cartulina negra con mensaje 'Te Quiero' y lazo amarillo. El detalle más económico y tierno para expresar amor. Incluye tarjeta personalizada. Pequeño en tamaño, grande en significado.",
                 categories: ["flores-amarillas", "girasoles", "precio-bajo"],
@@ -35,7 +35,7 @@ const products = [
             {
                 id: 4,
                 name: "Girasol Poético",
-                price: 32000,
+                price: 35200,
                 image: "../assets/foto83.webp",
                 description: "1 girasol presentado en cartulina negra con texto personalizado escrito a mano y lazo dorado. Detalle artístico y sentimental que combina la belleza del girasol con palabras desde el corazón. Regalo original y emotivo.",
                 categories: ["girasoles", "precio-bajo"]
@@ -43,7 +43,7 @@ const products = [
             {
                 id: 5,
                 name: "Poema Amarillo",
-                price: 45000,
+                price: 49500,
                 image: "../assets/foto69.webp",
                 description: "Bouquet de pompones amarillos envuelto en cartulina negra con texto poético escrito a mano y lazo amarillo. Detalle artístico y sentimental que combina flores con palabras de amor. Regalo original y económico cargado de significado.",
                 categories: ["flores-amarillas", "pompones", "precio-bajo"]
@@ -51,7 +51,7 @@ const products = [
             {
                 id: 6,
                 name: "Frescura Amarilla",
-                price: 49000,
+                price: 53900,
                 image: "../assets/foto78.webp",
                 description: "Bouquet sencillo y fresco de margaritas amarillas con follaje verde envuelto en papel durazno. Detalle económico y alegre que transmite optimismo y buenos deseos. Perfecto para gestos espontáneos llenos de color y vitalidad.",
                 categories: ["flores-amarillas", "bouquets", "precio-bajo"]
@@ -59,7 +59,7 @@ const products = [
             {
                 id: 7,
                 name: "Sol Amarillo",
-                price: 54000,
+                price: 59400,
                 image: "../assets/foto53.webp",
                 description: "Bouquet alegre de pompones amarillos abundantes envueltos en papel turquesa. Incluye tarjeta personalizada. Detalle fresco, vibrante y económico que transmite energía positiva y alegría pura. Perfecto para iluminar cualquier momento.",
                 categories: ["flores-amarillas", "pompones", "precio-bajo"]
@@ -67,7 +67,7 @@ const products = [
             {
                 id: 8,
                 name: "Dulce Sorpresa Solar",
-                price: 58000,
+                price: 63800,
                 image: "../assets/foto74.webp",
                 description: "Bouquet divertido con girasoles, margaritas de color fucsia, gomitas y quipitos envuelto en cartulina negra. Incluye tarjeta personalizada. Combinación creativa de flores y dulces perfecta para sorprender con alegría y sabor.",
                 categories: ["flores-amarillas", "girasoles", "chocolates", "precio-bajo"]
@@ -91,7 +91,7 @@ const products = [
                         {
                 id: 11,
                 name: "Rosas Eternas Doradas",
-                price: 78000,
+                price: 85800,
                 image: "../assets/foto65.webp",
                 description: "Elegante caja redonda negra con 4 rosas eternas doradas, follaje verde y tarjeta personalizada con mensaje especial. Diseño sofisticado con lazo dorado. Un regalo duradero que simboliza amor eterno e inmortal.",
                 categories: ["flores-amarillas", "rosas-eternas", "cajas", "precio-bajo"]
@@ -107,7 +107,7 @@ const products = [
             {
                 id: 13,
                 name: "Trío Nocturno",
-                price: 75000,
+                price: 82500,
                 image: "../assets/foto73.webp",
                 description: "Bouquet elegante con 3 girasoles grandes y follaje verde envuelto en cartulina negra. Incluye tarjeta personalizada. Contraste sofisticado entre el amarillo dorado y el negro que transmite distinción y carácter. Detalle con personalidad.",
                 categories: ["flores-amarillas", "girasoles", "precio-bajo"]
@@ -115,7 +115,7 @@ const products = [
             {
                 id: 14,
                 name: "Corazón Floral con Nutella",
-                price: 93000,
+                price: 102300,
                 image: "../assets/foto33.webp",
                 description: "Bouquet en forma de corazón con 3 girasoles, manzanilla y follaje en papel negro elegante. Incluye Nutella y tarjeta personalizada. Detalle creativo y original que combina flores, dulzura y amor en una presentación única.",
                 categories: ["flores-amarillas", "girasoles", "chocolates", "precio-bajo"]
@@ -131,7 +131,7 @@ const products = [
             {
                 id: 16,
                 name: "Tres Veces Te Amo",
-                price: 84000,
+                price: 92400,
                 image: "../assets/foto21.webp",
                 description: "Elegante bouquet con 3 girasoles envueltos en cartulina negra con dulce incluido y lazo amarillo. Presentación moderna y sofisticada que contrasta la calidez del girasol con la elegancia del negro. Detalle con personalidad.",
                 categories: ["girasoles", "precio-bajo"]
@@ -139,7 +139,7 @@ const products = [
             {
                 id: 17,
                 name: "Brillo Natural",
-                price: 88000,
+                price: 96800,
                 image: "../assets/foto55.webp",
                 description: "Bouquet encantador con 3 girasoles, astromelias blancas y clavellinas en papel coreano bicolor blanco y negro. Combinación fresca y luminosa con tarjeta personalizada. Detalle sencillo pero elegante que transmite calidez y admiración.",
                 categories: ["flores-amarillas", "girasoles", "coreano", "precio-bajo"]
@@ -147,7 +147,7 @@ const products = [
             {
                 id: 18,
                 name: "Bouquet Rústico Solar",
-                price: 88000,
+                price: 96800,
                 image: "../assets/foto66.webp",
                 description: "Bouquet con 3 girasoles, eucalipto, manzanilla y decoración natural envuelto en papel kraft con lazo lavanda. Estilo rústico y elegante con tarjeta de la marca. Combinación campestre que transmite calidez y autenticidad.",
                 categories: ["flores-amarillas", "girasoles", "bouquets", "precio-bajo"]
@@ -155,7 +155,7 @@ const products = [
             {
                 id: 19,
                 name: "Girasol Poético con Ferrero",
-                price: 84000,
+                price: 92400,
                 image: "../assets/foto70.webp",
                 description: "Bouquet con girasoles, margaritas y 3 chocolates Ferrero Rocher en cartulina negra con texto poético escrito a mano. Combinación de flores, dulzura y sentimiento. Detalle creativo y romántico que habla directo al corazón.",
                 categories: ["girasoles", "chocolates", "precio-bajo"]
@@ -203,7 +203,7 @@ const products = [
             {
                 id: 25,
                 name: "Cuatro Soles con Margarita",
-                price: 125000,
+                price: 137500,
                 image: "../assets/foto57.webp",
                 description: "Bouquet delicado con 4 girasoles y margaritas blancas decorado en papel coreano rosa. Combinación fresca y alegre que equilibra la calidez del girasol con la pureza de la margarita. Detalle encantador para cualquier ocasión.",
                 categories: ["flores-amarillas", "girasoles", "coreano", "precio-bajo"]
@@ -211,7 +211,7 @@ const products = [
             {
                 id: 26,
                 name: "Elegancia Oscura",
-                price: 98000,
+                price: 107800,
                 image: "../assets/foto59.webp",
                 description: "Bouquet de 4 girasoles grandes con follaje verde y solidago envuelto en elegante cartulina negra con tarjeta personalizada. Contraste sofisticado entre el amarillo radiante y el negro que transmite distinción y carácter único.",
                 categories: ["flores-amarillas", "girasoles", "precio-bajo"]
@@ -219,7 +219,7 @@ const products = [
             {
                 id: 27,
                 name: "Cuarteto con Ferrero",
-                price: 98000,
+                price: 107800,
                 image: "../assets/foto63.webp",
                 description: "Bouquet festivo con 4 girasoles grandes, 4 chocolates Ferrero Rocher, tarjeta de feliz día y lazo naranja en papel negro. Combinación perfecta entre flores y dulzura para celebrar momentos especiales con estilo y sabor.",
                 categories: ["flores-amarillas", "girasoles", "chocolates", "precio-bajo"]
@@ -243,7 +243,7 @@ const products = [
             {
                 id: 30,
                 name: "Trío Ferrero Solar",
-                price: 107000,
+                price: 117700,
                 image: "../assets/foto61.webp",
                 description: "Bouquet con 3 girasoles coronados con 3 chocolates Ferrero Rocher, decoración de follaje y lazo rojo en papel negro elegante. Combinación irresistible de flores y dulzura con tarjeta personalizada. Regalo con carácter y sabor.",
                 categories: ["flores-amarillas", "girasoles", "chocolates", "precio-bajo"]
@@ -251,7 +251,7 @@ const products = [
             {
                 id: 31,
                 name: "Sorpresa con Globo",
-                price: 114000,
+                price: 125400,
                 image: "../assets/foto68.webp",
                 description: "Arreglo en caja con 3 girasoles, yicsu (gypsophila) y globo personalizado dorado. Presentación festiva con lazo amarillo y tarjeta. Detalle especial ideal para esposas, madres y personas queridas que merecen un regalo con significado.",
                 categories: ["girasoles", "cajas", "precio-bajo"]
@@ -277,7 +277,7 @@ const products = [
             {
                 id: 34,
                 name: "Reina de Pompones",
-                price: 123000,
+                price: 135300,
                 image: "../assets/foto54.webp",
                 description: "Ramo grande con 4 paquetes de pompones amarillos en decoración tipo reina. Envuelto en papel blanco elegante. Arreglo voluminoso y llamativo que irradia alegría y positivismo. Ideal para sorprender con abundancia y color dorado.",
                 categories: ["flores-amarillas", "pompones", "precio-bajo"]
@@ -285,7 +285,7 @@ const products = [
             {
                 id: 35,
                 name: "Corazón de Pompones",
-                price: 123000,
+                price: 135300,
                 image: "../assets/foto71.webp",
                 description: "Caja en forma de corazón rosa repleta de pompones amarillos decorados con 2 mariposas doradas. Incluye tarjeta personalizada. Diseño romántico y original que combina la calidez del amarillo con la forma del amor. Regalo encantador.",
                 categories: ["flores-amarillas", "pompones", "cajas", "precio-bajo"],
@@ -385,10 +385,10 @@ const products = [
             {
                 id: 47,
                 name: "Siete Soles con Ferrero",
-                price: 149000,
+                price: 163900,
                 image: "../assets/foto76.webp",
                 description: "Bouquet generoso con 7 girasoles y 3 chocolates Ferrero Rocher envuelto en papel negro y amarillo con follaje. Incluye tarjeta personalizada. Combinación perfecta entre flores radiantes y dulzura para un regalo memorable.",
-                categories: ["flores-amarillas", "girasoles", "chocolates", "precio-bajo"]
+                categories: ["flores-amarillas", "girasoles", "chocolates", "precio-medio"]
             },
             {
                 id: 48,
@@ -418,7 +418,7 @@ const products = [
             {
                 id: 51,
                 name: "Siete Soles",
-                price: 169000,
+                price: 185900,
                 image: "../assets/foto56.webp",
                 description: "Bouquet espectacular con 7 girasoles grandes acompañados de nubes (gypsophila). Decorado en papel coreano rosa con estampado 'Love'. Arreglo luminoso y generoso que transmite admiración y amor sincero. Tarjeta incluida.",
                 categories: ["flores-amarillas", "girasoles", "coreano", "precio-medio"]
@@ -583,7 +583,7 @@ const products = [
             {
                 id: 71,
                 name: "Cumpleaños Radiante",
-                price: 201000,
+                price: 221100,
                 image: "../assets/foto37.webp",
                 description: "Caja elegante repleta de girasoles con globo burbuja personalizado 'Feliz Cumpleaños Amor'. Arreglo festivo y luminoso ideal para celebraciones especiales. Presentación premium con tarjeta incluida que hace de cada cumpleaños un momento mágico.",
                 categories: ["girasoles", "cajas", "precio-medio", "cumpleanos"],
@@ -601,7 +601,7 @@ const products = [
             {
                 id: 73,
                 name: "Caja Noir de Girasoles",
-                price: 194000,
+                price: 213400,
                 image: "../assets/foto67.webp",
                 description: "Caja redonda negra elegante con 7 girasoles, moño decorativo y tarjeta personalizada. Diseño moderno y sofisticado que combina la calidez del girasol con la elegancia del negro. Pieza central perfecta para decorar con distinción.",
                 categories: ["flores-amarillas", "girasoles", "cajas", "precio-medio"]
@@ -617,7 +617,7 @@ const products = [
             {
                 id: 75,
                 name: "Caja Elegancia Negra",
-                price: 204000,
+                price: 224400,
                 image: "../assets/foto40.webp",
                 description: "Caja redonda negra con girasoles abundantes y follaje verde, decorada con lazo de cinta amarilla dorada. Contraste elegante y moderno entre el negro y el amarillo radiante. Arreglo sofisticado ideal para quienes buscan un regalo con estilo único.",
                 categories: ["girasoles", "cajas", "precio-medio"]
@@ -715,18 +715,18 @@ const products = [
             {
                 id: 87,
                 name: "Docena Dorada Premium",
-                price: 250000,
+                price: 275000,
                 image: "../assets/foto75.webp",
                 description: "Bouquet espectacular con 12 girasoles grandes, mariposas decorativas, follaje verde y 8 chocolates Ferrero Rocher. Envuelto en papel negro y amarillo con lazo rojo. Arreglo de alto impacto que combina abundancia, belleza y dulzura.",
-                categories: ["flores-amarillas", "girasoles", "chocolates", "premium", "precio-medio"]
+                categories: ["flores-amarillas", "girasoles", "chocolates", "premium", "precio-alto"]
             },
             {
                 id: 88,
                 name: "Galaxia de Girasoles",
-                price: 231000,
+                price: 254100,
                 image: "../assets/foto34.webp",
                 description: "Impresionante ramo circular con 13 girasoles decorados con mariposas doradas en papel negro. Diseño espectacular y moderno que transmite poder, admiración y grandeza. Presentación de alto impacto con tarjeta personalizada.",
-                categories: ["flores-amarillas", "girasoles", "premium", "precio-medio"],
+                categories: ["flores-amarillas", "girasoles", "premium", "precio-alto"],
                 hidden: true
             },
             {
@@ -773,10 +773,10 @@ const products = [
             {
                 id: 94,
                 name: "Mariposas Doradas",
-                price: 239000,
+                price: 262900,
                 image: "../assets/foto62.webp",
                 description: "Impresionante ramo con 13 girasoles decorados con 4 mariposas doradas y moño elegante en papel negro. Incluye tarjeta del día de las flores amarillas. Diseño espectacular y simbólico que transmite admiración y grandeza.",
-                categories: ["flores-amarillas", "girasoles", "premium", "precio-medio"]
+                categories: ["flores-amarillas", "girasoles", "premium", "precio-alto"]
             },
                         {
                 id: 95,
@@ -846,7 +846,7 @@ const products = [
             {
                 id: 103,
                 name: "Celebración Completa",
-                price: 311000,
+                price: 342100,
                 image: "../assets/foto58.webp",
                 description: "Arreglo premium en caja con 6 girasoles, chocolates Ferrero Rocher, globo burbuja 'Feliz Día' y peluche de gato. Regalo completo que combina flores, dulzura, diversión y ternura. Perfecto para cumpleaños y celebraciones especiales.",
                 categories: ["flores-amarillas", "girasoles", "cajas", "chocolates", "premium", "precio-alto", "cumpleanos"],
@@ -871,7 +871,7 @@ const products = [
             {
                 id: 106,
                 name: "Majestuosidad de Girasoles",
-                price: 408000,
+                price: 448800,
                 image: "../assets/foto80.webp",
                 description: "Bouquet premium con 12 girasoles grandes, rosas blancas, follaje y tarjeta personalizada. Disponible en papel coreano. Reservar con 2 días de anticipación. Arreglo majestuoso e imponente para ocasiones que merecen lo mejor.",
                 categories: ["flores-amarillas", "rosas", "girasoles", "bouquets", "premium", "precio-alto"]
@@ -1345,16 +1345,16 @@ const products = [
             {
                 id: 165,
                 name: "Bouquet 5 Tulipanes Naturales Amarillos",
-                price: 257000,
+                price: 282700,
                 description: "Elegante bouquet de 5 tulipanes naturales amarillos con gypsophila (nubes), envuelto en papel coreano rosa con detalles dorados de corazones. Incluye tarjeta personalizada. La frescura y belleza de los tulipanes naturales en su máxima expresión.",
                 image: "../assets/foto165.webp",
-                categories: ["tulipanes", "coreano", "precio-medio"],
+                categories: ["tulipanes", "coreano", "precio-alto"],
                 hidden: true
             },
             {
                 id: 166,
                 name: "Mini Bouquet 3 Tulipanes Eternos",
-                price: 60000,
+                price: 66000,
                 description: "Encantador mini bouquet de 3 tulipanes eternos amarillos envueltos en papel negro con estampado dorado de corazones y la palabra 'Love'. Lazo amarillo decorativo. Detalle económico, elegante y duradero perfecto para sorprender.",
                 image: "../assets/foto166.webp",
                 categories: ["tulipanes", "precio-bajo"]
@@ -1655,7 +1655,7 @@ const products = [
             {
                 id: 203,
                 name: "Rayito de Amor",
-                price: 73000,
+                price: 80300,
                 image: "../assets/madres/ramo9.webp",
                 description: "Bouquet de 3 girasoles grandes con follaje verde envuelto en cartulina negra con lazo amarillo. Incluye 1 caja de almendras. Un detalle cálido, luminoso y delicioso para alegrar el día de mamá.",
                 categories: ["dia-madres", "girasoles", "chocolates", "bouquets", "precio-bajo"]
@@ -1991,7 +1991,7 @@ const products = [
             {
                 id: 254,
                 name: "Sol de Mi Vida",
-                price: 110000,
+                price: 121000,
                 image: "../assets/foto241.webp",
                 description: "Caja blanca con girasoles frescos, nubes (gypsophila) y follaje verde, rematada con lazo de raso amarillo, globo metalizado en forma de corazón con mensaje personalizado y tarjeta dedicatoria. Un detalle radiante y elegante, perfecto para aniversarios, cumpleaños y sorpresas que iluminan el día.",
                 categories: ["flores-amarillas", "girasoles", "cajas", "precio-bajo"]
@@ -1999,7 +1999,7 @@ const products = [
             {
                 id: 255,
                 name: "Ramo Eterno Amarillo",
-                price: 88000,
+                price: 96800,
                 image: "../assets/foto242.webp",
                 description: "Bouquet de 8 rosas eternas amarillas, envuelto en papel translúcido con lazo. Un regalo luminoso que nunca se marchita, ideal para aniversarios, cumpleaños y ocasiones que merecen durar para siempre.",
                 categories: ["flores-amarillas", "rosas-eternas", "bouquets", "precio-bajo"]
