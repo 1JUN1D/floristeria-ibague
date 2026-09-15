@@ -115,7 +115,7 @@ const products = [
             {
                 id: 14,
                 name: "Corazón Floral con Nutella",
-                price: 102000,
+                price: 93000,
                 image: "../assets/foto33.webp",
                 description: "Bouquet en forma de corazón con 3 girasoles, manzanilla y follaje en papel negro elegante. Incluye Nutella y tarjeta personalizada. Detalle creativo y original que combina flores, dulzura y amor en una presentación única.",
                 categories: ["flores-amarillas", "girasoles", "chocolates", "precio-bajo"]
@@ -2394,6 +2394,9 @@ function initCatalog() {
 
     // Soporte #dia-madre en URL
     checkHashMadres();
+
+    // Flores Amarillas (21 sept): flyer flotante + mini sección con contador
+    if (window.FloresAmarillas) FloresAmarillas.init();
 }
 
 // Animación de corazones al activar filtro Día de las Madres

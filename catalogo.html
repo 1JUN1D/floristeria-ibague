@@ -37,22 +37,7 @@
 </head>
 <body>
 
-    <!-- ===== FLYER FLOTANTE AMOR Y AMISTAD ===== -->
-    <div class="amor-flyer-overlay" id="amor-flyer" role="dialog" aria-label="Colección Amor y Amistad" aria-hidden="true">
-        <div class="amor-flyer">
-            <button class="amor-flyer-close" id="amor-flyer-close" aria-label="Cerrar">&times;</button>
-            <div class="amor-flyer-badge">Nueva colección</div>
-            <h3 class="amor-flyer-title">Amor y Amistad <span>&#10084;&#65039;</span></h3>
-            <p class="amor-flyer-text">Arreglos especiales para celebrar a quien amas. Disponibles con entrega en Ibagué.</p>
-            <div class="amor-flyer-photos">
-                <img src="assets/foto244.webp" alt="Corazón de rosas rojas" loading="lazy">
-                <img src="assets/foto243.webp" alt="Ramo de 50 rosas rojas con corona" loading="lazy">
-                <img src="assets/foto249.webp" alt="Caja corazón con rosas y chocolates" loading="lazy">
-            </div>
-            <button class="amor-flyer-cta" id="amor-flyer-cta">Ver la colección</button>
-            <div class="amor-flyer-bar"><span id="amor-flyer-progress"></span></div>
-        </div>
-    </div>
+    <!-- Flyer flotante Flores Amarillas: se inyecta desde js/flores-amarillas.js -->
 
     <!-- Navbar -->
     <div id="navbar-container"></div>
@@ -64,6 +49,10 @@
             <p>Explora nuestra colección completa de arreglos florales, bouquets, canastas, cajas y mucho más</p>
         </div>
     </section>
+
+    <!-- ===== MINI SECCION ESPECIAL FLORES AMARILLAS (21 de septiembre) =====
+         Se llena desde js/flores-amarillas.js (productos destacados + contador) -->
+    <section class="amarillas-special" id="amarillas-special"></section>
 
     <!-- Filters -->
     <section class="catalog-filters">
@@ -156,6 +145,7 @@
 
     <!-- JavaScript -->
     <script src="js/script.js"></script>
+    <script src="js/flores-amarillas.js"></script>
     <script>
         // Datos de productos - Catálogo Floral Completo
 const products = [
@@ -269,7 +259,7 @@ const products = [
             {
                 id: 14,
                 name: "Corazón Floral con Nutella",
-                price: 102000,
+                price: 93000,
                 image: "assets/foto33.webp",
                 description: "Bouquet en forma de corazón con 3 girasoles, manzanilla y follaje en papel negro elegante. Incluye Nutella y tarjeta personalizada. Detalle creativo y original que combina flores, dulzura y amor en una presentación única.",
                 categories: ["flores-amarillas", "girasoles", "chocolates", "precio-bajo"]
@@ -2630,43 +2620,12 @@ const products = [
         }
 
 
-        // ===== FLYER FLOTANTE AMOR Y AMISTAD (autocierre 5s) =====
-        (function () {
-            var overlay = document.getElementById('amor-flyer');
-            if (!overlay) return;
-            var closeBtn = document.getElementById('amor-flyer-close');
-            var ctaBtn = document.getElementById('amor-flyer-cta');
-            var timer = null;
-
-            function closeFlyer() {
-                if (timer) { clearTimeout(timer); timer = null; }
-                overlay.classList.remove('visible');
-                overlay.setAttribute('aria-hidden', 'true');
-                setTimeout(function () { overlay.style.display = 'none'; }, 500);
-            }
-
-            function openFlyer() {
-                overlay.classList.add('visible');
-                overlay.setAttribute('aria-hidden', 'false');
-                timer = setTimeout(closeFlyer, 5000);
-            }
-
-            closeBtn.addEventListener('click', closeFlyer);
-            overlay.addEventListener('click', function (e) { if (e.target === overlay) closeFlyer(); });
-            document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeFlyer(); });
-
-            ctaBtn.addEventListener('click', function () {
-                closeFlyer();
-                var btn = document.querySelector('.filter-btn-amor');
-                if (btn) { btn.click(); } else { renderProducts('amor-amistad'); }
-            });
-
-            setTimeout(openFlyer, 700);
-        })();
-
         // Inicializar
         renderProducts();
         checkHash();
+
+        // ===== FLORES AMARILLAS: flyer flotante (autocierre 5s) + mini sección con contador =====
+        if (window.FloresAmarillas) FloresAmarillas.init();
     </script>
 </body>
 </html>
