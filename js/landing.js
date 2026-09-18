@@ -2092,6 +2092,70 @@ const products = [
                 description: "Orquídea viva de dos varas, con color según disponibilidad, envuelta en papel decorativo con lazo de raso e incluye tarjeta personalizada. Un regalo duradero y sofisticado que sigue floreciendo semanas después.",
                 categories: ["premium", "amor-amistad", "precio-medio"]
             },
+            {
+                id: 267,
+                name: "Treinta Soles con Mariposas",
+                price: 232000,
+                image: "../assets/foto254.webp",
+                description: "Bouquet de 30 rosas amarillas envueltas en papel transparente con corazones y borde dorado, decorado con mariposas doradas e incluye tarjeta personalizada. Un ramo abundante y luminoso que transmite alegría, buena energía y nuevos comienzos.",
+                categories: ["flores-amarillas", "rosas", "bouquets", "precio-medio"]
+            },
+            {
+                id: 268,
+                name: "Amanecer Amarillo y Rosa",
+                price: 188000,
+                image: "../assets/foto255.webp",
+                description: "Bouquet de rosas amarillas con ramas de eucalipto, envuelto en papel rosado con detalle a cuadros amarillos y lazo de raso crema. Incluye tarjeta personalizada. Combinación fresca y juvenil que contrasta el amarillo vibrante con tonos pastel.",
+                categories: ["flores-amarillas", "rosas", "bouquets", "precio-medio"]
+            },
+            {
+                id: 269,
+                name: "Reina Dorada 50 Rosas",
+                price: 494000,
+                image: "../assets/foto256.webp",
+                description: "Imponente bouquet de 50 rosas amarillas envuelto en papel negro, coronado con tiara y decorado con mariposas doradas, con lazo dorado e incluye tarjeta personalizada. Un regalo de lujo para hacerla sentir como una reina.",
+                categories: ["flores-amarillas", "rosas", "bouquets", "premium", "precio-alto"]
+            },
+            {
+                id: 270,
+                name: "Dulzura Amarilla",
+                price: 105000,
+                image: "../assets/foto257.webp",
+                description: "Bouquet de rosas amarillas acompañadas de gypsophila blanca y solidago, envuelto en papel amarillo pastel con lazo a juego. Detalle delicado y económico que transmite ternura, alegría y buenos deseos.",
+                categories: ["flores-amarillas", "rosas", "bouquets", "precio-bajo"]
+            },
+            {
+                id: 271,
+                name: "Luna Dorada 20 Rosas",
+                price: 180000,
+                image: "../assets/foto258.webp",
+                description: "Bouquet redondo de 20 rosas amarillas bordeadas con gypsophila, envuelto en papel blanco con lazo rústico e incluye tarjeta con mensaje personalizado. Diseño limpio y elegante donde el amarillo es el protagonista.",
+                categories: ["flores-amarillas", "rosas", "bouquets", "coreano", "precio-medio"]
+            },
+            {
+                id: 272,
+                name: "Rayos de Sol en Blanco",
+                price: 165000,
+                image: "../assets/foto259.webp",
+                description: "Bouquet de rosas amarillas con eucalipto fresco, envuelto en papel blanco con lazo amarillo. Presentación luminosa y moderna que resalta el color de las rosas. Ideal para regalar alegría y buena energía.",
+                categories: ["flores-amarillas", "rosas", "bouquets", "precio-medio"]
+            },
+            {
+                id: 273,
+                name: "Lirio de Sol",
+                price: 82000,
+                image: "../assets/foto260.webp",
+                description: "Bouquet de lirios amarillos y rosas amarillas con follaje verde y toques de flor blanca, envuelto en papel amarillo con lazo blanco. Detalle económico, fresco y perfumado que ilumina cualquier espacio.",
+                categories: ["flores-amarillas", "lirios", "rosas", "bouquets", "precio-bajo"]
+            },
+            {
+                id: 274,
+                name: "Campo de Lirios Amarillos",
+                price: 156000,
+                image: "../assets/foto261.webp",
+                description: "Bouquet silvestre de lirios amarillos, margaritas amarillas, solidago y eucalipto, envuelto en papel kraft y rosado con lazo rosa. Estilo natural y abundante, lleno de aroma y color. Los lirios se van abriendo con los días.",
+                categories: ["flores-amarillas", "lirios", "bouquets", "precio-medio"]
+            },
         ];
 
 // --- VARIABLES GLOBALES ---
