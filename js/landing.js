@@ -54,7 +54,8 @@ const products = [
                 price: 54000,
                 image: "../assets/foto78.webp",
                 description: "Bouquet sencillo y fresco de margaritas amarillas con follaje verde envuelto en papel durazno. Detalle económico y alegre que transmite optimismo y buenos deseos. Perfecto para gestos espontáneos llenos de color y vitalidad.",
-                categories: ["flores-amarillas", "bouquets", "precio-bajo"]
+                categories: ["flores-amarillas", "bouquets", "precio-bajo"],
+                hidden: true
             },
             {
                 id: 7,
