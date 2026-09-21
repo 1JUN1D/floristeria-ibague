@@ -18,12 +18,11 @@
         targetDay: 21,
         flyerSeconds: 5,
         // Productos del flyer (máx. 4) y de la mini sección, por nombre
-        flyerNames: ['Mariposas Doradas', 'Siete Soles', 'Sol Amarillo', 'Poema Amarillo'],
+        flyerNames: ['Treinta Soles con Mariposas', 'Reina Dorada 50 Rosas', 'Luna Dorada 20 Rosas', 'Campo de Lirios Amarillos'],
         sectionNames: [
-            'Mariposas Doradas', 'Siete Soles', 'Sol Amarillo', 'Poema Amarillo',
-            'Sol de Mi Vida', 'Caja Noir de Girasoles', 'Cuatro Soles con Margarita',
-            'Siete Soles con Ferrero', 'Corazón Floral con Nutella', 'Ramo Eterno Amarillo',
-            'Reina de Pompones', 'Docena Dorada Premium'
+            'Treinta Soles con Mariposas', 'Amanecer Amarillo y Rosa', 'Reina Dorada 50 Rosas',
+            'Dulzura Amarilla', 'Luna Dorada 20 Rosas', 'Rayos de Sol en Blanco',
+            'Lirio de Sol', 'Campo de Lirios Amarillos'
         ],
         whatsapp: '573151100609',
         siteUrl: 'https://floristeriaibague.dondeseria.com/'
