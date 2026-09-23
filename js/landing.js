@@ -2459,9 +2459,6 @@ function initCatalog() {
 
     // Soporte #dia-madre en URL
     checkHashMadres();
-
-    // Flores Amarillas (21 sept): flyer flotante + mini sección con contador
-    if (window.FloresAmarillas) FloresAmarillas.init();
 }
 
 // Animación de corazones al activar filtro Día de las Madres

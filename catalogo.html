@@ -37,8 +37,6 @@
 </head>
 <body>
 
-    <!-- Flyer flotante Flores Amarillas: se inyecta desde js/flores-amarillas.js -->
-
     <!-- Navbar -->
     <div id="navbar-container"></div>
 
@@ -49,10 +47,6 @@
             <p>Explora nuestra colección completa de arreglos florales, bouquets, canastas, cajas y mucho más</p>
         </div>
     </section>
-
-    <!-- ===== MINI SECCION ESPECIAL FLORES AMARILLAS (21 de septiembre) =====
-         Se llena desde js/flores-amarillas.js (productos destacados + contador) -->
-    <section class="amarillas-special" id="amarillas-special"></section>
 
     <!-- Filters -->
     <section class="catalog-filters">
@@ -145,7 +139,6 @@
 
     <!-- JavaScript -->
     <script src="js/script.js"></script>
-    <script src="js/flores-amarillas.js"></script>
     <script>
         // Datos de productos - Catálogo Floral Completo
 const products = [
@@ -2688,9 +2681,6 @@ const products = [
         // Inicializar
         renderProducts();
         checkHash();
-
-        // ===== FLORES AMARILLAS: flyer flotante (autocierre 5s) + mini sección con contador =====
-        if (window.FloresAmarillas) FloresAmarillas.init();
     </script>
 </body>
 </html>
