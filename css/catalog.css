@@ -1647,3 +1647,91 @@
     .amarillas-flyer, .amarillas-flyer-overlay, .amarillas-mini-card { transition: none; }
     .amarillas-flyer-title span, .amarillas-special-title span { animation: none; }
 }
+
+
+/* ===================================
+   DIA DE HOT WHEELS (30 SEP) - BOTON ESPECIAL
+   =================================== */
+.filter-btn-hotwheels {
+    background: linear-gradient(135deg, #0d47a1 0%, #1976d2 50%, #0d47a1 100%) !important;
+    color: #fff !important;
+    border: 2px solid #ff6d00 !important;
+    font-size: 0.95rem !important;
+    font-weight: 800 !important;
+    padding: 0.6rem 1.5rem 0.6rem 2.6rem !important;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50px !important;
+    letter-spacing: 0.3px;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+    box-shadow: 0 4px 14px rgba(255, 109, 0, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.35) !important;
+    animation: hotwheels-glow 2.4s ease-in-out infinite;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+}
+
+/* Carro de carreras a la izquierda */
+.filter-btn-hotwheels::before {
+    content: "\1F3CE\FE0F";
+    position: absolute;
+    left: 0.8rem;
+    top: 50%;
+    font-size: 1.05rem;
+    transform: translateY(-50%);
+    animation: hotwheels-drive 1.6s ease-in-out infinite;
+    pointer-events: none;
+}
+
+/* Llama que recorre el boton */
+.filter-btn-hotwheels::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -70%;
+    width: 45%;
+    height: 100%;
+    background: linear-gradient(100deg, transparent, rgba(255, 145, 0, 0.75), rgba(255, 235, 59, 0.6), transparent);
+    transform: skewX(-20deg);
+    animation: hotwheels-flame 2.6s ease-in-out infinite;
+    pointer-events: none;
+}
+
+.filter-btn-hotwheels:hover {
+    background: linear-gradient(135deg, #1565c0 0%, #2196f3 50%, #1565c0 100%) !important;
+    transform: translateY(-3px) scale(1.04) !important;
+    box-shadow: 0 8px 22px rgba(255, 109, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.35) !important;
+}
+
+.filter-btn-hotwheels.active {
+    background: linear-gradient(135deg, #dd2c00 0%, #ff6d00 55%, #ffab00 100%) !important;
+    color: #fff !important;
+    border-color: #0d47a1 !important;
+    box-shadow: 0 8px 22px rgba(221, 44, 0, 0.55), inset 0 1px 0 rgba(255, 255, 255, 0.35) !important;
+    animation: none;
+}
+
+@keyframes hotwheels-glow {
+    0%, 100% { box-shadow: 0 4px 14px rgba(255, 109, 0, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.35); }
+    50% { box-shadow: 0 6px 24px rgba(255, 109, 0, 0.85), inset 0 1px 0 rgba(255, 255, 255, 0.35); }
+}
+
+@keyframes hotwheels-drive {
+    0%, 100% { transform: translateY(-50%) translateX(0); }
+    50% { transform: translateY(-50%) translateX(3px) rotate(-6deg); }
+}
+
+@keyframes hotwheels-flame {
+    0% { left: -70%; }
+    55%, 100% { left: 140%; }
+}
+
+@media (max-width: 600px) {
+    .filter-btn-hotwheels {
+        font-size: 0.85rem !important;
+        padding: 0.5rem 1.1rem 0.5rem 2.2rem !important;
+    }
+    .filter-btn-hotwheels::before { left: 0.7rem; font-size: 0.95rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .filter-btn-hotwheels, .filter-btn-hotwheels::before, .filter-btn-hotwheels::after { animation: none; }
+}
