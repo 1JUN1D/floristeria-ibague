@@ -904,7 +904,7 @@ const products = [
             {
                 id: 110,
                 name: "Besos Hechos en Flor",
-                price: 556000,
+                price: 850000,
                 image: "../assets/foto95.webp",
                 description: "Mega bouquet de lujo con abundantes rosas rojas, Ferrero Rocher intercalados, corona decorativa y cinta personalizada, envuelto en papel negro y gris con bordes dorados. Una obra maestra floral para la persona más importante de tu vida.",
                 categories: ["rosas", "bouquets", "chocolates", "premium", "precio-alto"]
@@ -948,14 +948,6 @@ const products = [
                 description: "Caja rosada con rosas blancas y rosadas, 6 Ferrero Rocher intercalados y globo burbuja personalizado con nombre. Un detalle completo y especial que combina flores, chocolates y personalización. Ideal para cumpleaños memorables.",
                 image: "../assets/foto115.webp",
                 categories: ["rosas", "cajas", "chocolates", "precio-medio", "cumpleanos"]
-            },
-                        {
-                id: 116,
-                name: "Tierno Amor Campestre",
-                price: 217000,
-                description: "Caja blanca rectangular con arreglo campestre de rosas rosadas, lirios blancos, gerberas, girasoles y abundante follaje verde. Combinación fresca y natural con variedad de flores. Perfecto para transmitir amor y ternura.",
-                image: "../assets/foto116.webp",
-                categories: ["rosas", "cajas", "girasoles", "gerberas", "precio-medio"]
             },
                         {
                 id: 117,
@@ -1022,28 +1014,12 @@ const products = [
                 categories: ["rosas", "cajas", "precio-medio"]
             },
             {
-                id: 125,
-                name: "Arreglo Amalia",
-                price: 207000,
-                description: "Caja blanca estilo 'Maison des Fleurs' con rose baby y claveles blancos, envueltos en papel tissue con lazo rosa satinado. Arreglo elegante y sofisticado con estilo europeo. Perfecto para mujeres con gusto refinado.",
-                image: "../assets/foto125.webp",
-                categories: ["rosas", "cajas", "coreano", "precio-medio"]
-            },
-            {
                 id: 126,
                 name: "Re Enamorado de Ti",
                 price: 181000,
                 description: "Caja rosada con rosas en tonos rosa y fucsia, claveles, pompones blancos, nubes (gypsophila) y follaje verde con lazo rosa y lila. Un arreglo romántico que grita amor. Ideal para reconquistar, aniversarios y fechas especiales.",
                 image: "../assets/foto126.webp",
                 categories: ["rosas", "cajas", "precio-medio"]
-            },
-            {
-                id: 127,
-                name: "Mujer Bonita",
-                price: 408000,
-                description: "Espectacular canasta de mimbre rebosante de girasoles, rosas en tonos rosa y lila, claveles rosados, follaje verde y tarjeta personalizada. Arreglo en su máximo esplendor con combinación exuberante de flores. Un regalo premium que deja sin palabras.",
-                image: "../assets/foto127.webp",
-                categories: ["rosas", "canastas", "girasoles", "premium", "precio-alto"]
             },
             {
                 id: 128,
@@ -1061,14 +1037,6 @@ const products = [
                 image: "../assets/foto129.webp",
                 categories: ["rosas", "cajas", "precio-medio", "cumpleanos"],
                 hidden: true
-            },
-            {
-                id: 130,
-                name: "Love Explosion",
-                price: 360000,
-                description: "Imponente caja blanca rebosante de rosas premium abiertas en tonos rosa y blanco. Arreglo XXL perfecto para dar un detalle único e inolvidable. La abundancia de rosas crea un efecto visual espectacular que transmite amor a lo grande.",
-                image: "../assets/foto130.webp",
-                categories: ["rosas", "cajas", "premium", "precio-alto"]
             },
             {
                 id: 131,
@@ -1990,14 +1958,6 @@ const products = [
                 categories: ["lirios", "rosas", "cajas", "premium", "precio-alto"]
             },
             {
-                id: 254,
-                name: "Sol de Mi Vida",
-                price: 110000,
-                image: "../assets/foto241.webp",
-                description: "Caja blanca con girasoles frescos, nubes (gypsophila) y follaje verde, rematada con lazo de raso amarillo, globo metalizado en forma de corazón con mensaje personalizado y tarjeta dedicatoria. Un detalle radiante y elegante, perfecto para aniversarios, cumpleaños y sorpresas que iluminan el día.",
-                categories: ["flores-amarillas", "girasoles", "cajas", "precio-bajo"]
-            },
-            {
                 id: 255,
                 name: "Ramo Eterno Amarillo",
                 price: 88000,
@@ -2008,7 +1968,7 @@ const products = [
             {
                 id: 256,
                 name: "Reina de Corazones",
-                price: 310000,
+                price: 270000,
                 image: "../assets/foto243.webp",
                 description: "Espectacular ramo circular con 40 rosas rojas y cinturón de flores blancas tipo nube, con corona dorada al centro y envuelto en papel coreano. Una declaración de amor de alto impacto, pensada para coronar a quien reina en tu corazón.",
                 categories: ["rosas", "bouquets", "premium", "amor-amistad", "precio-alto"]
