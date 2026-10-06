@@ -715,10 +715,10 @@ const products = [
             },
             {
                 id: 87,
-                name: "Docena Dorada Premium",
+                name: "Decena Dorada Premium",
                 price: 250000,
                 image: "../assets/foto75.webp",
-                description: "Bouquet espectacular con 12 girasoles grandes, mariposas decorativas, follaje verde y 8 chocolates Ferrero Rocher. Envuelto en papel negro y amarillo con lazo rojo. Arreglo de alto impacto que combina abundancia, belleza y dulzura.",
+                description: "Bouquet espectacular con 10 girasoles grandes, mariposas decorativas, follaje verde y 8 chocolates Ferrero Rocher. Envuelto en papel negro y amarillo con lazo rojo. Arreglo de alto impacto que combina abundancia, belleza y dulzura.",
                 categories: ["flores-amarillas", "girasoles", "chocolates", "premium", "precio-alto"]
             },
             {
@@ -1988,14 +1988,6 @@ const products = [
                 image: "../assets/foto245.webp",
                 description: "Bouquet de rosas rojas, tulipanes blancos, pompones blancos y eucalipto, envuelto en papel rosa estampado con lazo de raso e incluye tarjeta personalizada. Combinación fresca y elegante que mezcla pasión y ternura.",
                 categories: ["rosas", "tulipanes", "bouquets", "premium", "amor-amistad", "precio-alto"]
-            },
-            {
-                id: 259,
-                name: "Ternura y Chocolate",
-                price: 248000,
-                image: "../assets/foto246.webp",
-                description: "Combo con peluche disponible, caja con 3 rosas rojas, chocolates Ferrero Rocher y carta personalizada. Un regalo completo que mezcla ternura, dulzura y flores en una sola sorpresa.",
-                categories: ["rosas", "cajas", "chocolates", "amor-amistad", "precio-alto"]
             },
             {
                 id: 260,
