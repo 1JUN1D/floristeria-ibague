@@ -2125,6 +2125,10 @@ let currentSearchQuery = '';
 let LANDING_PRIORITY_TAG = '';
 
 // --- GENERAR CÓDIGO DE PRODUCTO ---
+function isArtificialTulip(p) {
+    return p.artificialTulips === true || /tulip[aá]n(es)?\s+etern/i.test(p.description || '');
+}
+
 function getProductCode(id) {
     return 'COD-' + String(id).padStart(3, '0');
 }
@@ -2271,6 +2275,7 @@ function renderProducts(filters = [], limit = null) {
                 <div class="product-info">
                     <h3>${product.name}</h3>
                     <p>${product.description}</p>
+                    ${isArtificialTulip(product) ? `<div class="product-notice product-notice-artificial"><span class="product-notice-icon">\u{1F337}</span><span><strong>Tulipanes artificiales:</strong> los tulipanes de este arreglo son eternos (artificiales), no son flores naturales.</span></div>` : ''}
                     ${product.categories.includes('funebre') ? `<div class="product-notice"><span class="product-notice-icon">\u{2139}\u{FE0F}</span>Este arreglo se elabora con la flor disponible del día, logrando un diseño lo más similar posible a la imagen.</div>` : `<div class="product-notice"><span class="product-notice-icon">\u{2139}\u{FE0F}</span>Las flores, colores y detalles decorativos pueden variar según la disponibilidad del día. Conservamos el estilo, el tamaño y el valor del arreglo.</div>`}
                     ${product.gift ? `<div class="product-gift"><span class="product-gift-icon">\u{1F381}</span>${product.gift}</div>` : ''}
                     <div class="product-footer">

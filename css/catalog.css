@@ -1015,6 +1015,15 @@
     flex-shrink: 0;
 }
 
+/* Aviso tulipanes eternos (artificiales) */
+.product-notice-artificial {
+    background: #fff4f8;
+    border-color: #f8c6d8;
+    border-left-color: #e91e63;
+    color: #8a1c46;
+}
+
+
 /* ===================================
    FLORES AMARILLAS - BOTON ESPECIAL
    =================================== */

@@ -2429,9 +2429,93 @@ const products = [
                 description: "Espectacular bouquet de rosas rojas de satín con perlas, corona dorada, mariposas doradas y banda “Princesa hermosa”, bordeado de tulipanes blancos y envuelto en papel negro con líneas doradas. Rosas que no se marchitan: un recuerdo eterno para una persona muy especial.",
                 categories: ["rosas-eternas", "tulipanes", "premium", "precio-alto"]
             },
+            {
+                id: 288,
+                name: "Jardín Rosa Lavanda",
+                price: 240000,
+                image: "assets/foto275.webp",
+                description: "Abundante bouquet de rosas en tonos rosa, durazno y lavanda, claveles rosados, lirios rosados, pompones blancos y espigas moradas, decorado con mariposas doradas. Envuelto en papel rosado con borde dorado. Un arreglo lleno de color y romanticismo para sorprender en grande.",
+                categories: ["rosas", "lirios", "bouquets", "premium", "precio-medio"]
+            },
+            {
+                id: 289,
+                name: "Canasta Dulce Primavera",
+                price: 285000,
+                image: "assets/foto276.webp",
+                description: "Gran canasta de mimbre con lirios rosados, rosas rosadas, claveles, gerberas, margaritas blancas y eucalipto, rematada con un gran lazo rosa y tarjeta personalizada. Abundante, fresca y perfumada: un regalo imponente para celebrar a alguien muy especial.",
+                categories: ["canastas", "lirios", "rosas", "gerberas", "premium", "precio-alto"]
+            },
+            {
+                id: 290,
+                name: "Tulipanes Eternos en Rosa",
+                price: 75000,
+                image: "assets/foto277.webp",
+                description: "Bouquet con 3 tulipanes eternos en tonos rosa, rosas fucsia y claveles rosados, envuelto en papel coreano rosa con lazo satinado e incluye tarjeta personalizada. Detalle tierno y económico con tulipanes que no se marchitan.",
+                categories: ["tulipanes", "rosas", "bouquets", "coreano", "precio-bajo"]
+            },
+            {
+                id: 291,
+                name: "Encanto Rosado",
+                price: 120000,
+                image: "assets/foto278.webp",
+                description: "Bouquet de rosas rosadas, gerberas fucsia, mini claveles, margaritas blancas y crisantemo crema, envuelto en papel coreano rosa con lazo e incluye tarjeta personalizada. Fresco, alegre y delicado, ideal para sorprender en cualquier ocasión.",
+                categories: ["gerberas", "rosas", "bouquets", "coreano", "precio-bajo"]
+            },
+            {
+                id: 292,
+                name: "Pasión Oriental",
+                price: 165000,
+                image: "assets/foto279.webp",
+                description: "Bouquet de lirios stargazer rosados con rosas rojas, margaritas blancas y astromelias, envuelto en papel kraft dorado y rosado con lazo rojo. Una combinación intensa y perfumada que mezcla la pasión de las rosas con la elegancia de los lirios.",
+                categories: ["lirios", "rosas", "bouquets", "precio-medio"]
+            },
+            {
+                id: 293,
+                name: "Nube de Lirios Rosados",
+                price: 180000,
+                image: "assets/foto280.webp",
+                description: "Bouquet de lirios rosados y rosas rosadas rodeados de abundante gypsophila, envuelto en papel rosado con lazo e incluye tarjeta personalizada. Suave, romántico y muy aromático: los lirios se van abriendo con los días.",
+                categories: ["lirios", "rosas", "bouquets", "coreano", "precio-medio"]
+            },
+            {
+                id: 294,
+                name: "Corazón de Gerberas",
+                price: 68000,
+                image: "assets/foto281.webp",
+                description: "Bouquet de mini gerberas fucsia, rosadas y blancas con pompones lila y crisantemos verde limón, envuelto en papel blanco y rosado con estampado de corazones. Detalle alegre, colorido y económico para alegrar el día de alguien.",
+                categories: ["gerberas", "pompones", "bouquets", "precio-bajo"]
+            },
+            {
+                id: 295,
+                name: "¿Quieres Ser Mi Novia?",
+                price: 85000,
+                image: "assets/foto282.webp",
+                description: "Bouquet de mini gerberas, pompones y crisantemos en tonos rosa, blanco y verde limón, envuelto en papel con corazones y cruzado por una banda rosa con el mensaje “¿Quieres ser mi novia?”, moño satinado y mariposa dorada. La forma más tierna de hacer la gran pregunta.",
+                categories: ["gerberas", "pompones", "bouquets", "precio-bajo"]
+            },
+            {
+                id: 296,
+                name: "Snoopy Rosa",
+                price: 120000,
+                image: "assets/foto283.webp",
+                description: "Bouquet de rosas fucsia rodeadas de gypsophila, coronado con un peluche de Snoopy con moño rosado. Envuelto en papel rosado con estampado de margaritas e incluye tarjeta con mensaje personalizado. Un regalo tierno y divertido que combina flores y ternura.",
+                categories: ["rosas", "bouquets", "precio-bajo"]
+            },
+            {
+                id: 297,
+                name: "Snoopy Pasión Roja",
+                price: 245000,
+                image: "assets/foto284.webp",
+                description: "Bouquet de rosas rojas con toques de gypsophila, coronado con un peluche de Snoopy con moños rojos. Envuelto en papel negro con líneas doradas y lazo rojo, incluye tarjeta con mensaje personalizado. Elegante y tierno a la vez, ideal para cumpleaños y aniversarios.",
+                categories: ["rosas", "bouquets", "cumpleanos", "premium", "precio-medio"]
+            },
         ];
 
         // Generar código de producto a partir del id
+        function isArtificialTulip(p) {
+            return p.artificialTulips === true || /tulip[aá]n(es)?\s+etern/i.test(p.description || '');
+        }
+
         function getProductCode(id) {
             return 'COD-' + String(id).padStart(3, '0');
         }
@@ -2568,6 +2652,7 @@ const products = [
                     <div class="product-info">
                         <h3 class="product-name">${product.name}</h3>
                         <div class="product-description">${product.description}</div>
+                        ${isArtificialTulip(product) ? `<div class="product-notice product-notice-artificial"><span class="product-notice-icon">\u{1F337}</span><span><strong>Tulipanes artificiales:</strong> los tulipanes de este arreglo son eternos (artificiales), no son flores naturales.</span></div>` : ''}
                         ${product.categories.includes('funebre') ? `<div class="product-notice"><span class="product-notice-icon">\u{2139}\u{FE0F}</span>Este arreglo se elabora con la flor disponible del día, logrando un diseño lo más similar posible a la imagen.</div>` : `<div class="product-notice"><span class="product-notice-icon">\u{2139}\u{FE0F}</span>Las flores, colores y detalles decorativos pueden variar según la disponibilidad del día. Conservamos el estilo, el tamaño y el valor del arreglo.</div>`}
                         ${product.gift ? `<div class="product-gift"><span class="product-gift-icon">\u{1F381}</span>${product.gift}</div>` : ''}
                         <div class="product-footer">
