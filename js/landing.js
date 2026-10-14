@@ -46,7 +46,8 @@ const products = [
                 price: 45000,
                 image: "../assets/foto69.webp",
                 description: "Bouquet de pompones amarillos envuelto en cartulina negra con texto poético escrito a mano y lazo amarillo. Detalle artístico y sentimental que combina flores con palabras de amor. Regalo original y económico cargado de significado.",
-                categories: ["flores-amarillas", "pompones", "precio-bajo"]
+                categories: ["flores-amarillas", "pompones", "precio-bajo"],
+                hidden: true
             },
             {
                 id: 6,
@@ -63,7 +64,8 @@ const products = [
                 price: 54000,
                 image: "../assets/foto53.webp",
                 description: "Bouquet alegre de pompones amarillos abundantes envueltos en papel turquesa. Incluye tarjeta personalizada. Detalle fresco, vibrante y económico que transmite energía positiva y alegría pura. Perfecto para iluminar cualquier momento.",
-                categories: ["flores-amarillas", "pompones", "precio-bajo"]
+                categories: ["flores-amarillas", "pompones", "precio-bajo"],
+                hidden: true
             },
             {
                 id: 8,
@@ -2059,7 +2061,8 @@ const products = [
                 price: 169000,
                 image: "../assets/foto255.webp",
                 description: "Bouquet de rosas amarillas con ramas de eucalipto, envuelto en papel rosado con detalle a cuadros amarillos y lazo de raso crema. Incluye tarjeta personalizada. Combinación fresca y juvenil que contrasta el amarillo vibrante con tonos pastel.",
-                categories: ["flores-amarillas", "rosas", "bouquets", "precio-medio"]
+                categories: ["flores-amarillas", "rosas", "bouquets", "precio-medio"],
+                hidden: true
             },
             {
                 id: 269,
@@ -2067,7 +2070,8 @@ const products = [
                 price: 445000,
                 image: "../assets/foto256.webp",
                 description: "Imponente bouquet de 50 rosas amarillas envuelto en papel negro, coronado con tiara y decorado con mariposas doradas, con lazo dorado e incluye tarjeta personalizada. Un regalo de lujo para hacerla sentir como una reina.",
-                categories: ["flores-amarillas", "rosas", "bouquets", "premium", "precio-alto"]
+                categories: ["flores-amarillas", "rosas", "bouquets", "premium", "precio-alto"],
+                hidden: true
             },
             {
                 id: 270,
@@ -2075,7 +2079,8 @@ const products = [
                 price: 95000,
                 image: "../assets/foto257.webp",
                 description: "Bouquet de rosas amarillas acompañadas de gypsophila blanca y solidago, envuelto en papel amarillo pastel con lazo a juego. Detalle delicado y económico que transmite ternura, alegría y buenos deseos.",
-                categories: ["flores-amarillas", "rosas", "bouquets", "precio-bajo"]
+                categories: ["flores-amarillas", "rosas", "bouquets", "precio-bajo"],
+                hidden: true
             },
             {
                 id: 271,
@@ -2083,7 +2088,8 @@ const products = [
                 price: 162000,
                 image: "../assets/foto258.webp",
                 description: "Bouquet redondo de 20 rosas amarillas bordeadas con gypsophila, envuelto en papel blanco con lazo rústico e incluye tarjeta con mensaje personalizado. Diseño limpio y elegante donde el amarillo es el protagonista.",
-                categories: ["flores-amarillas", "rosas", "bouquets", "coreano", "precio-medio"]
+                categories: ["flores-amarillas", "rosas", "bouquets", "coreano", "precio-medio"],
+                hidden: true
             },
             {
                 id: 272,
@@ -2091,7 +2097,8 @@ const products = [
                 price: 149000,
                 image: "../assets/foto259.webp",
                 description: "Bouquet de rosas amarillas con eucalipto fresco, envuelto en papel blanco con lazo amarillo. Presentación luminosa y moderna que resalta el color de las rosas. Ideal para regalar alegría y buena energía.",
-                categories: ["flores-amarillas", "rosas", "bouquets", "precio-medio"]
+                categories: ["flores-amarillas", "rosas", "bouquets", "precio-medio"],
+                hidden: true
             },
             {
                 id: 273,
@@ -2099,7 +2106,8 @@ const products = [
                 price: 74000,
                 image: "../assets/foto260.webp",
                 description: "Bouquet de lirios amarillos y rosas amarillas con follaje verde y toques de flor blanca, envuelto en papel amarillo con lazo blanco. Detalle económico, fresco y perfumado que ilumina cualquier espacio.",
-                categories: ["flores-amarillas", "lirios", "rosas", "bouquets", "precio-bajo"]
+                categories: ["flores-amarillas", "lirios", "rosas", "bouquets", "precio-bajo"],
+                hidden: true
             },
             {
                 id: 274,

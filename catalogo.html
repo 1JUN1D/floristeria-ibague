@@ -63,7 +63,7 @@
             <div class="filters-container">
                 <span class="filter-label">Filtrar por:</span>
                 <button class="filter-btn active" data-filter="todos">Todos los Productos</button>
-                <button class="filter-btn filter-btn-hotwheels" data-filter="hot-wheels">Día de Hot Wheels</button>
+                <button class="filter-btn filter-btn-madres" data-filter="dia-madres">Para Mamá</button>
                 <button class="filter-btn filter-btn-amarillas" data-filter="flores-amarillas">Flores Amarillas</button>
                 <button class="filter-btn filter-btn-amor" data-filter="amor-amistad">Amor y Amistad</button>
                 <button class="filter-btn filter-btn-padres" data-filter="dia-padres" style="display:none;">Día del Padre</button>
@@ -184,7 +184,8 @@ const products = [
                 price: 45000,
                 image: "assets/foto69.webp",
                 description: "Bouquet de pompones amarillos envuelto en cartulina negra con texto poético escrito a mano y lazo amarillo. Detalle artístico y sentimental que combina flores con palabras de amor. Regalo original y económico cargado de significado.",
-                categories: ["flores-amarillas", "pompones", "precio-bajo"]
+                categories: ["flores-amarillas", "pompones", "precio-bajo"],
+                hidden: true
             },
             {
                 id: 6,
@@ -201,7 +202,8 @@ const products = [
                 price: 54000,
                 image: "assets/foto53.webp",
                 description: "Bouquet alegre de pompones amarillos abundantes envueltos en papel turquesa. Incluye tarjeta personalizada. Detalle fresco, vibrante y económico que transmite energía positiva y alegría pura. Perfecto para iluminar cualquier momento.",
-                categories: ["flores-amarillas", "pompones", "precio-bajo"]
+                categories: ["flores-amarillas", "pompones", "precio-bajo"],
+                hidden: true
             },
             {
                 id: 8,
@@ -2261,7 +2263,8 @@ const products = [
                 price: 169000,
                 image: "assets/foto255.webp",
                 description: "Bouquet de rosas amarillas con ramas de eucalipto, envuelto en papel rosado con detalle a cuadros amarillos y lazo de raso crema. Incluye tarjeta personalizada. Combinación fresca y juvenil que contrasta el amarillo vibrante con tonos pastel.",
-                categories: ["flores-amarillas", "rosas", "bouquets", "precio-medio"]
+                categories: ["flores-amarillas", "rosas", "bouquets", "precio-medio"],
+                hidden: true
             },
             {
                 id: 269,
@@ -2269,7 +2272,8 @@ const products = [
                 price: 445000,
                 image: "assets/foto256.webp",
                 description: "Imponente bouquet de 50 rosas amarillas envuelto en papel negro, coronado con tiara y decorado con mariposas doradas, con lazo dorado e incluye tarjeta personalizada. Un regalo de lujo para hacerla sentir como una reina.",
-                categories: ["flores-amarillas", "rosas", "bouquets", "premium", "precio-alto"]
+                categories: ["flores-amarillas", "rosas", "bouquets", "premium", "precio-alto"],
+                hidden: true
             },
             {
                 id: 270,
@@ -2277,7 +2281,8 @@ const products = [
                 price: 95000,
                 image: "assets/foto257.webp",
                 description: "Bouquet de rosas amarillas acompañadas de gypsophila blanca y solidago, envuelto en papel amarillo pastel con lazo a juego. Detalle delicado y económico que transmite ternura, alegría y buenos deseos.",
-                categories: ["flores-amarillas", "rosas", "bouquets", "precio-bajo"]
+                categories: ["flores-amarillas", "rosas", "bouquets", "precio-bajo"],
+                hidden: true
             },
             {
                 id: 271,
@@ -2285,7 +2290,8 @@ const products = [
                 price: 162000,
                 image: "assets/foto258.webp",
                 description: "Bouquet redondo de 20 rosas amarillas bordeadas con gypsophila, envuelto en papel blanco con lazo rústico e incluye tarjeta con mensaje personalizado. Diseño limpio y elegante donde el amarillo es el protagonista.",
-                categories: ["flores-amarillas", "rosas", "bouquets", "coreano", "precio-medio"]
+                categories: ["flores-amarillas", "rosas", "bouquets", "coreano", "precio-medio"],
+                hidden: true
             },
             {
                 id: 272,
@@ -2293,7 +2299,8 @@ const products = [
                 price: 149000,
                 image: "assets/foto259.webp",
                 description: "Bouquet de rosas amarillas con eucalipto fresco, envuelto en papel blanco con lazo amarillo. Presentación luminosa y moderna que resalta el color de las rosas. Ideal para regalar alegría y buena energía.",
-                categories: ["flores-amarillas", "rosas", "bouquets", "precio-medio"]
+                categories: ["flores-amarillas", "rosas", "bouquets", "precio-medio"],
+                hidden: true
             },
             {
                 id: 273,
@@ -2301,7 +2308,8 @@ const products = [
                 price: 74000,
                 image: "assets/foto260.webp",
                 description: "Bouquet de lirios amarillos y rosas amarillas con follaje verde y toques de flor blanca, envuelto en papel amarillo con lazo blanco. Detalle económico, fresco y perfumado que ilumina cualquier espacio.",
-                categories: ["flores-amarillas", "lirios", "rosas", "bouquets", "precio-bajo"]
+                categories: ["flores-amarillas", "lirios", "rosas", "bouquets", "precio-bajo"],
+                hidden: true
             },
             {
                 id: 274,
@@ -2317,7 +2325,8 @@ const products = [
                 price: 85000,
                 image: "assets/foto262.webp",
                 description: "Cuadro con marco negro y moto Hot Wheels a escala, banderas de meta, llamas de carreras y tarjeta con mensaje personalizado, rematado con moño azul satinado. Un detalle original y duradero para el amante de las motos. Especial Día de Hot Wheels (30 de septiembre).",
-                categories: ["hot-wheels", "precio-bajo"]
+                categories: ["hot-wheels", "precio-bajo"],
+                hidden: true
             },
             {
                 id: 276,
@@ -2325,7 +2334,8 @@ const products = [
                 price: 130000,
                 image: "assets/foto263.webp",
                 description: "Bouquet con 2 carritos Hot Wheels coleccionables y 3 rosas azules de satín, envuelto en papel azul noche y dorado con lazo azul. El regalo perfecto para sorprender a quien ama los carros. Especial Día de Hot Wheels (30 de septiembre).",
-                categories: ["hot-wheels", "precio-bajo"]
+                categories: ["hot-wheels", "precio-bajo"],
+                hidden: true
             },
             {
                 id: 277,
@@ -2333,7 +2343,8 @@ const products = [
                 price: 70000,
                 image: "assets/foto264.webp",
                 description: "Bouquet con 1 carrito Hot Wheels coleccionable y rosa azul de satín, envuelto en papel azul noche y dorado con lazo azul. Detalle económico, divertido y con estilo. Especial Día de Hot Wheels (30 de septiembre).",
-                categories: ["hot-wheels", "precio-bajo"]
+                categories: ["hot-wheels", "precio-bajo"],
+                hidden: true
             },
             {
                 id: 278,
@@ -2341,7 +2352,8 @@ const products = [
                 price: 220000,
                 image: "assets/foto265.webp",
                 description: "Gran bouquet con 5 carritos Hot Wheels coleccionables rodeados de abundante gypsophila blanca, envuelto en papel negro con borde dorado y lazo rojo. Una colección completa para el fanático de los autos. Especial Día de Hot Wheels (30 de septiembre).",
-                categories: ["hot-wheels", "precio-medio"]
+                categories: ["hot-wheels", "precio-medio"],
+                hidden: true
             },
             {
                 id: 279,
@@ -2349,7 +2361,8 @@ const products = [
                 price: 75000,
                 image: "assets/foto266.webp",
                 description: "Cono negro con carrito Hot Wheels coleccionable, rosa roja natural y snacks dulces, decorado con moño amarillo y tarjeta. Un detalle divertido y lleno de sabor para regalar. Precio por un (1) cono; la foto muestra dos como referencia. Especial Día de Hot Wheels (30 de septiembre).",
-                categories: ["hot-wheels", "precio-bajo"]
+                categories: ["hot-wheels", "precio-bajo"],
+                hidden: true
             },
             {
                 id: 280,
@@ -2357,7 +2370,8 @@ const products = [
                 price: 145000,
                 image: "assets/foto267.webp",
                 description: "Bouquet negro con carrito Hot Wheels coleccionable, figuras decorativas de Batman y moño azul satinado. El regalo ideal para los fans del caballero de la noche y de los carros. Especial Día de Hot Wheels (30 de septiembre).",
-                categories: ["hot-wheels", "precio-bajo"]
+                categories: ["hot-wheels", "precio-bajo"],
+                hidden: true
             },
             {
                 id: 281,
