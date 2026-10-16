@@ -161,7 +161,8 @@ const products = [
                 price: 84000,
                 image: "../assets/foto70.webp",
                 description: "Bouquet con girasoles, margaritas y 3 chocolates Ferrero Rocher en cartulina negra con texto poético escrito a mano. Combinación de flores, dulzura y sentimiento. Detalle creativo y romántico que habla directo al corazón.",
-                categories: ["girasoles", "chocolates", "precio-bajo"]
+                categories: ["girasoles", "chocolates", "precio-bajo"],
+                hidden: true
             },
             {
                 id: 20,
