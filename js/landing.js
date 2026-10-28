@@ -1966,7 +1966,8 @@ const products = [
                 price: 88000,
                 image: "../assets/foto242.webp",
                 description: "Bouquet de 8 rosas eternas amarillas, envuelto en papel translúcido con lazo. Un regalo luminoso que nunca se marchita, ideal para aniversarios, cumpleaños y ocasiones que merecen durar para siempre.",
-                categories: ["flores-amarillas", "rosas-eternas", "bouquets", "precio-bajo"]
+                categories: ["flores-amarillas", "rosas-eternas", "bouquets", "precio-bajo"],
+                hidden: true
             },
             {
                 id: 256,
