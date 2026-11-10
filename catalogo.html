@@ -2775,6 +2775,69 @@ const products = [
             return str.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
         }
 
+
+        // ===== ORDEN DEL CATÁLOGO GENERAL =====
+        // Cada fila: 1) económico  2) precio medio  3) el más costoso.
+        // Los de menos de $60.000 y los de flores eternas/satín van al fondo del catálogo.
+        const PRECIO_MINIMO_DESTACADO = 60000;
+
+        function esFlorEterna(p) {
+            const texto = (p.name || '') + ' ' + (p.description || '');
+            return (p.categories || []).includes('rosas-eternas') ||
+                /\bsat[ií]n\b/i.test(texto) ||
+                /(rosas?|flores?|tulipan(es)?|tulipán|girasol(es)?|hortensias?|lirios?|osito)\s+(eternas?|eternos?)/i.test(texto);
+        }
+
+        function esParaElFondo(p) {
+            return p.price < PRECIO_MINIMO_DESTACADO || esFlorEterna(p);
+        }
+
+        // Reparte un grupo para que no queden juntos muchos productos de la misma categoría
+        function variarCategorias(group) {
+            const order = ['rosas', 'bouquets', 'cajas', 'canastas', 'girasoles', 'gerberas', 'lirios', 'pompones', 'tulipanes', 'coreano', 'novia', 'chocolates', 'premium'];
+            const groups = {};
+            group.forEach(p => {
+                const cat = order.find(c => p.categories.includes(c)) || 'otros';
+                (groups[cat] = groups[cat] || []).push(p);
+            });
+            const positioned = [];
+            Object.keys(groups).forEach((cat, catIdx) => {
+                const g = groups[cat].sort((a, b) => a.price - b.price);
+                g.forEach((p, i) => positioned.push({ p, pos: (i + 0.5) / g.length, catIdx }));
+            });
+            positioned.sort((a, b) => a.pos - b.pos || a.catIdx - b.catIdx);
+            return positioned.map(x => x.p);
+        }
+
+        // Devuelve la lista ordenada: filas económico / medio / costoso, luego fúnebres, luego los del fondo
+        function ordenarCatalogoGeneral(list, priorityTag) {
+            const funebre = list.filter(p => p.categories.includes('funebre'));
+            const resto = list.filter(p => !p.categories.includes('funebre'));
+            const alFondo = resto.filter(esParaElFondo);
+            const principales = resto.filter(p => !esParaElFondo(p)).sort((a, b) => a.price - b.price);
+
+            const tercio = Math.ceil(principales.length / 3);
+            const tramos = [
+                principales.slice(0, tercio),            // económicos
+                principales.slice(tercio, tercio * 2),   // precio medio
+                principales.slice(tercio * 2)            // más costosos
+            ].map(g => {
+                if (!priorityTag) return variarCategorias(g);
+                const prio = g.filter(p => p.categories.includes(priorityTag));
+                const otros = g.filter(p => !p.categories.includes(priorityTag));
+                return [...variarCategorias(prio), ...variarCategorias(otros)];
+            });
+
+            const filas = [];
+            const maxLen = Math.max(...tramos.map(g => g.length), 0);
+            for (let i = 0; i < maxLen; i++) {
+                tramos.forEach(g => { if (i < g.length) filas.push(g[i]); });
+            }
+
+            const fondo = [...alFondo].sort((a, b) => b.price - a.price);
+            return [...filas, ...funebre, ...fondo];
+        }
+
         // Cuántos productos muestra el filtro "Últimos Añadidos"
         const ULTIMOS_ANADIDOS = 24;
 
@@ -2830,56 +2893,13 @@ const products = [
             emptyState.classList.remove('active');
             resultsCount.textContent = filteredProducts.length;
 
-            // Intercalar productos para variedad visual
+            // Vista general del catálogo (sin filtro ni búsqueda)
             if (currentFilter === 'todos' && currentSearch.trim() === '') {
-                // Primera fila: los últimos 3 productos añadidos
-                const primeraFila = newestFirst.slice(0, 3);
+                // Primera fila: los últimos 3 productos añadidos (sin fúnebres, baratos ni eternos), de menor a mayor precio
+                const primeraFila = newestFirst.filter(p => !esParaElFondo(p)).slice(0, 3).sort((a, b) => a.price - b.price);
                 const primeraFilaIds = new Set(primeraFila.map(p => p.id));
-                filteredProducts = filteredProducts.filter(p => !primeraFilaIds.has(p.id));
-
-                const funebre = filteredProducts.filter(p => p.categories.includes('funebre'));
-                const noFunebre = filteredProducts.filter(p => !p.categories.includes('funebre'));
-
-                // Agrupar no-fúnebres por categoría principal
-                const categoryGroups = {};
-                const categoryOrder = ['dia-madres', 'rosas', 'bouquets', 'cajas', 'canastas', 'girasoles', 'gerberas', 'pompones', 'rosas-eternas', 'coreano', 'novia', 'chocolates', 'premium'];
-
-                noFunebre.forEach(p => {
-                    const mainCat = categoryOrder.find(c => p.categories.includes(c)) || 'otros';
-                    if (!categoryGroups[mainCat]) categoryGroups[mainCat] = [];
-                    categoryGroups[mainCat].push(p);
-                });
-
-                // Intercalar por precio dentro de cada grupo (alto-bajo-alto-bajo)
-                Object.values(categoryGroups).forEach(group => {
-                    group.sort((a, b) => a.price - b.price);
-                    const temp = [];
-                    let lo = 0, hi = group.length - 1;
-                    let pickHigh = true;
-                    while (lo <= hi) {
-                        if (pickHigh) { temp.push(group[hi--]); }
-                        else { temp.push(group[lo++]); }
-                        pickHigh = !pickHigh;
-                    }
-                    group.length = 0;
-                    group.push(...temp);
-                });
-
-                // Distribución proporcional: repartir cada categoría de forma pareja a lo largo del catálogo
-                const activeCats = categoryOrder.filter(c => categoryGroups[c] && categoryGroups[c].length > 0);
-                if (categoryGroups['otros'] && categoryGroups['otros'].length > 0) activeCats.push('otros');
-
-                const positioned = [];
-                activeCats.forEach((cat, catIdx) => {
-                    const group = categoryGroups[cat];
-                    const len = group.length;
-                    group.forEach((p, i) => { positioned.push({ p, pos: (i + 0.5) / len, catIdx }); });
-                });
-                positioned.sort((a, b) => a.pos - b.pos || a.catIdx - b.catIdx);
-                const interleaved = positioned.map(x => x.p);
-
-                // Añadir fúnebres al final
-                filteredProducts = [...primeraFila, ...interleaved, ...funebre];
+                const resto = filteredProducts.filter(p => !primeraFilaIds.has(p.id));
+                filteredProducts = [...primeraFila, ...ordenarCatalogoGeneral(resto)];
             }
 
             grid.innerHTML = filteredProducts.map(product => {
