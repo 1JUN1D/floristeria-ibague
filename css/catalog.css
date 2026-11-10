@@ -1744,3 +1744,26 @@
 @media (prefers-reduced-motion: reduce) {
     .filter-btn-hotwheels, .filter-btn-hotwheels::before, .filter-btn-hotwheels::after { animation: none; }
 }
+
+
+/* ===================================
+   ÚLTIMOS AÑADIDOS - BOTÓN
+   =================================== */
+.filter-btn-nuevos {
+    background: linear-gradient(135deg, #00796b, #26a69a) !important;
+    color: #fff !important;
+    border: 2px solid #00796b !important;
+    font-size: 0.95rem !important;
+    font-weight: 700 !important;
+    padding: 0.6rem 1.4rem !important;
+    box-shadow: 0 4px 15px rgba(0, 121, 107, 0.35) !important;
+}
+.filter-btn-nuevos::before {
+    content: "\2728 ";
+}
+.filter-btn-nuevos:hover,
+.filter-btn-nuevos.active {
+    background: linear-gradient(135deg, #004d40, #00796b) !important;
+    transform: translateY(-3px) scale(1.05) !important;
+    box-shadow: 0 6px 20px rgba(0, 121, 107, 0.5) !important;
+}

@@ -63,6 +63,7 @@
             <div class="filters-container">
                 <span class="filter-label">Filtrar por:</span>
                 <button class="filter-btn active" data-filter="todos">Todos los Productos</button>
+                <button class="filter-btn filter-btn-nuevos" data-filter="recientes">Últimos Añadidos</button>
                 <button class="filter-btn filter-btn-madres" data-filter="dia-madres">Para Mamá</button>
                 <button class="filter-btn filter-btn-amarillas" data-filter="flores-amarillas">Flores Amarillas</button>
                 <button class="filter-btn filter-btn-amor" data-filter="amor-amistad">Amor y Amistad</button>
@@ -2774,6 +2775,9 @@ const products = [
             return str.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
         }
 
+        // Cuántos productos muestra el filtro "Últimos Añadidos"
+        const ULTIMOS_ANADIDOS = 24;
+
         // Estado global de búsqueda y filtro
         let currentFilter = 'todos';
         let currentSearch = '';
@@ -2790,8 +2794,15 @@ const products = [
             // Excluir productos ocultos
             let filteredProducts = products.filter(p => !p.hidden && !p.categories.includes('dia-padres'));
 
+            // Productos más recientes (id más alto = añadido más reciente), sin fúnebres
+            const newestFirst = filteredProducts
+                .filter(p => !p.categories.includes('funebre'))
+                .sort((a, b) => b.id - a.id);
+
             // Aplicar filtro de categoría
-            if (currentFilter !== 'todos') {
+            if (currentFilter === 'recientes') {
+                filteredProducts = newestFirst.slice(0, ULTIMOS_ANADIDOS);
+            } else if (currentFilter !== 'todos') {
                 filteredProducts = filteredProducts.filter(product =>
                     product.categories.includes(currentFilter)
                 );
@@ -2821,6 +2832,11 @@ const products = [
 
             // Intercalar productos para variedad visual
             if (currentFilter === 'todos' && currentSearch.trim() === '') {
+                // Primera fila: los últimos 3 productos añadidos
+                const primeraFila = newestFirst.slice(0, 3);
+                const primeraFilaIds = new Set(primeraFila.map(p => p.id));
+                filteredProducts = filteredProducts.filter(p => !primeraFilaIds.has(p.id));
+
                 const funebre = filteredProducts.filter(p => p.categories.includes('funebre'));
                 const noFunebre = filteredProducts.filter(p => !p.categories.includes('funebre'));
 
@@ -2863,7 +2879,7 @@ const products = [
                 const interleaved = positioned.map(x => x.p);
 
                 // Añadir fúnebres al final
-                filteredProducts = [...interleaved, ...funebre];
+                filteredProducts = [...primeraFila, ...interleaved, ...funebre];
             }
 
             grid.innerHTML = filteredProducts.map(product => {
