@@ -885,7 +885,7 @@ const products = [
             {
                 id: 107,
                 name: "Amor de Mi Vida",
-                price: 479000,
+                price: 540000,
                 image: "assets/foto103.webp",
                 description: "Impresionante mega bouquet redondo con 100 rosas rojas intensas envueltas en papel blanco con elegante lazo de cinta crema. Una declaración de amor absoluta que deja sin palabras. El regalo más grandioso para el amor de tu vida.",
                 categories: ["rosas", "bouquets", "premium", "precio-alto"]
