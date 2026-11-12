@@ -179,12 +179,13 @@ const products = [
                 price: 84000,
                 image: "assets/foto85.webp",
                 description: "Delicado bouquet de rosas rosadas con abundante gypsophila (nube) envuelto en papel blanco estilo coreano. Un detalle romántico y tierno ideal para expresar amor con suavidad y elegancia. Incluye tarjeta personalizada.",
-                categories: ["rosas", "bouquets", "coreano", "precio-bajo"]
+                categories: ["rosas", "bouquets", "coreano", "precio-bajo"],
+                hidden: true
             },
             {
                 id: 22,
                 name: "Te Amo Rosado",
-                price: 84000,
+                price: 75000,
                 image: "assets/foto104.webp",
                 description: "Delicado bouquet de rosas rosadas con eucalipto envuelto en papel blanco estilo minimalista. Sencillo, fresco y romántico. El detalle perfecto para decir 'te amo' con elegancia y naturalidad sin necesidad de excesos.",
                 categories: ["rosas", "bouquets", "coreano", "precio-bajo"]
@@ -235,7 +236,8 @@ const products = [
                 price: 101000,
                 image: "assets/foto86.webp",
                 description: "Bouquet premium de rosas rojas intensas con follaje de eucalipto, envuelto en papel negro elegante con lazo de cinta negra. Presentación sofisticada y moderna que combina pasión y distinción. El regalo perfecto para impresionar.",
-                categories: ["rosas", "bouquets", "coreano", "precio-bajo"]
+                categories: ["rosas", "bouquets", "coreano", "precio-bajo"],
+                hidden: true
             },
                         {
                 id: 29,
@@ -2621,4 +2623,12 @@ const products = [
                 description: "Bouquet de hortensias azules con rosas blancas, crisantemos y margaritas, envuelto en papel azul rey con lazo dorado e incluye tarjeta personalizada. Ideal para sorprender en su cumpleaños con un regalo fresco y elegante.",
                 categories: ["rosas", "bouquets", "cumpleanos", "precio-bajo"]
             },
-        ];
+                    {
+                id: 328,
+                name: "Gran Amor 200 Rosas",
+                price: 1225000,
+                image: "assets/foto315.webp",
+                description: "Espectacular bouquet redondo de 200 rosas rojas envuelto en papel blanco con bordes dorados, decorado con moño lila con perlas e incluye tarjeta personalizada. El regalo más imponente para una declaración de amor inolvidable.",
+                categories: ["rosas", "bouquets", "premium", "precio-alto"]
+            },
+];
