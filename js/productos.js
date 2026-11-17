@@ -2011,8 +2011,8 @@ const products = [
             {
                 id: 251,
                 name: "Ramo de Grado con Ferrero y Birrete",
-                price: 245000,
-                image: "assets/foto238.webp",
+                price: 256000,
+                image: "assets/foto318.webp",
                 description: "Frondoso ramo de rosas rojas y rosadas con eucalipto y follaje verde, envuelto en papel rosa con encaje blanco y gran lazo. Incluye caja de 4 chocolates Ferrero Rocher, birrete de graduación negro con borla amarilla y tarjeta personalizada. El regalo perfecto para celebrar ese logro tan esperado con elegancia y dulzura.",
                 categories: ["rosas", "bouquets", "chocolates", "graduacion", "precio-alto"]
             },
@@ -2257,7 +2257,7 @@ const products = [
                 id: 282,
                 name: "Alegría de Graduación",
                 price: 145000,
-                image: "assets/foto269.webp",
+                image: "assets/foto316.webp",
                 description: "Bouquet colorido de gerberas fucsia y coral, rosas blancas, margaritas, perritos blancos y solidago, con mariposa dorada y birrete de graduación. Envuelto en papel blanco con lazo rosa. Alegre y lleno de vida para celebrar al nuevo profesional.",
                 categories: ["gerberas", "bouquets", "graduacion", "precio-bajo"]
             },
@@ -2288,8 +2288,8 @@ const products = [
             {
                 id: 286,
                 name: "Birrete Rosado",
-                price: 170000,
-                image: "assets/foto273.webp",
+                price: 175000,
+                image: "assets/foto317.webp",
                 description: "Bouquet de gerberas rosadas, rosas rosadas y gypsophila con birrete de graduación y tarjeta, envuelto en papel estilo periódico y blanco con lazo vinotinto. Moderno y tierno para felicitar al graduado.",
                 categories: ["gerberas", "rosas", "bouquets", "graduacion", "precio-medio"]
             },
@@ -2630,5 +2630,117 @@ const products = [
                 image: "assets/foto315.webp",
                 description: "Espectacular bouquet redondo de 200 rosas rojas envuelto en papel blanco con bordes dorados, decorado con moño lila con perlas e incluye tarjeta personalizada. El regalo más imponente para una declaración de amor inolvidable.",
                 categories: ["rosas", "bouquets", "premium", "precio-alto"]
+            },
+            {
+                id: 329,
+                name: "Angel Graduada",
+                price: 285000,
+                image: "assets/foto319.webp",
+                description: "Bouquet de rosas rosadas rodeadas de abundante gypsophila con peluche de Angel con birrete y banda con mensaje personalizado, envuelto en papel rosado con flores. Un regalo tierno y divertido para celebrar su grado.",
+                categories: ["graduacion", "rosas", "bouquets", "premium", "precio-alto"]
+            },
+            {
+                id: 330,
+                name: "Para la Graduada Más Hermosa",
+                price: 498000,
+                image: "assets/foto320.webp",
+                description: "Gran bouquet de gerberas rosadas, rosas blancas y rosadas y gypsophila, con banda personalizada, birrete y pergamino de graduación, envuelto en varias capas de papel rosado. Un arreglo imponente para celebrar en grande su logro.",
+                categories: ["graduacion", "gerberas", "rosas", "bouquets", "premium", "precio-alto"]
+            },
+            {
+                id: 331,
+                name: "Congratulations en Rosa",
+                price: 81000,
+                image: "assets/foto321.webp",
+                description: "Bouquet de rosas rosadas, margaritas rosadas, gypsophila y eucalipto con banda dorada “Congratulations” y birrete, envuelto en papel rosa palo con lazo crema e incluye tarjeta personalizada. Delicado y elegante para felicitar al graduado.",
+                categories: ["graduacion", "rosas", "bouquets", "precio-bajo"]
+            },
+            {
+                id: 332,
+                name: "Dulce Graduación",
+                price: 173000,
+                image: "assets/foto322.webp",
+                description: "Bouquet de rosas rosadas, gerberas rosadas, margaritas y eucalipto con birrete de graduación, envuelto en papel rosado con lazo a juego. Fresco, tierno y perfecto para celebrar el grado.",
+                categories: ["graduacion", "rosas", "gerberas", "bouquets", "coreano", "precio-medio"]
+            },
+            {
+                id: 333,
+                name: "Logro en Kraft",
+                price: 98000,
+                image: "assets/foto323.webp",
+                description: "Bouquet de gerbera rosada, rosas, claveles y eucalipto con birrete de graduación, envuelto en papel kraft beige con lazo rosa. Un detalle sencillo y bonito para felicitar al nuevo profesional.",
+                categories: ["graduacion", "rosas", "gerberas", "bouquets", "precio-bajo"]
+            },
+            {
+                id: 334,
+                name: "Lirios del Grado",
+                price: 135000,
+                image: "assets/foto324.webp",
+                description: "Bouquet de lirios blancos, rosas rosadas, astromelias y gypsophila con birrete de graduación, envuelto en papel blanco translúcido con lazo rosa. Elegante y perfumado para celebrar un gran logro.",
+                categories: ["graduacion", "lirios", "rosas", "bouquets", "precio-bajo"]
+            },
+            {
+                id: 335,
+                name: "Snoopy Graduado",
+                price: 206000,
+                image: "assets/foto325.webp",
+                description: "Bouquet de rosas rosadas y blancas con eucalipto, coronado con un peluche de Snoopy con birrete, envuelto en papel rosado con lazo crema. Un regalo tierno y original para el día del grado.",
+                categories: ["graduacion", "rosas", "bouquets", "precio-medio"]
+            },
+            {
+                id: 336,
+                name: "Caja Flore de Graduación",
+                price: 216000,
+                image: "assets/foto326.webp",
+                description: "Caja redonda blanca con rosas fucsia y rosadas, claveles, crisantemos blancos y pompón amarillo, con birrete de graduación e incluye tarjeta personalizada. Abundante y colorida para celebrar el grado con estilo.",
+                categories: ["graduacion", "rosas", "cajas", "precio-medio"]
+            },
+            {
+                id: 337,
+                name: "Celebración en Rosa",
+                price: 138000,
+                image: "assets/foto327.webp",
+                description: "Bouquet de rosas fucsia, claveles rosados y durazno y astromelias con birrete de graduación, envuelto en papel rosado con lazo e incluye tarjeta personalizada. Alegre y lleno de color para felicitar al graduado.",
+                categories: ["graduacion", "rosas", "bouquets", "precio-bajo"]
+            },
+            {
+                id: 338,
+                name: "Lirios Rosados de Grado",
+                price: 163000,
+                image: "assets/foto328.webp",
+                description: "Bouquet de lirios rosados y claveles rosados con birrete de graduación, envuelto en papel rosado con lazo e incluye tarjeta personalizada. Perfumado y romántico para celebrar su logro.",
+                categories: ["graduacion", "lirios", "bouquets", "precio-medio"]
+            },
+            {
+                id: 339,
+                name: "Sol y Ferrero",
+                price: 106000,
+                image: "assets/foto329.webp",
+                description: "Bouquet con girasol, rosas blanca y rosada, claveles, crisantemos y gypsophila, acompañado de una caja de chocolates Ferrero Rocher y tarjeta personalizada, envuelto en papel blanco con detalles dorados y lazo rosa. Alegre y dulce, perfecto para felicitar en su día de grado.",
+                categories: ["graduacion", "girasoles", "rosas", "chocolates", "bouquets", "precio-bajo"]
+            },
+            {
+                id: 340,
+                name: "Siete Soles de Grado",
+                price: 188000,
+                image: "assets/foto330.webp",
+                description: "Bouquet de 7 girasoles con gypsophila y birrete de graduación, envuelto en papel rosa palo con lazo amarillo e incluye tarjeta personalizada. Luminoso y alegre para celebrar al nuevo profesional.",
+                categories: ["graduacion", "girasoles", "flores-amarillas", "bouquets", "precio-medio"]
+            },
+            {
+                id: 341,
+                name: "Rosas Rojas con Ferrero",
+                price: 138000,
+                image: "assets/foto331.webp",
+                description: "Arreglo de rosas rojas con eucalipto y 3 chocolates Ferrero Rocher en base blanca con moño rojo, incluye tarjeta personalizada. Elegante y dulce, ideal para felicitar en su día de grado.",
+                categories: ["graduacion", "rosas", "chocolates", "cajas", "precio-bajo"]
+            },
+            {
+                id: 342,
+                name: "Grado en Rojo",
+                price: 250000,
+                image: "assets/foto332.webp",
+                description: "Gran bouquet redondo de rosas rojas rodeadas de gypsophila con birrete de graduación, envuelto en papel rosado. Clásico, elegante e imponente para celebrar el grado.",
+                categories: ["graduacion", "rosas", "bouquets", "premium", "precio-medio"]
             },
 ];
