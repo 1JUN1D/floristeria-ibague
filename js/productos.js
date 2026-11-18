@@ -2743,4 +2743,12 @@ const products = [
                 description: "Gran bouquet redondo de rosas rojas rodeadas de gypsophila con birrete de graduación, envuelto en papel rosado. Clásico, elegante e imponente para celebrar el grado.",
                 categories: ["graduacion", "rosas", "bouquets", "premium", "precio-medio"]
             },
+            {
+                id: 343,
+                name: "Jardín Rosa con Perlas",
+                price: 115000,
+                image: "assets/foto333.webp",
+                description: "Bouquet de lirio rosado, rosas rosadas, claveles, crisantemos, margaritas y astromelias, decorado con una tira de perlas y envuelto en papel rosado con lazo satinado e incluye tarjeta personalizada. Delicado, fresco y lleno de color para sorprender en cualquier ocasión.",
+                categories: ["lirios", "rosas", "bouquets", "precio-bajo"]
+            },
 ];
