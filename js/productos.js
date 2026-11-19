@@ -103,7 +103,7 @@ const products = [
             {
                 id: 12,
                 name: "Giras en Mi Mente",
-                price: 85000,
+                price: 95000,
                 image: "assets/foto20.webp",
                 description: "Detalle especial con 1 girasol central rodeado de flores surtidas en tonos rosa y blanco, acompañado de 4 chocolates Ferrero Rocher y tarjeta personalizada. Envuelto en papel coreano rosa. Regalo dulce y encantador.",
                 categories: ["girasoles", "chocolates", "precio-bajo"]
